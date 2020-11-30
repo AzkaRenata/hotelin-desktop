@@ -61,10 +61,64 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dashboard\DashboardWindow.xaml.cs">
+      <DependentUpon>DashboardWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailKamar\DetailKamarPage.xaml.cs">
+      <DependentUpon>DetailKamarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailPembatalan\DetailPembatalanPage.xaml.cs">
+      <DependentUpon>DetailPembatalanPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailPemesanan\DetailPemesananPage.xaml.cs">
+      <DependentUpon>DetailPemesananPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailPengunjung\DetailPengunjungPage.xaml.cs">
+      <DependentUpon>DetailPengunjungPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\DetailPage.xaml.cs">
+      <DependentUpon>DetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pembatalan\PembatalanPage.xaml.cs">
+      <DependentUpon>PembatalanPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pemesanan\PemesananPage.xaml.cs">
+      <DependentUpon>PemesananPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pengunjung\PengunjungPage.xaml.cs">
+      <DependentUpon>PengunjungPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register\RegisterController.cs" />
     <Compile Include="Register\RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="Dashboard\DashboardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailKamar\DetailKamarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailPembatalan\DetailPembatalanPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailPemesanan\DetailPemesananPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailPengunjung\DetailPengunjungPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Detail\DetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +139,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pembatalan\PembatalanPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pemesanan\PemesananPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pengunjung\PengunjungPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Profile\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Register\RegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -116,6 +186,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Profile\ac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Profile\pool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Profile\wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Profile\lunch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Profile\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Profile\place.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Profile\hotel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DetailPemesanan\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DetailPengunjung\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DetailPembatalan\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DetailKamar\bedroom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Dashboard\logo-white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
