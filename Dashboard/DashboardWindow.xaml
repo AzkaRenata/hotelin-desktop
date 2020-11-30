@@ -1,0 +1,125 @@
+﻿<basic:MyWindow  xmlns:basic="clr-namespace:Velacro.UIElements.Basic;assembly=Velacro" x:Name="dashboardWindow"
+
+    x:Class="Hotelin_Desktop.Dashboard.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotelin_Desktop.Dashboard"
+        mc:Ignorable="d"
+        Title="DashboardWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None">
+
+    <Grid Background="White">
+        <Rectangle 
+            Fill="#5399af" 
+            HorizontalAlignment="Left" 
+            Height="450" 
+            VerticalAlignment="Top" 
+            Width="170"/>
+        <Image 
+            HorizontalAlignment="Left" 
+            Height="90" Margin="38,22,0,0" 
+            VerticalAlignment="Top" 
+            Width="90" 
+            Source="logo-white.png" 
+            Stretch="Fill"/>
+        <Button 
+            x:Name="profileButton" 
+            Content="    Profile" 
+            HorizontalAlignment="Left" 
+            Margin="0,140,0,0" 
+            VerticalAlignment="Top" 
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Left"
+            Width="170" 
+            Height="36" 
+            Background="#5399af" 
+            Foreground="White" 
+            Click="profileButton_Click" 
+            BorderBrush="{x:Null}" 
+            FontSize="16" 
+            FontWeight="Bold"/>
+        <Button 
+            x:Name="detailButton" 
+            Content="    Detail" 
+            HorizontalAlignment="Left" 
+            Margin="0,174,0,0" 
+            VerticalAlignment="Top" 
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Left"
+            Width="170" 
+            Height="36" 
+            Background="#5399af" 
+            Foreground="White" 
+            Click="detailButton_Click" 
+            BorderBrush="{x:Null}" 
+            FontSize="16" 
+            FontWeight="Bold"/>
+        <Button 
+            x:Name="pemesananButton" 
+            Content="    Pemesanan" 
+            HorizontalAlignment="Left" 
+            Margin="0,212,0,0" 
+            VerticalAlignment="Top" 
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Left"
+            Width="170" 
+            Height="36" 
+            Background="#5399af" 
+            Foreground="White" 
+            Click="pemesananButton_Click" 
+            BorderBrush="{x:Null}" 
+            FontSize="16" 
+            FontWeight="Bold"/>
+        <Button 
+            x:Name="pengunjungButton" 
+            Content="    Pengunjung" 
+            HorizontalAlignment="Left" 
+            Margin="0,250,0,0" 
+            VerticalAlignment="Top" 
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Left"
+            Width="170" 
+            Height="36" 
+            Background="#5399af" 
+            Foreground="White" 
+            Click="pengunjungButton_Click" 
+            BorderBrush="{x:Null}" 
+            FontSize="16" 
+            FontWeight="Bold"/>
+        <Button 
+            x:Name="pembatalanButton" 
+            Content="    Pembatalan" 
+            HorizontalAlignment="Left" 
+            Margin="0,288,0,0" 
+            VerticalAlignment="Top" 
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Left"
+            Width="170" 
+            Height="36" 
+            Background="#5399af" 
+            Foreground="white" 
+            Click="pembatalanButton_Click" 
+            BorderBrush="{x:Null}" 
+            FontSize="16" 
+            FontWeight="Bold"/>
+        <Button 
+            x:Name="logoutButton" 
+            Content="    Logout" 
+            HorizontalAlignment="Left" 
+            Margin="0,326,0,0" 
+            VerticalAlignment="Top" 
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Left"
+            Width="170" 
+            Height="36" 
+            Background="#5399af" 
+            Foreground="White" 
+            Click="logoutButton_Click" 
+            BorderBrush="{x:Null}" 
+            FontSize="16" 
+            FontWeight="Bold"/>
+        <Frame x:Name="appFrame" NavigationUIVisibility="Hidden" Content="" HorizontalAlignment="Left" Height="450" Margin="170,0,0,0" VerticalAlignment="Top" Width="620" />
+    </Grid>
+
+</basic:MyWindow>

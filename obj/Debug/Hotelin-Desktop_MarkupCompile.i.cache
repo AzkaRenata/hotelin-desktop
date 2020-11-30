@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\xampp\htdocs\hotelin-desktop\obj\Debug\
+C:\hotelin-desktop\obj\Debug\
 Hotelin_Desktop
 none
 false
 DEBUG;TRACE
-C:\xampp\htdocs\hotelin-desktop\App.xaml
-328402172
+C:\hotelin-desktop\App.xaml
+131652208803
 
-101437597586
-15-1007408099
-Login\LoginPage.xaml;MainWindow.xaml;Register\RegisterPage.xaml;
+202145512632
+15-1298780364
+Dashboard\DashboardWindow.xaml;DetailKamar\DetailKamarPage.xaml;DetailPembatalan\DetailPembatalanPage.xaml;DetailPemesanan\DetailPemesananPage.xaml;DetailPengunjung\DetailPengunjungPage.xaml;Detail\DetailPage.xaml;Login\LoginPage.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\RegisterPage.xaml;
 
 True
 

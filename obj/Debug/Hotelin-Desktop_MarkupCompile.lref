@@ -1,6 +1,16 @@
 ﻿
 
-FC:\xampp\htdocs\hotelin-desktop\Login\LoginPage.xaml;;
-FC:\xampp\htdocs\hotelin-desktop\MainWindow.xaml;;
-FC:\xampp\htdocs\hotelin-desktop\Register\RegisterPage.xaml;;
+FC:\hotelin-desktop\Dashboard\DashboardWindow.xaml;;
+FC:\hotelin-desktop\DetailKamar\DetailKamarPage.xaml;;
+FC:\hotelin-desktop\DetailPembatalan\DetailPembatalanPage.xaml;;
+FC:\hotelin-desktop\DetailPemesanan\DetailPemesananPage.xaml;;
+FC:\hotelin-desktop\DetailPengunjung\DetailPengunjungPage.xaml;;
+FC:\hotelin-desktop\Detail\DetailPage.xaml;;
+FC:\hotelin-desktop\Login\LoginPage.xaml;;
+FC:\hotelin-desktop\MainWindow.xaml;;
+FC:\hotelin-desktop\Pembatalan\PembatalanPage.xaml;;
+FC:\hotelin-desktop\Pemesanan\PemesananPage.xaml;;
+FC:\hotelin-desktop\Pengunjung\PengunjungPage.xaml;;
+FC:\hotelin-desktop\Profile\ProfilePage.xaml;;
+FC:\hotelin-desktop\Register\RegisterPage.xaml;;
 
