@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotelin_Desktop.Register;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,12 +17,13 @@ using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
 
+
 namespace Hotelin_Desktop.Login
 {
     /// <summary>
-    /// Interaction logic for LoginPage.xaml
+    /// Interaction logic for LoginWindow.xaml
     /// </summary>
-    public partial class LoginPage : MyPage
+    public partial class LoginWindow : MyWindow
     {
         private BuilderButton buttonBuilder;
         private BuilderTextBox txtBoxBuilder;
@@ -30,11 +32,12 @@ namespace Hotelin_Desktop.Login
         private IMyTextBox emailTxtBox;
         private IMyTextBox passwordTxtBox;
         private IMyTextBlock loginStatusTxtBlock;
+        private MyWindow registerWindow;
 
-        public LoginPage()
+        public LoginWindow()
         {
             InitializeComponent();
-            this.KeepAlive = true;
+            //this.KeepAlive = true;
             setController(new LoginController(this));
             initUIBuilders();
             initUIElements();
@@ -69,6 +72,20 @@ namespace Hotelin_Desktop.Login
             {
                 loginButton.setText(_status);
             });
+        }
+
+        private void register_window_btn_Click(object sender, RoutedEventArgs e)
+        {
+            registerWindow = new RegisterWindow();
+            registerWindow.Show();
+            this.Close();
+        }
+
+        private void register_link_Click(object sender, RoutedEventArgs e)
+        {
+            registerWindow = new RegisterWindow();
+            registerWindow.Show();
+            this.Close();
         }
     }
 }

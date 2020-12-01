@@ -23,23 +23,10 @@ namespace Hotelin_Desktop
     /// </summary>
     public partial class MainWindow : MyWindow
     {
-        private MyPage loginPage;
-        private MyPage registerPage;
         public MainWindow()
         {
             InitializeComponent();
-            loginPage = new LoginPage();
-            registerPage = new RegisterPage();
-        }
-
-        private void login_btn_onCLick(Object sender, RoutedEventArgs e)
-        {
-            mainFrame.Navigate(loginPage);
-        }
-
-        private void register_btn_onCLick(Object sender, RoutedEventArgs e)
-        {
-            mainFrame.Navigate(registerPage );
+            
         }
     }
 }
