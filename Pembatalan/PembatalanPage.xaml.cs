@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Hotelin_Desktop.Model;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,9 +26,39 @@ namespace Hotelin_Desktop.Pembatalan
     /// </summary>
     public partial class PembatalanPage : MyPage
     {
+        private List<BookingModel> bookingList;
+        private List<int> actualId = new List<int>();
         public PembatalanPage()
         {
             InitializeComponent();
+            setController(new PembatalanController(this));
+            getBookingHistory();
+        }
+
+        private void getBookingHistory()
+        {
+            string token = File.ReadAllText(@"userToken.txt");
+            Console.WriteLine("MASUK : " + token);
+            getController().callMethod("requestBookingHistory", token);
+        }
+
+        public void setBookingHistory(List<BookingModel> bookings)
+        {
+            int id = 1;
+            this.bookingList = bookings;
+
+            actualId.Clear();
+            foreach (BookingModel booking in bookings)
+            {
+                Console.WriteLine(booking.id);
+                Console.WriteLine(booking.name);
+                Console.WriteLine(booking.room_id);
+                Console.WriteLine(booking.room_price);
+                Console.WriteLine(booking.room_type);
+                Console.WriteLine(booking.booking_status);
+            }
+            Console.WriteLine("");
+            Console.WriteLine("");
         }
     }
 }

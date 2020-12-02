@@ -84,8 +84,8 @@ namespace Hotelin_Desktop.Login
                 string fullPath = @"userToken.txt";
                 File.WriteAllText(fullPath, token);
                 // Read a file  
-                //string readText = File.ReadAllText(fullPath);
-                //Console.WriteLine(readText);
+                string readText = File.ReadAllText(fullPath);
+                Console.WriteLine("READ : " + readText);
                 dashboardWindow = new DashboardWindow();
                 dashboardWindow.Show();
                 Window.GetWindow(this).Close();
