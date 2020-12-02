@@ -1,6 +1,8 @@
-﻿using Hotelin_Desktop.Register;
+﻿using Hotelin_Desktop.Dashboard;
+using Hotelin_Desktop.Register;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +35,7 @@ namespace Hotelin_Desktop.Login
         private IMyTextBox passwordTxtBox;
         private IMyTextBlock loginStatusTxtBlock;
         private MyWindow registerWindow;
+        private MyWindow dashboardWindow;
 
         public LoginWindow()
         {
@@ -74,6 +77,21 @@ namespace Hotelin_Desktop.Login
             });
         }
 
+        public void saveToken(String token)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                string fullPath = @"userToken.txt";
+                File.WriteAllText(fullPath, token);
+                // Read a file  
+                //string readText = File.ReadAllText(fullPath);
+                //Console.WriteLine(readText);
+                dashboardWindow = new DashboardWindow();
+                dashboardWindow.Show();
+                Window.GetWindow(this).Close();
+            });
+        }
+
         private void register_window_btn_Click(object sender, RoutedEventArgs e)
         {
             registerWindow = new RegisterWindow();
@@ -86,6 +104,11 @@ namespace Hotelin_Desktop.Login
             registerWindow = new RegisterWindow();
             registerWindow.Show();
             this.Close();
+        }
+
+        public void tesPrint()
+        {
+            Console.WriteLine("TESSS");
         }
     }
 }

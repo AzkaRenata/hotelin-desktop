@@ -21,8 +21,28 @@
             FontSize="26" 
             Foreground="#707070"
             FontWeight="Bold"/>
+        <ListView x:Name="sparepartList" HorizontalAlignment="Stretch" Margin="20,100,20,70" VerticalAlignment="Stretch">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding name}" Header="Nama Pemesan" Width="40"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding time}" Header="Tanggal Menginap" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding room_type}" Header="Tipe Kamar" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding price}" Header="Harga" Width="110"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding action}" Header="Action" Width="150"/>
+                    <GridViewColumn Header="Action" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
 
-        
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 
 </basic:MyPage>
