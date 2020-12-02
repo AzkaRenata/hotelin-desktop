@@ -64,8 +64,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Velacro">
-      <HintPath>framework\Velacro.dll</HintPath>
+    <Reference Include="Velacro, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\azizk\Downloads\Velacro.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -76,13 +77,67 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dashboard\DashboardWindow.xaml.cs">
+      <DependentUpon>DashboardWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailKamar\DetailKamarPage.xaml.cs">
+      <DependentUpon>DetailKamarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailPembatalan\DetailPembatalanPage.xaml.cs">
+      <DependentUpon>DetailPembatalanPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailPemesanan\DetailPemesananPage.xaml.cs">
+      <DependentUpon>DetailPemesananPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailPengunjung\DetailPengunjungPage.xaml.cs">
+      <DependentUpon>DetailPengunjungPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\DetailPage.xaml.cs">
+      <DependentUpon>DetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pembatalan\PembatalanPage.xaml.cs">
+      <DependentUpon>PembatalanPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pemesanan\PemesananPage.xaml.cs">
+      <DependentUpon>PemesananPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pengunjung\PengunjungPage.xaml.cs">
+      <DependentUpon>PengunjungPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Register\RegisterController.cs" />
     <Compile Include="Register\RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Dashboard\DashboardWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DetailKamar\DetailKamarPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DetailPembatalan\DetailPembatalanPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DetailPemesanan\DetailPemesananPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DetailPengunjung\DetailPengunjungPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Detail\DetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Login\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +155,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pembatalan\PembatalanPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pemesanan\PemesananPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pengunjung\PengunjungPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Profile\ProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Register\RegisterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,6 +220,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Login\hotel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Dashboard\logo-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DetailKamar\bedroom.jpg" />
+    <Resource Include="DetailPembatalan\profile.png" />
+    <Resource Include="DetailPemesanan\profile.png" />
+    <Resource Include="DetailPengunjung\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Profile\ac.png" />
+    <Resource Include="Profile\hotel.jpg" />
+    <Resource Include="Profile\lunch.png" />
+    <Resource Include="Profile\place.png" />
+    <Resource Include="Profile\pool.png" />
+    <Resource Include="Profile\star.png" />
+    <Resource Include="Profile\wifi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
