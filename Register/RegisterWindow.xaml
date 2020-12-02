@@ -1,13 +1,12 @@
-﻿<basic:MyPage  xmlns:basic="clr-namespace:Velacro.UIElements.Basic;assembly=Velacro" x:Name="loginPage"
-               x:Class="Hotelin_Desktop.Login.LoginPage"
+﻿<basic:MyWindow xmlns:basic="clr-namespace:Velacro.UIElements.Basic;assembly=Velacro" x:Class="Hotelin_Desktop.Register.RegisterWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Hotelin_Desktop.Login"
+        xmlns:local="clr-namespace:Hotelin_Desktop.Register"
         mc:Ignorable="d"
-        Title="LoginPage" Height="450" Width="800">
-   <Grid HorizontalAlignment="Center" Height="450" VerticalAlignment="Center" Width="800">
+        Title="RegisterWindow" Height="450" Width="800">
+    <Grid HorizontalAlignment="Center" Height="450" VerticalAlignment="Center" Width="800">
         <Rectangle 
             HorizontalAlignment="Center" 
             Height="450" 
@@ -19,42 +18,34 @@
         <Rectangle 
             HorizontalAlignment="Left" 
             Height="450" 
-            VerticalAlignment="Center" 
-            Width="400" 
-            Fill="#FF5399AF"  
-            RadiusX="20.625" 
-            RadiusY="20.625"/>
-        <Rectangle 
-            HorizontalAlignment="Left" 
-            Height="450" 
             Margin="388,0,0,0" 
             Stroke="White" 
             VerticalAlignment="Center" 
             Width="385" 
             Fill="White"/>
-        <Button 
+        <Button x:Name="login_window_btn" 
             Content="LOGIN" 
             HorizontalAlignment="Left" 
             Height="34" 
-            Margin="467,81,0,0" 
+            Margin="467,74.495,0,0" 
             VerticalAlignment="Top" 
             Width="90" 
             Background="{x:Null}" 
             BorderBrush="{x:Null}" 
             FontFamily="Montserrat" 
-            FontSize="20" Foreground="#FF5399AF"/>
+            FontSize="20" Click="login_window_btn_Click"/>
         <Button 
             Content="REGISTER" 
             HorizontalAlignment="Left" 
             Height="34" 
-            Margin="578,81,0,0" 
+            Margin="578,74.495,0,0" 
             VerticalAlignment="Top" 
             Width="112" 
             Background="{x:Null}" 
             BorderBrush="{x:Null}" 
             FontFamily="Montserrat" 
-            FontSize="20"/>
-        <Grid HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Margin="438,158,0,0" Visibility="Visible">
+            FontSize="20" Foreground="#FF5399AF"/>
+        <Grid HorizontalAlignment="Left" Height="240" VerticalAlignment="Top" Margin="438,150.194,0,0">
             <TextBox x:Name="email_txt" 
                 HorizontalAlignment="Left" 
                 Height="30" Text="Email" 
@@ -65,20 +56,20 @@
                 BorderBrush="{x:Null}" 
                 FontSize="14" 
                 FontFamily="Montserrat" 
-                VerticalContentAlignment="Center"/>
+                VerticalContentAlignment="Center" Margin="0,-6.602,0,0"/>
             <Path 
                 Data="M483.75,114.375 L706.875,114.375" 
                 Fill="#FFF4F4F5" 
                 HorizontalAlignment="Left" 
                 Height="1" 
-                Margin="0,35,0,0" 
+                Margin="0,28.194,0,0" 
                 Stretch="Fill" 
                 Stroke="Black"
                 VerticalAlignment="Top" 
                 Width="285"/>
             <TextBox x:Name="password_txt" 
                 HorizontalAlignment="Left" 
-                Height="30" Margin="0,60,0,0" 
+                Height="30" Margin="0,52.194,0,0" 
                 Text="Password" 
                 TextWrapping="Wrap" 
                 VerticalAlignment="Top" 
@@ -92,69 +83,14 @@
                 Fill="#FFF4F4F5" 
                 HorizontalAlignment="Left" 
                 Height="1" 
-                Margin="0,95,0,0" 
+                Margin="0,87.689,0,0" 
                 Stretch="Fill" 
                 Stroke="Black" 
                 VerticalAlignment="Top" 
                 Width="285"/>
-            <Button x:Name="login_btn" 
-                Content="LOGIN" 
+            <TextBox x:Name="confirm_password_txt" 
                 HorizontalAlignment="Left" 
-                Height="38" 
-                Margin="0,150,0,0" 
-                VerticalAlignment="Top" 
-                Width="285" 
-                Background="#FF5399AF" 
-                FontSize="14" 
-                Foreground="White" 
-                BorderBrush="{x:Null}"/>
-        </Grid>
-        <Grid HorizontalAlignment="Left" Height="240" VerticalAlignment="Top" Margin="438,158,0,0" Visibility="Hidden">
-            <TextBox 
-                HorizontalAlignment="Left" 
-                Height="30" Text="Email" 
-                TextWrapping="Wrap" 
-                VerticalAlignment="Top" 
-                Width="285" 
-                Background="{x:Null}" 
-                BorderBrush="{x:Null}" 
-                FontSize="14" 
-                FontFamily="Montserrat" 
-                VerticalContentAlignment="Center"/>
-            <Path 
-                Data="M483.75,114.375 L706.875,114.375" 
-                Fill="#FFF4F4F5" 
-                HorizontalAlignment="Left" 
-                Height="1" 
-                Margin="0,36,0,0" 
-                Stretch="Fill" 
-                Stroke="Black"
-                VerticalAlignment="Top" 
-                Width="285"/>
-            <TextBox 
-                HorizontalAlignment="Left" 
-                Height="30" Margin="0,60,0,0" 
-                Text="Password" 
-                TextWrapping="Wrap" 
-                VerticalAlignment="Top" 
-                Width="285" Background="{x:Null}" 
-                BorderBrush="{x:Null}" 
-                FontFamily="Montserrat" 
-                FontSize="14" 
-                VerticalContentAlignment="Center"/>
-            <Path 
-                Data="M483.75,114.375 L706.875,114.375" 
-                Fill="#FFF4F4F5" 
-                HorizontalAlignment="Left" 
-                Height="1" 
-                Margin="0,102,0,0" 
-                Stretch="Fill" 
-                Stroke="Black" 
-                VerticalAlignment="Top" 
-                Width="285"/>
-            <TextBox 
-                HorizontalAlignment="Left" 
-                Height="30" Margin="0,60,0,0" 
+                Height="30" Margin="0,112.786,0,0" 
                 Text="Confirm Password" 
                 TextWrapping="Wrap" 
                 VerticalAlignment="Top" 
@@ -168,22 +104,25 @@
                 Fill="#FFF4F4F5" 
                 HorizontalAlignment="Left" 
                 Height="1" 
-                Margin="0,166,0,0" 
+                Margin="0,146.485,0,0" 
                 Stretch="Fill" 
                 Stroke="Black" 
                 VerticalAlignment="Top" 
                 Width="285"/>
-            <Button 
-                Content="LOGIN" 
+            <Button x:Name="register_btn" 
+                Content="REGISTER" 
                 HorizontalAlignment="Left" 
                 Height="38" 
-                Margin="0,202,0,0" 
+                Margin="0,180,0,0" 
                 VerticalAlignment="Top" 
                 Width="285" 
-                Background="#FF214185" 
+                Background="#FF5399AF" 
                 FontSize="14" 
                 Foreground="White" 
                 BorderBrush="{x:Null}"/>
         </Grid>
+        <Image HorizontalAlignment="Left" Height="430" Margin="4,16,0,0" VerticalAlignment="Top" Width="378" Source="hotel.jpg" Stretch="UniformToFill"/>
+        <Label Content="Sudah punya akun?" HorizontalAlignment="Left" Margin="498.647,373.94,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="login_link" Content="Login" HorizontalAlignment="Left" Margin="592.883,376.538,0,0" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF5399AF" Click="login_link_Click"/>
     </Grid>
-</basic:MyPage>
+</basic:MyWindow>

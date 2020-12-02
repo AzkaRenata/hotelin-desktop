@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotelin_Desktop.Login;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,9 @@ using Velacro.UIElements.TextBox;
 namespace Hotelin_Desktop.Register
 {
     /// <summary>
-    /// Interaction logic for RegisterPage.xaml
+    /// Interaction logic for RegisterWindow.xaml
     /// </summary>
-    public partial class RegisterPage : MyPage
+    public partial class RegisterWindow : MyWindow
     {
         private BuilderButton buttonBuilder;
         private BuilderTextBox txtBoxBuilder;
@@ -33,17 +34,16 @@ namespace Hotelin_Desktop.Register
         private IMyTextBox passwordTxtBox;
         private IMyTextBox passwordcTxtBox;
         private IMyTextBlock registerStatusTxtBlock;
+        private MyWindow loginWindow;
 
-        public RegisterPage()
+        public RegisterWindow()
         {
             InitializeComponent();
-            this.KeepAlive = true;
+            //this.KeepAlive = true;
             setController(new RegisterController(this));
             initUIBuilders();
             initUIElements();
         }
-
-        
 
         private void initUIBuilders()
         {
@@ -51,8 +51,6 @@ namespace Hotelin_Desktop.Register
             txtBoxBuilder = new BuilderTextBox();
             txtBlockBuilder = new BuilderTextBlock();
         }
-
-        
 
         private void initUIElements()
         {
@@ -85,6 +83,21 @@ namespace Hotelin_Desktop.Register
                 registerButton.setText(_status);
             });
 
+        }
+
+        private void login_window_btn_Click(object sender, RoutedEventArgs e)
+        {
+            loginWindow = new LoginWindow();
+            loginWindow.Show();
+            this.Close();
+
+        }
+
+        private void login_link_Click(object sender, RoutedEventArgs e)
+        {
+            loginWindow = new LoginWindow();
+            loginWindow.Show();
+            this.Close();
         }
     }
 }
