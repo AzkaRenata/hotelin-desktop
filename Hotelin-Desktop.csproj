@@ -98,12 +98,16 @@
     <Compile Include="Login\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\BookingModel.cs" />
+    <Compile Include="Pembatalan\PembatalanController.cs" />
     <Compile Include="Pembatalan\PembatalanPage.xaml.cs">
       <DependentUpon>PembatalanPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pemesanan\PemesananController.cs" />
     <Compile Include="Pemesanan\PemesananPage.xaml.cs">
       <DependentUpon>PemesananPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pengunjung\PengunjungController.cs" />
     <Compile Include="Pengunjung\PengunjungPage.xaml.cs">
       <DependentUpon>PengunjungPage.xaml</DependentUpon>
     </Compile>
