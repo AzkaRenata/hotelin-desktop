@@ -1,4 +1,5 @@
-﻿using Hotelin_Desktop.Model;
+using Hotelin_Desktop.Model;
+using Hotelin_Desktop.DetailPemesanan;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,10 +29,20 @@ namespace Hotelin_Desktop.Pemesanan
     {
         private List<BookingModel> bookingList;
         private List<int> actualId = new List<int>();
+        private DetailPemesananPage detailPemesananPage;
+
         public PemesananPage()
         {
             InitializeComponent();
             setController(new PemesananController(this));
+            Pemesanan olivia = new Pemesanan();
+            olivia.namaPemesan = "Olivia";
+            olivia.tanggalMenginap = "3-5 Oktober";
+            olivia.tipeKamar = "Presidental Suite";
+            olivia.harga = "Rp. 1.626.804";
+
+            pemesanan_datagrid.Items.Add(olivia);
+            
             getBookingHistory();
         }
 
@@ -59,6 +70,22 @@ namespace Hotelin_Desktop.Pemesanan
             }
             Console.WriteLine("");
             Console.WriteLine("");
+
+        public class Pemesanan
+        {
+            public string namaPemesan { get; set; }
+            public string tanggalMenginap { get; set; }
+            public string tipeKamar { get; set; }
+            public string harga { get; set; }
+        }
+
+        private void view_btn_Click(object sender, RoutedEventArgs e)
+        {
+            //appFrame.Navigate(detailPemesananPage);
+        }
+
+        private void delete_btn_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

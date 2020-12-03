@@ -1,4 +1,5 @@
-﻿using Hotelin_Desktop.Model;
+using Hotelin_Desktop.Model;
+using Hotelin_Desktop.DetailPengunjung;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,10 +29,19 @@ namespace Hotelin_Desktop.Pengunjung
     {
         private List<BookingModel> bookingList;
         private List<int> actualId = new List<int>();
+        private DetailPengunjungPage detailPengunjungPage;
+        
         public PengunjungPage()
         {
             InitializeComponent();
             setController(new PengunjungController(this));
+            Pengunjung olivia = new Pengunjung();
+            olivia.namaPemesan = "Olivia";
+            olivia.tanggalMenginap = "3-5 Oktober";
+            olivia.tipeKamar = "Presidental Suite";
+            olivia.harga = "Rp. 1.626.804";
+
+            pengunjung_datagrid.Items.Add(olivia);
             getBookingHistory();
         }
 
@@ -59,6 +69,22 @@ namespace Hotelin_Desktop.Pengunjung
             }
             Console.WriteLine("");
             Console.WriteLine("");
+
+        public class Pengunjung
+        {
+            public string namaPemesan { get; set; }
+            public string tanggalMenginap { get; set; }
+            public string tipeKamar { get; set; }
+            public string harga { get; set; }
+        }
+
+        private void view_btn_Click(object sender, RoutedEventArgs e)
+        {
+            //appFrame.Navigate(detailPengunjungPage);
+        }
+
+        private void delete_btn_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
