@@ -4,30 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< Updated upstream
-C:\Users\TALITAKUM\Documents\hotelin-desktop\obj\Debug\
-=======
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\
->>>>>>> Stashed changes
 Hotelin_Desktop
 none
 false
 DEBUG;TRACE
-<<<<<<< Updated upstream
-C:\Users\TALITAKUM\Documents\hotelin-desktop\App.xaml
-31111934619
-
-10-928780446
-15-504834380
-Login\LoginWindow.xaml;MainWindow.xaml;Register\RegisterWindow.xaml;
-=======
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\App.xaml
-13-1559226046
+17-706852232
 
-19621493967
+231608273885
 15-735649527
-Dashboard\DashboardWindow.xaml;DetailKamar\DetailKamarPage.xaml;DetailPembatalan\DetailPembatalanPage.xaml;DetailPemesanan\DetailPemesananPage.xaml;DetailPengunjung\DetailPengunjungPage.xaml;Detail\DetailPage.xaml;Login\LoginWindow.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\RegisterWindow.xaml;
->>>>>>> Stashed changes
+AddKamar\AddKamarPage.xaml;Dashboard\DashboardWindow.xaml;DetailKamar\DetailKamarPage.xaml;DetailPembatalan\DetailPembatalanPage.xaml;DetailPemesanan\DetailPemesananPage.xaml;DetailPengunjung\DetailPengunjungPage.xaml;Detail\DetailPage.xaml;EditKamar\EditKamarPage.xaml;EditProfile\EditProfilePage.xaml;Login\LoginWindow.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\FormRegisterWindow.xaml;Register\RegisterWindow.xaml;
 
-True
+False
 
