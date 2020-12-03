@@ -1,4 +1,4 @@
-﻿using Hotelin_Desktop.DetailPengunjung;
+using Hotelin_Desktop.DetailPengunjung;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,7 +55,6 @@ namespace Hotelin_Desktop.Pengunjung
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
-
         }
     }
 }

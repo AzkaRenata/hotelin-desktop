@@ -1,4 +1,4 @@
-﻿using Hotelin_Desktop.DetailPembatalan;
+using Hotelin_Desktop.DetailPembatalan;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Velacro.UIElements.Basic;
+using Velacro.UIElements.Button;
+using Velacro.UIElements.TextBlock;
+using Velacro.UIElements.TextBox;
 
 namespace Hotelin_Desktop.Pembatalan
 {
@@ -51,7 +54,6 @@ namespace Hotelin_Desktop.Pembatalan
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
-
         }
     }
 }

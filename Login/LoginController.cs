@@ -21,7 +21,6 @@ namespace Hotelin_Desktop.Login
             var client = new ApiClient("http://192.168.1.2:8000/");
             var request = new ApiRequestBuilder();
 
-            String token = "";
             var req = request
                 .buildHttpRequest()
                 .addParameters("email", _email)
@@ -39,7 +38,10 @@ namespace Hotelin_Desktop.Login
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                getView().callMethod("setLoginStatus", status);
+                string token = _response.getJObject()["token"].ToString();
+                getView().callMethod("saveToken", token);
+                //getView().callMethod("tesPrint");
+                //getView().callMethod("moveToDashboard");
             }
         }
     }
