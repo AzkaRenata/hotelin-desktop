@@ -42,25 +42,13 @@
                 <DataGridTextColumn Header="Tanggal Menginap" Binding="{Binding tanggalMenginap}" Width="135"/>
                 <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding tipeKamar}" Width="110"/>
                 <DataGridTextColumn Header="Harga" Binding="{Binding harga}" Width="100"/>
-                <DataGridTemplateColumn Header="View">
+                <DataGridTemplateColumn Header="Action">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="view_btn" Background="Transparent" Click="view_btn_Click">
-                                <StackPanel Orientation="Vertical">
-                                    <Image Source="view.png"></Image>
-                                </StackPanel>
-                            </Button>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Delete">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Name="delete_btn" Background="Transparent" Click="delete_btn_Click">
-                                <StackPanel Orientation="Vertical">
-                                    <Image Source="delete.png"></Image>
-                                </StackPanel>
-                            </Button>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Name="view_btn" Content="View" Click="view_btn_Click"/>
+                                <Button Name="delete_btn" Content="Delete" Click="delete_btn_Click"/>
+                            </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

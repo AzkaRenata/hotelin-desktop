@@ -77,6 +77,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddKamar\AddKamarPage.xaml.cs">
+      <DependentUpon>AddKamarPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\DashboardWindow.xaml.cs">
       <DependentUpon>DashboardWindow.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,12 @@
     </Compile>
     <Compile Include="Detail\DetailPage.xaml.cs">
       <DependentUpon>DetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditKamar\EditKamarPage.xaml.cs">
+      <DependentUpon>EditKamarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile\EditProfilePage.xaml.cs">
+      <DependentUpon>EditProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
@@ -114,10 +123,17 @@
     <Compile Include="Profile\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Register\FormRegisterWindow.xaml.cs">
+      <DependentUpon>FormRegisterWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register\RegisterController.cs" />
     <Compile Include="Register\RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddKamar\AddKamarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dashboard\DashboardWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -141,6 +157,14 @@
     <Page Include="Detail\DetailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EditKamar\EditKamarPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditProfile\EditProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Login\LoginWindow.xaml">
       <SubType>Designer</SubType>
@@ -174,6 +198,10 @@
     <Page Include="Profile\ProfilePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Register\FormRegisterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Register\RegisterWindow.xaml">
       <SubType>Designer</SubType>
