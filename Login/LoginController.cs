@@ -18,14 +18,14 @@ namespace Hotelin_Desktop.Login
 
         public async void login(string _email, string _password)
         {
-            var client = new ApiClient("http://192.168.1.2:8000/");
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             var req = request
                 .buildHttpRequest()
                 .addParameters("email", _email)
                 .addParameters("password", _password)
-                .setEndpoint("api/user/login")
+                .setEndpoint("user/login")
                 .setRequestMethod(HttpMethod.Post);
             client.setOnSuccessRequest(setViewLoginStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());

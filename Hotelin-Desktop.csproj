@@ -99,6 +99,8 @@
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\BookingModel.cs" />
+    <Compile Include="Model\HotelProfile.cs" />
+    <Compile Include="MyURL\MyURL.cs" />
     <Compile Include="Pembatalan\PembatalanController.cs" />
     <Compile Include="Pembatalan\PembatalanPage.xaml.cs">
       <DependentUpon>PembatalanPage.xaml</DependentUpon>
@@ -111,6 +113,7 @@
     <Compile Include="Pengunjung\PengunjungPage.xaml.cs">
       <DependentUpon>PengunjungPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Profile\ProfileController.cs" />
     <Compile Include="Profile\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
@@ -242,6 +245,9 @@
     <Resource Include="Profile\pool.png" />
     <Resource Include="Profile\star.png" />
     <Resource Include="Profile\wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Profile\star-dark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

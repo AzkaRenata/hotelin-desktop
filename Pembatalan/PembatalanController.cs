@@ -19,16 +19,17 @@ namespace Hotelin_Desktop.Pembatalan
 
         public async void requestBookingHistory(string token)
         {
-            var client = new ApiClient("http://192.168.1.2:8000/");
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint("api/booking/list/3")
+                .setEndpoint("booking/list/3")
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);
             var response = await client.sendRequest(request.getApiRequestBundle());
+            Console.WriteLine("Masukk Pembatalan");
             //Console.WriteLine(response.getJObject()["token"]);
             //client.setAuthorizationToken(response.getJObject()["access_token"].ToString());
         }

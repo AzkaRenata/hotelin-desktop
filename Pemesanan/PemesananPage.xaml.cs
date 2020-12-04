@@ -70,6 +70,7 @@ namespace Hotelin_Desktop.Pemesanan
             }
             Console.WriteLine("");
             Console.WriteLine("");
+        }
 
         public class Pemesanan
         {

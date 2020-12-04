@@ -8,27 +8,28 @@ using System.Threading.Tasks;
 using Velacro.Api;
 using Velacro.Basic;
 
-namespace Hotelin_Desktop.Pemesanan
+namespace Hotelin_Desktop.Profile
 {
-    class PemesananController : MyController
+    class ProfileController : MyController
     {
-        public PemesananController(IMyView _myView) : base(_myView)
+        public ProfileController(IMyView _myView) : base(_myView)
         {
 
         }
 
-        public async void requestBookingHistory(string token)
+        public async void requestProfile(string token)
         {
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint("booking/list/2")
+                .setEndpoint("hotel/profile")
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);
             var response = await client.sendRequest(request.getApiRequestBundle());
+            Console.WriteLine("Masukk Profile");
             //Console.WriteLine(response.getJObject()["token"]);
             //client.setAuthorizationToken(response.getJObject()["access_token"].ToString());
         }
@@ -45,7 +46,7 @@ namespace Hotelin_Desktop.Pemesanan
                 //var model = JsonConvert.DeserializeObject<BookingList>(JArray.Parse(_response.getJObject().Value));
                 //Console.WriteLine(model);
                 //Console.WriteLine("HAYO : " + _response.getParsedObject<BookingList>().booking.Count());
-                getView().callMethod("setBookingHistory", _response.getParsedObject<BookingList>().booking);
+                getView().callMethod("setProfile", _response.getParsedObject<HotelProfile>());
             }
         }
     }
