@@ -69,6 +69,7 @@ namespace Hotelin_Desktop.Pembatalan
             }
             Console.WriteLine("");
             Console.WriteLine("");
+        }
 
         public class Pembatalan
         {

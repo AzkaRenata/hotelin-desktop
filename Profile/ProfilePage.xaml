@@ -23,6 +23,7 @@
             FontWeight="Bold"/>
 
         <Image 
+            x:Name="hotel_img"
             HorizontalAlignment="Left" 
             Height="142" 
             Margin="26,113,0,0" 
@@ -31,38 +32,38 @@
             Source="hotel.jpg" 
             Stretch="Fill"/>
         <Image 
+            x:Name="room_img1"
             HorizontalAlignment="Left" 
             Height="50" Margin="26,271,0,0" 
             VerticalAlignment="Top" 
-            Width="50" 
-            Source="hotel.jpg" 
+            Width="50"
             Stretch="Fill"/>
         <Image 
+            x:Name="room_img2"
             HorizontalAlignment="Left" 
             Height="50" 
             Margin="88,271,0,0" 
             VerticalAlignment="Top" 
             Width="50" 
-            Source="hotel.jpg" 
             Stretch="Fill"/>
         <Image 
+            x:Name="room_img3"
             HorizontalAlignment="Left" 
             Height="50" 
             Margin="149,271,0,0" 
             VerticalAlignment="Top" 
             Width="50" 
-            Source="hotel.jpg" 
             Stretch="Fill"/>
         <Image 
+            x:Name="room_img4"
             HorizontalAlignment="Left" 
             Height="50" 
             Margin="211,271,0,0" 
             VerticalAlignment="Top" 
             Width="50" 
-            Source="hotel.jpg" 
             Stretch="Fill"/>
 
-        <Grid Background="White" Margin="282,94,20,45" >
+        <Grid Background="White" Margin="282,94,17,21" >
             <Grid.Effect>
                 <DropShadowEffect 
                     BlurRadius="20" 
@@ -71,7 +72,8 @@
             </Grid.Effect>
 
             <Label 
-                Content="Eastin Ashta Resort Canggu"
+                x:Name="hotel_name_label"
+                Content="No Hotel Name"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -83,7 +85,8 @@
                 FontWeight="Bold"/>
 
             <Label 
-                Content="Canggu, Bali"
+                Content="Location Not Set"
+                x:Name="hotel_location_label"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -94,11 +97,24 @@
                 Foreground="#707070"/>
 
             <Label 
-                Content="Rp. 1.625.084"
+                Content="(No Rating)"
+                x:Name="hotel_rating_label"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
-                Margin="20,92,0,0" 
+                Margin="21,99,0,0" 
+                Height="28" 
+                Width="77" 
+                FontSize="12" 
+                Foreground="#707070" FontWeight="Bold"/>
+
+            <Label 
+                Content="Price Not Set"
+                x:Name="hotel_price_label"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top"
+                Margin="20,121,0,0" 
                 Height="28" 
                 Width="110" 
                 FontSize="12" 
@@ -109,20 +125,19 @@
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
-                Margin="20,119,0,0" 
+                Margin="20,144,0,0" 
                 Height="28" 
                 Width="110" 
                 FontSize="12" 
                 Foreground="#707070" FontWeight="Bold"/>
 
             <TextBlock 
+                x:Name="hotel_desc_label"
                 FontSize="12" 
-                Margin="24,145,20,99" 
+                Margin="24,170,20,74" 
                 TextWrapping="Wrap" 
                 Foreground="#707070" >
-                Eastin Ashta Resort Canggu adalah akomodasi modern yang 
-                terletak hanya 6 menit berjalan kaki dari Pantai Echo. 
-                   Hotel ini menawarkan kolam renang dan pusat kebugaran.
+                No Description
             </TextBlock>
 
             <Label 
@@ -130,39 +145,43 @@
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
-                Margin="20,214,0,0" 
+                Margin="20,239,0,0" 
                 Height="28" 
                 Width="110" 
                 FontSize="12" 
                 Foreground="#707070" FontWeight="Bold"/>
 
             <Label 
-                Content="Sarapan Gratis" 
+                x:Name="facility1_label"
+                Content="Not Available" 
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
-                Height="30" Margin="53,240,0,0" 
+                Height="30" Margin="53,265,0,0" 
                 VerticalAlignment="Top" 
                 Width="100"/>
             <Label 
-                Content="Free Wifi" 
+                x:Name="facility2_label"
+                Content="Not Available" 
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
-                Height="30" Margin="54,267,0,0" 
+                Height="30" Margin="54,292,0,0" 
                 VerticalAlignment="Top" 
                 Width="100"/>
 
             <Label 
-                Content="Kolam Renang" 
+                x:Name="facility3_label"
+                Content="Not Available" 
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
-                Height="30" Margin="213,240,0,0" 
+                Height="30" Margin="213,265,0,0" 
                 VerticalAlignment="Top" 
                 Width="100"/>
             <Label 
-                Content="AC" 
+                x:Name="facility4_label"
+                Content="Not Available" 
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
-                Height="30" Margin="213,267,0,0" 
+                Height="30" Margin="213,292,0,0" 
                 VerticalAlignment="Top" 
                 Width="100"/>
         </Grid>
@@ -189,50 +208,56 @@
             Width="16" 
             Source="place.png" 
             Stretch="Fill"/>
+        <!--Rating-->
         <Image 
+            x:Name="star1"
             HorizontalAlignment="Left" 
-            Height="16" 
-            Margin="308,166,0,0" 
+            Height="17" 
+            Margin="309,172,0,0" 
+            VerticalAlignment="Top" 
+            Width="16"  
+            Stretch="Fill"
+            Source="star-dark.png"/>
+        <Image 
+            x:Name="star2"
+            HorizontalAlignment="Left" 
+            Height="17" 
+            Margin="329,172,0,0" 
             VerticalAlignment="Top" 
             Width="16" 
-            Source="star.png" 
-            Stretch="Fill"/>
+            Stretch="Fill"
+            Source="star-dark.png"/>
         <Image 
+            x:Name="star3"
             HorizontalAlignment="Left" 
-            Height="16" 
-            Margin="328,166,0,0" 
+            Height="17" 
+            Margin="349,172,0,0" 
             VerticalAlignment="Top" 
             Width="16" 
-            Source="star.png" 
-            Stretch="Fill"/>
+            Stretch="Fill"
+            Source="star-dark.png"/>
         <Image 
+            x:Name="star4"
             HorizontalAlignment="Left" 
-            Height="16" 
-            Margin="348,166,0,0" 
+            Height="17" 
+            Margin="369,172,0,0" 
             VerticalAlignment="Top" 
-            Width="16" 
-            Source="star.png" 
-            Stretch="Fill"/>
+            Width="16"  
+            Stretch="Fill"
+            Source="star-dark.png"/>
         <Image 
+            x:Name="star5"
             HorizontalAlignment="Left" 
-            Height="16" 
-            Margin="368,166,0,0" 
+            Height="17" 
+            Margin="389,172,0,0" 
             VerticalAlignment="Top" 
-            Width="16" 
-            Source="star.png" 
-            Stretch="Fill"/>
-        <Image 
-            HorizontalAlignment="Left" 
-            Height="16" 
-            Margin="388,166,0,0" 
-            VerticalAlignment="Top" 
-            Width="16" 
-            Source="star.png" 
-            Stretch="Fill"/>
+            Width="17"  
+            Stretch="Fill"
+            Source="star-dark.png"/>
         <Image 
             HorizontalAlignment="Left" 
             Height="18" 
-            Margin="308,341,0,0" 
+            Margin="308,366,0,0" 
             VerticalAlignment="Top" 
             Width="18" 
             Source="lunch.png" 
@@ -240,15 +265,7 @@
         <Image 
             HorizontalAlignment="Left" 
             Height="18" 
-            Margin="308,367,0,0" 
-            VerticalAlignment="Top" 
-            Width="18" 
-            Source="wifi.png" 
-            Stretch="Fill"/>
-        <Image 
-            HorizontalAlignment="Left" 
-            Height="18" 
-            Margin="468,340,0,0" 
+            Margin="308,392,0,0" 
             VerticalAlignment="Top" 
             Width="18" 
             Source="pool.png" 
@@ -256,7 +273,15 @@
         <Image 
             HorizontalAlignment="Left" 
             Height="18" 
-            Margin="468,367,0,0" 
+            Margin="468,365,0,0" 
+            VerticalAlignment="Top" 
+            Width="18" 
+            Source="wifi.png" 
+            Stretch="Fill"/>
+        <Image 
+            HorizontalAlignment="Left" 
+            Height="18" 
+            Margin="468,392,0,0" 
             VerticalAlignment="Top" 
             Width="18" 
             Source="ac.png" 
