@@ -38,16 +38,16 @@
                 </Style>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding tipeKamar}" Width="130"/>
-                <DataGridTextColumn Header="Harga" Binding="{Binding harga}" Width="130"/>
-                <DataGridTextColumn Header="Jumlah Kamar" Binding="{Binding jumlahKamar}" Width="150"/>
+                <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding room_type}" Width="130"/>
+                <DataGridTextColumn Header="Harga" Binding="{Binding room_price}" Width="130"/>
+                <DataGridTextColumn Header="Kapasitas Tamu" Binding="{Binding guest_capacity}" Width="150"/>
                 <DataGridTemplateColumn Header="Action">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Button Name="view_btn" Content="View" Click="view_btn_Click"/>
-                                <Button Name="edit_btn" Content="Edit" Click="edit_btn_Click"/>
-                                <Button Name="delete_btn" Content="Delete" Click="delete_btn_Click"/>
+                                <Button x:Name="view_btn" Content="View" Click="view_btn_Click"/>
+                                <Button x:Name="edit_btn" Content="Edit" Click="edit_btn_Click"/>
+                                <Button x:Name="delete_btn" Content="Delete" Click="delete_btn_Click"/>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -55,6 +55,7 @@
             </DataGrid.Columns>
 
         </DataGrid>
+        <Frame x:Name="appFrame" NavigationUIVisibility="Hidden" Content="" HorizontalAlignment="Left" Height="450" Margin="170,0,0,0" VerticalAlignment="Top" Width="620" />
     </Grid>
 
 </basic:MyPage>
