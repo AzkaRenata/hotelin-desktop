@@ -1,6 +1,8 @@
 ﻿using Hotelin_Desktop.DetailKamar;
+using Hotelin_Desktop.Model;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,25 +31,38 @@ namespace Hotelin_Desktop.Detail
         public DetailPage()
         {
             InitializeComponent();
-
-            Kamar presidental = new Kamar();
-            presidental.tipeKamar = "Presidental Suite";
-            presidental.harga = "Rp. 1.626.804";
-            presidental.jumlahKamar = "20";
-
-            kamar_datagrid.Items.Add(presidental);
+            detailKamarPage = new DetailKamarPage();
+            setController(new RoomListController(this));
+            getRoomList();
+           
         }
 
-        public class Kamar
+        public void getRoomList()
         {
-            public string tipeKamar { get; set; }
-            public string harga { get; set; }
-            public string jumlahKamar { get; set; }
+            string token = File.ReadAllText(@"userToken.txt");
+            Console.WriteLine("MASUK : " + token);
+            getController().callMethod("requestRoomList", token);
+
+        }
+
+        public void setRoomList(List<Room> roomList)
+        {
+            string image_url = MyURL.MyURL.imageURL;
+            Console.WriteLine("DATA KAMAR");
+            foreach (Room room in roomList)
+            {
+                this.Dispatcher.Invoke(() =>
+                {
+                    kamar_datagrid.Items.Add(room);
+                });
+
+            }
+
         }
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-            //appFrame.Navigate(detailKamarPage);
+            appFrame.Navigate(detailKamarPage);
         }
 
         private void edit_btn_Click(object sender, RoutedEventArgs e)

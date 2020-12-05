@@ -98,6 +98,7 @@
     <Compile Include="Detail\DetailPage.xaml.cs">
       <DependentUpon>DetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Detail\RoomListController.cs" />
     <Compile Include="EditKamar\EditKamarPage.xaml.cs">
       <DependentUpon>EditKamarPage.xaml</DependentUpon>
     </Compile>
@@ -109,6 +110,7 @@
     </Compile>
     <Compile Include="Model\BookingModel.cs" />
     <Compile Include="Model\HotelProfile.cs" />
+    <Compile Include="Model\RoomList.cs" />
     <Compile Include="MyURL\MyURL.cs" />
     <Compile Include="Pembatalan\PembatalanController.cs" />
     <Compile Include="Pembatalan\PembatalanPage.xaml.cs">
