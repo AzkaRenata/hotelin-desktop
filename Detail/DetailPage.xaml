@@ -11,7 +11,7 @@
 
     <Grid Background="White">
         <Label 
-            Content="Detail Kamar"
+            Content="List Kamar"
             VerticalContentAlignment="Center"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top"
@@ -38,6 +38,7 @@
                 </Style>
             </DataGrid.Resources>
             <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}" Width="0" Visibility="Hidden"/>
                 <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding room_type}" Width="130"/>
                 <DataGridTextColumn Header="Harga" Binding="{Binding room_price}" Width="130"/>
                 <DataGridTextColumn Header="Kapasitas Tamu" Binding="{Binding guest_capacity}" Width="150"/>
@@ -55,7 +56,6 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Frame x:Name="appFrame" NavigationUIVisibility="Hidden" Content="" HorizontalAlignment="Left" Height="450" Margin="170,0,0,0" VerticalAlignment="Top" Width="620" />
     </Grid>
 
 </basic:MyPage>

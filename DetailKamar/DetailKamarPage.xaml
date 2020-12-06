@@ -23,6 +23,7 @@
             FontWeight="Bold"/>
 
         <Image 
+            x:Name="room_image"
             HorizontalAlignment="Left" 
             Height="142" 
             Margin="26,113,0,0" 
@@ -40,7 +41,8 @@
             </Grid.Effect>
 
             <Label 
-                Content="Presidential Suite"
+                x:Name="room_type_label"
+                Content="Room Type"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -64,7 +66,8 @@
                 FontWeight="Bold"/>
 
             <Label 
-                Content="Rp 1.625.084"
+                x:Name="room_price_label"
+                Content="No Price"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -75,7 +78,7 @@
                 Foreground="#707070"/>
 
             <Label 
-                Content="Jumlah Kamar"
+                Content="Jumlah Tamu"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -87,7 +90,8 @@
                 FontWeight="Bold"/>
 
             <Label 
-                Content="20"
+                x:Name="guest_capacity_label"
+                Content="0"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -98,7 +102,7 @@
                 Foreground="#707070"/>
 
             <Label 
-                Content="Fasilitasr"
+                Content="Fasilitas"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -110,7 +114,8 @@
                 FontWeight="Bold"/>
 
             <Label 
-                Content="1 Queen Bed"
+                x:Name="facility1"
+                Content=""
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -121,7 +126,8 @@
                 Foreground="#707070"/>
 
             <Label 
-                Content="Sarapan Gratis"
+                x:Name="facility2"
+                Content=""
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -132,7 +138,8 @@
                 Foreground="#707070"/>
 
             <Label 
-                Content="Free Wifi"
+                x:Name="facility3"
+                Content=""
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -144,6 +151,7 @@
         </Grid>
 
         <Button 
+          x:Name="room_edit_btn"
           Content="Edit Kamar" 
           HorizontalAlignment="Left" 
           Margin="496,49,0,0" 
@@ -153,7 +161,7 @@
           Background="#5399af" 
           BorderBrush="{x:Null}" 
           FontWeight="Bold" 
-          Foreground="White"/>
+          Foreground="White" Click="room_edit_btn_Click"/>
     </Grid>
 
 </basic:MyPage>

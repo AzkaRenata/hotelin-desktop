@@ -31,12 +31,36 @@ namespace Hotelin_Desktop.Detail
             
         }
 
+        public async void deleteRoom(string token, int id)
+        {
+            var client = new ApiClient(MyURL.MyURL.baseURL);
+            var request = new ApiRequestBuilder();
+
+            var req = request
+                .buildHttpRequest()
+                .setEndpoint("room/delete/"+id)
+                .setRequestMethod(HttpMethod.Delete);
+            client.setAuthorizationToken(token);
+            client.setOnSuccessRequest(redirectToRoomList);
+            var response = await client.sendRequest(request.getApiRequestBundle());
+        }
+
+
+        private void redirectToRoomList(HttpResponseBundle _response)
+        {
+            if (_response.getHttpResponseMessage().Content != null)
+            {
+                string status = _response.getHttpResponseMessage().ReasonPhrase;
+
+                getView().callMethod("getRoomList");
+            }
+        }
+
         private void setItem(HttpResponseBundle _response)
         {
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                Console.WriteLine("COBA");
               
                 getView().callMethod("setRoomList", _response.getParsedObject<List<Room>>());
             }
