@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotelin_Desktop.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -14,6 +15,29 @@ namespace Hotelin_Desktop.Login
         public LoginController(IMyView _myView) : base(_myView)
         {
 
+        }
+
+        public async void validateToken(string token)
+        {
+            var client = new ApiClient(MyURL.MyURL.baseURL);
+            var request = new ApiRequestBuilder();
+
+            var req = request
+                .buildHttpRequest()
+                .setEndpoint("test")
+                .setRequestMethod(HttpMethod.Get);
+            client.setAuthorizationToken(token);
+            client.setOnSuccessRequest(setTokenStatus);
+            var response = await client.sendRequest(request.getApiRequestBundle());
+
+        }
+
+        private void setTokenStatus(HttpResponseBundle _response)
+        {
+            if (_response.getHttpResponseMessage().Content != null)
+            {
+                getView().callMethod("setTokenStatus", _response.getParsedObject<SuccessMessage>());
+            }
         }
 
         public async void login(string _email, string _password)
