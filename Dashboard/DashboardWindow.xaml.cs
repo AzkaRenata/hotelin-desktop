@@ -28,47 +28,37 @@ namespace Hotelin_Desktop.Dashboard
     /// </summary>
     public partial class DashboardWindow : MyWindow
     {
-        private ProfilePage profilePage;
-        private DetailPage detailPage;
-        private PemesananPage pemesananPage;
-        private PengunjungPage pengunjungPage;
-        private PembatalanPage pembatalanPage;
        
         public DashboardWindow()
         {
             InitializeComponent();
-            profilePage = new ProfilePage();
-            detailPage = new DetailPage();
-            pemesananPage = new PemesananPage();
-            pengunjungPage = new PengunjungPage();
-            pembatalanPage = new PembatalanPage();
-
-            appFrame.Navigate(profilePage);
+ 
+            appFrame.Navigate(new ProfilePage());
         }
 
         private void profileButton_Click(object sender, RoutedEventArgs e)
         {
-            appFrame.Navigate(profilePage);
+            appFrame.Navigate(new ProfilePage());
         }
 
         private void detailButton_Click(object sender, RoutedEventArgs e)
         {
-            appFrame.Navigate(detailPage);
+            appFrame.Navigate(new DetailPage());
         }
 
         private void pemesananButton_Click(object sender, RoutedEventArgs e)
         {
-            appFrame.Navigate(pemesananPage);
+            appFrame.Navigate(new PemesananPage());
         }
 
         private void pengunjungButton_Click(object sender, RoutedEventArgs e)
         {
-            appFrame.Navigate(pengunjungPage);
+            appFrame.Navigate(new PengunjungPage());
         }
 
         private void pembatalanButton_Click(object sender, RoutedEventArgs e)
         {
-            appFrame.Navigate(pembatalanPage);
+            appFrame.Navigate(new PembatalanPage());
         }
 
         private void logoutButton_Click(object sender, RoutedEventArgs e)
