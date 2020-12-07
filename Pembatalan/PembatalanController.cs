@@ -46,7 +46,7 @@ namespace Hotelin_Desktop.Pembatalan
                 //var model = JsonConvert.DeserializeObject<BookingList>(JArray.Parse(_response.getJObject().Value));
                 //Console.WriteLine(model);
                 //Console.WriteLine("HAYO : " + _response.getParsedObject<BookingList>().booking.Count());
-                getView().callMethod("setBookingHistory", _response.getParsedObject<BookingList>().booking);
+                getView().callMethod("setPembatalan", _response.getParsedObject<BookingList>().booking);
             }
         }
     }

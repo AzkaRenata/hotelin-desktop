@@ -38,10 +38,10 @@
                 </Style>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nama Pemesan" Binding="{Binding namaPemesan}" Width="125"/>
-                <DataGridTextColumn Header="Tanggal Menginap" Binding="{Binding tanggalMenginap}" Width="135"/>
-                <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding tipeKamar}" Width="110"/>
-                <DataGridTextColumn Header="Harga" Binding="{Binding harga}" Width="100"/>
+                <DataGridTextColumn Header="Nama Pemesan" Binding="{Binding name}" Width="125"/>
+                <DataGridTextColumn Header="Tanggal Menginap" Binding="{Binding check_in}" Width="135"/>
+                <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding room_price}" Width="110"/>
+                <DataGridTextColumn Header="Harga" Binding="{Binding room_price}" Width="100"/>
                 <DataGridTemplateColumn Header="Action">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -55,5 +55,7 @@
             </DataGrid.Columns>
 
         </DataGrid>
+        <Frame x:Name="appFrame" NavigationUIVisibility="Hidden" Content="" HorizontalAlignment="Left" Height="450" Margin="170,0,0,0" VerticalAlignment="Top" Width="620" />
+
     </Grid>
 </basic:MyPage>

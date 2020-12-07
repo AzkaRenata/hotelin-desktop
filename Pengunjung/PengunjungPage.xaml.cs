@@ -35,13 +35,13 @@ namespace Hotelin_Desktop.Pengunjung
         {
             InitializeComponent();
             setController(new PengunjungController(this));
-            Pengunjung olivia = new Pengunjung();
+            /*Pengunjung olivia = new Pengunjung();
             olivia.namaPemesan = "Olivia";
             olivia.tanggalMenginap = "3-5 Oktober";
             olivia.tipeKamar = "Presidental Suite";
             olivia.harga = "Rp. 1.626.804";
 
-            pengunjung_datagrid.Items.Add(olivia);
+            pengunjung_datagrid.Items.Add(olivia);*/
             getBookingHistory();
         }
 
@@ -54,33 +54,49 @@ namespace Hotelin_Desktop.Pengunjung
 
         public void setBookingHistory(List<BookingModel> bookings)
         {
-            int id = 1;
-            this.bookingList = bookings;
-            
-            actualId.Clear();
-            foreach (BookingModel booking in bookings)
-            {
-                Console.WriteLine(booking.id);
-                Console.WriteLine(booking.name);
-                Console.WriteLine(booking.room_id);
-                Console.WriteLine(booking.room_price);
-                Console.WriteLine(booking.room_type);
-                Console.WriteLine(booking.booking_status);
-            }
-            Console.WriteLine("");
-            Console.WriteLine("");
+            /* int id = 1;
+             this.bookingList = bookings;
 
-        public class Pengunjung
+             actualId.Clear();
+             foreach (BookingModel booking in bookings)
+             {
+                 Console.WriteLine(booking.id);
+                 Console.WriteLine(booking.name);
+                 Console.WriteLine(booking.room_id);
+                 Console.WriteLine(booking.room_price);
+                 Console.WriteLine(booking.room_type);
+                 Console.WriteLine(booking.booking_status);
+             }
+             Console.WriteLine("");
+             Console.WriteLine("");*/
+
+        }
+
+        public void setPengunjung(List<BookingModel> bookingList)
+        {
+            string base_url = MyURL.MyURL.baseURL;
+            Console.WriteLine("DATA KAMAR");
+            foreach (BookingModel booking in bookingList)
+            {
+                this.Dispatcher.Invoke(() =>
+                {
+                    pengunjung_datagrid.Items.Add(booking);
+                });
+
+            }
+        }
+
+        /*public class Pengunjung
         {
             public string namaPemesan { get; set; }
             public string tanggalMenginap { get; set; }
             public string tipeKamar { get; set; }
             public string harga { get; set; }
-        }
+        }*/
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-            //appFrame.Navigate(detailPengunjungPage);
+            appFrame.Navigate(detailPengunjungPage);
         }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
