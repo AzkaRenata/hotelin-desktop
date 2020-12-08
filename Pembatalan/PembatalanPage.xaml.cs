@@ -30,6 +30,8 @@ namespace Hotelin_Desktop.Pembatalan
         private List<BookingModel> bookingList;
         private List<int> actualId = new List<int>();
         private DetailPembatalanPage detailPembatalanPage;
+        private string token;
+
 
         public PembatalanPage()
         {
@@ -48,7 +50,7 @@ namespace Hotelin_Desktop.Pembatalan
 
         private void getBookingHistory()
         {
-            string token = File.ReadAllText(@"userToken.txt");
+            token = File.ReadAllText(@"userToken.txt");
             Console.WriteLine("MASUK : " + token);
             getController().callMethod("requestBookingHistory", token);
         }
@@ -96,11 +98,24 @@ namespace Hotelin_Desktop.Pembatalan
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-            appFrame.Navigate(detailPembatalanPage);
+            /*int id = (pembatalan_datagrid.SelectedItem as Room).id;
+            DetailPembatalanPage detailPembatalanPage = new DetailPembatalanPage(id);
+            NavigationService.Navigate(detailPembatalanPage);*/
+           
         }
+
+        // private void edit_btn_Click(object sender, RoutedEventArgs e)
+        // {
+        // }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
+            int id = (pembatalan_datagrid.SelectedItem as Room).id;
+            MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if(result == MessageBoxResult.Yes)
+            {
+                getController().callMethod("deleteRoom", token, id);
+            }
         }
     }
 }

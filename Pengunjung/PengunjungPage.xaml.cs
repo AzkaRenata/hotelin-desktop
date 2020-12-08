@@ -30,7 +30,8 @@ namespace Hotelin_Desktop.Pengunjung
         private List<BookingModel> bookingList;
         private List<int> actualId = new List<int>();
         private DetailPengunjungPage detailPengunjungPage;
-        
+        private String token;
+
         public PengunjungPage()
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace Hotelin_Desktop.Pengunjung
 
         private void getBookingHistory()
         {
-            string token = File.ReadAllText(@"userToken.txt");
+            token = File.ReadAllText(@"userToken.txt");
             Console.WriteLine("MASUK : " + token);
             getController().callMethod("requestBookingHistory", token);
         }

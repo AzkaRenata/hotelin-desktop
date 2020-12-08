@@ -29,6 +29,8 @@ namespace Hotelin_Desktop.Pemesanan
     {
         //private List<int> actualId = new List<int>();
         private DetailPemesananPage detailPemesananPage;
+        private string token;
+
 
         public PemesananPage()
         {
@@ -48,7 +50,7 @@ namespace Hotelin_Desktop.Pemesanan
 
         private void getBookingHistory()
         {
-            string token = File.ReadAllText(@"userToken.txt");
+            token = File.ReadAllText(@"userToken.txt");
             Console.WriteLine("MASUK : " + token);
             getController().callMethod("requestBookingHistory", token);
         }
@@ -95,12 +97,23 @@ namespace Hotelin_Desktop.Pemesanan
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-            
-            appFrame.Navigate(detailPemesananPage);
+          /*  int id = (pemesanan_datagrid.SelectedItem as Room).id;
+            DetailPemesananPage detailKamarPage = new DetailPemesananPage(id);
+            NavigationService.Navigate(detailKamarPage);*/
         }
+
+        // private void edit_btn_Click(object sender, RoutedEventArgs e)
+        // {
+        // }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
+            /*int id = (pemesanan_datagrid.SelectedItem as Room).id;
+            MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if(result == MessageBoxResult.Yes)
+            {
+                getController().callMethod("deleteRoom", token, id);
+            }*/
         }
     }
 }
