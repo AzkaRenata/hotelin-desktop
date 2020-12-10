@@ -99,6 +99,8 @@
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\BookingModel.cs" />
+    <Compile Include="Model\RoomModel.cs" />
+    <Compile Include="Model\HotelModel.cs" />
     <Compile Include="Pembatalan\PembatalanController.cs" />
     <Compile Include="Pembatalan\PembatalanPage.xaml.cs">
       <DependentUpon>PembatalanPage.xaml</DependentUpon>
@@ -117,6 +119,22 @@
     <Compile Include="Register\RegisterController.cs" />
     <Compile Include="Register\RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TambahKamar\TambahKamarController.cs" />
+    <Compile Include="TambahKamar\TambahKamarPage.xaml.cs">
+      <DependentUpon>TambahKamarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TambahHotel\TambahHotelController.cs" />
+    <Compile Include="TambahHotel\TambahHotelPage.xaml.cs">
+      <DependentUpon>TambahHotelPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateKamar\UpdateKamarController.cs" />
+    <Compile Include="UpdateKamar\UpdateKamarPage.xaml.cs">
+      <DependentUpon>UpdateKamarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateHotel\UpdateHotelController.cs" />
+    <Compile Include="UpdateHotel\UpdateHotelPage.xaml.cs">
+      <DependentUpon>UpdateHotelPage.xaml</DependentUpon>
     </Compile>
     <Page Include="Dashboard\DashboardWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -178,6 +196,22 @@
     <Page Include="Register\RegisterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TambahKamar\TambahKamarPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TambahHotel\TambahHotelPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UpdateKamar\UpdateKamarPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UpdateHotel\UpdateHotelPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -243,5 +277,6 @@
     <Resource Include="Profile\star.png" />
     <Resource Include="Profile\wifi.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

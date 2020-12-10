@@ -56,7 +56,7 @@ namespace Hotelin_Desktop.Pengunjung
         {
             int id = 1;
             this.bookingList = bookings;
-            
+
             actualId.Clear();
             foreach (BookingModel booking in bookings)
             {
@@ -69,6 +69,7 @@ namespace Hotelin_Desktop.Pengunjung
             }
             Console.WriteLine("");
             Console.WriteLine("");
+        }
 
         public class Pengunjung
         {
