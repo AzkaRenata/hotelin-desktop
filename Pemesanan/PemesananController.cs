@@ -45,7 +45,7 @@ namespace Hotelin_Desktop.Pemesanan
                 //var model = JsonConvert.DeserializeObject<BookingList>(JArray.Parse(_response.getJObject().Value));
                 //Console.WriteLine(model);
                 //Console.WriteLine("HAYO : " + _response.getParsedObject<BookingList>().booking.Count());
-                getView().callMethod("setBookingHistory", _response.getParsedObject<BookingList>().booking);
+                getView().callMethod("setPemesanan", _response.getParsedObject<BookingList>().booking);
             }
         }
     }

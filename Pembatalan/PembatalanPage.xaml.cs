@@ -30,31 +30,34 @@ namespace Hotelin_Desktop.Pembatalan
         private List<BookingModel> bookingList;
         private List<int> actualId = new List<int>();
         private DetailPembatalanPage detailPembatalanPage;
+        private string token;
+
 
         public PembatalanPage()
         {
             InitializeComponent();
             setController(new PembatalanController(this));
-            Pembatalan olivia = new Pembatalan();
+            this.detailPembatalanPage = new DetailPembatalanPage();
+            /*Pembatalan olivia = new Pembatalan();
             olivia.namaPemesan = "Olivia";
             olivia.tanggalMenginap = "3-5 Oktober";
             olivia.tipeKamar = "Presidental Suite";
             olivia.harga = "Rp. 1.626.804";
 
-            pembatalan_datagrid.Items.Add(olivia);
+            pembatalan_datagrid.Items.Add(olivia);*/
             getBookingHistory();
         }
 
         private void getBookingHistory()
         {
-            string token = File.ReadAllText(@"userToken.txt");
+            token = File.ReadAllText(@"userToken.txt");
             Console.WriteLine("MASUK : " + token);
             getController().callMethod("requestBookingHistory", token);
         }
 
         public void setBookingHistory(List<BookingModel> bookings)
         {
-            int id = 1;
+            /*int id = 1;
             this.bookingList = bookings;
 
             actualId.Clear();
@@ -68,7 +71,21 @@ namespace Hotelin_Desktop.Pembatalan
                 Console.WriteLine(booking.booking_status);
             }
             Console.WriteLine("");
-            Console.WriteLine("");
+            Console.WriteLine("");*/
+        }
+
+        public void setPembatalan(List<BookingModel> bookingList)
+        {
+            string base_url = MyURL.MyURL.baseURL;
+            Console.WriteLine("DATA KAMAR");
+            foreach (BookingModel booking in bookingList)
+            {
+                this.Dispatcher.Invoke(() =>
+                {
+                    pembatalan_datagrid.Items.Add(booking);
+                });
+
+            }
         }
 
         public class Pembatalan
@@ -81,11 +98,24 @@ namespace Hotelin_Desktop.Pembatalan
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-            //appFrame.Navigate(detailPembatalanPage);
+            /*int id = (pembatalan_datagrid.SelectedItem as Room).id;
+            DetailPembatalanPage detailPembatalanPage = new DetailPembatalanPage(id);
+            NavigationService.Navigate(detailPembatalanPage);*/
+           
         }
+
+        // private void edit_btn_Click(object sender, RoutedEventArgs e)
+        // {
+        // }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
+            int id = (pembatalan_datagrid.SelectedItem as Room).id;
+            MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if(result == MessageBoxResult.Yes)
+            {
+                getController().callMethod("deleteRoom", token, id);
+            }
         }
     }
 }
