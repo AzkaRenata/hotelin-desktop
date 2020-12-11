@@ -21,12 +21,12 @@ namespace Hotelin_Desktop.Pengunjung
 
         public async void requestBookingHistory(string token)
         {
-            var client = new ApiClient("http://192.168.1.2:8000/");
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint("api/booking/list/1")
+                .setEndpoint("booking/list/1")
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);
@@ -47,7 +47,7 @@ namespace Hotelin_Desktop.Pengunjung
                 //var model = JsonConvert.DeserializeObject<BookingList>(JArray.Parse(_response.getJObject().Value));
                 //Console.WriteLine(model);
                 //Console.WriteLine("HAYO : " + _response.getParsedObject<BookingList>().booking.Count());
-                getView().callMethod("setBookingHistory", _response.getParsedObject<BookingList>().booking);
+                getView().callMethod("setPengunjung", _response.getParsedObject<BookingList>().booking);
             }
         }
     }

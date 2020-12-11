@@ -1,4 +1,5 @@
 ﻿using Hotelin_Desktop.Dashboard;
+using Hotelin_Desktop.Model;
 using Hotelin_Desktop.Register;
 using System;
 using System.Collections.Generic;
@@ -44,8 +45,28 @@ namespace Hotelin_Desktop.Login
             setController(new LoginController(this));
             initUIBuilders();
             initUIElements();
+            isLoggedIn();
         }
 
+        private void isLoggedIn()
+        {
+            string token = File.ReadAllText(@"userToken.txt");
+            getController().callMethod("validateToken",token);
+        }
+
+        public void setTokenStatus(SuccessMessage successMessage)
+        {
+            Console.WriteLine("Success : " + successMessage.success);
+            if (successMessage.success)
+            {
+                this.Dispatcher.Invoke(() =>
+                {
+                    dashboardWindow = new DashboardWindow();
+                    dashboardWindow.Show();
+                    Window.GetWindow(this).Close();
+                });
+            }
+        }
         private void initUIBuilders()
         {
             buttonBuilder = new BuilderButton();

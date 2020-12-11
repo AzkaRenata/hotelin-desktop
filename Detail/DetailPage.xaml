@@ -11,7 +11,7 @@
 
     <Grid Background="White">
         <Label 
-            Content="Detail Kamar"
+            Content="List Kamar"
             VerticalContentAlignment="Center"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top"
@@ -21,6 +21,41 @@
             FontSize="26" 
             Foreground="#707070"
             FontWeight="Bold"/>
+        <DataGrid x:Name="kamar_datagrid" 
+            HorizontalAlignment="Left" 
+            Height="207" 
+            Margin="20,102,0,0" 
+            VerticalAlignment="Top" 
+            Width="578">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="LightGray"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="Padding" Value="7"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}" Width="0" Visibility="Hidden"/>
+                <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding room_type}" Width="130"/>
+                <DataGridTextColumn Header="Harga" Binding="{Binding room_price}" Width="130"/>
+                <DataGridTextColumn Header="Kapasitas Tamu" Binding="{Binding guest_capacity}" Width="150"/>
+                <DataGridTemplateColumn Header="Action">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="view_btn" Content="View" Click="view_btn_Click"/>
+                                <Button x:Name="edit_btn" Content="Edit" Click="edit_btn_Click"/>
+                                <Button x:Name="delete_btn" Content="Delete" Click="delete_btn_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
     </Grid>
 
 </basic:MyPage>

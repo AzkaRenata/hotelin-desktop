@@ -110,7 +110,7 @@
                 VerticalAlignment="Top" 
                 Width="285"/>
             <Button x:Name="register_btn" 
-                Content="REGISTER" 
+                Content="LANJUT" 
                 HorizontalAlignment="Left" 
                 Height="38" 
                 Margin="0,180,0,0" 
@@ -119,10 +119,36 @@
                 Background="#FF5399AF" 
                 FontSize="14" 
                 Foreground="White" 
-                BorderBrush="{x:Null}"/>
+                BorderBrush="{x:Null}">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="6"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Grid>
-        <Image HorizontalAlignment="Left" Height="430" Margin="4,16,0,0" VerticalAlignment="Top" Width="378" Source="hotel.jpg" Stretch="UniformToFill"/>
-        <Label Content="Sudah punya akun?" HorizontalAlignment="Left" Margin="498.647,373.94,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="login_link" Content="Login" HorizontalAlignment="Left" Margin="592.883,376.538,0,0" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF5399AF" Click="login_link_Click"/>
+        <Image 
+            HorizontalAlignment="Left" 
+            Height="430" 
+            Margin="4,16,0,0" 
+            VerticalAlignment="Top" 
+            Width="378" 
+            Source="hotel.jpg" 
+            Stretch="UniformToFill"/>
+        <Label 
+            Content="Sudah punya akun?" 
+            HorizontalAlignment="Left" 
+            Margin="498.647,373.94,0,0" 
+            VerticalAlignment="Top"/>
+        <Button 
+            x:Name="login_link" 
+            Content="Login" 
+            HorizontalAlignment="Left" 
+            Margin="592.883,376.538,0,0" 
+            VerticalAlignment="Top"
+            Width="75" Background="{x:Null}" 
+            BorderBrush="{x:Null}" 
+            Foreground="#FF5399AF" 
+            Click="login_link_Click"/>
     </Grid>
 </basic:MyWindow>
