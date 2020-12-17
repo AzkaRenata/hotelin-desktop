@@ -101,8 +101,8 @@ namespace Hotelin_Desktop.Detail
 
         private void edit_btn_Click(object sender, RoutedEventArgs e)
         {
-            //int id = (kamar_datagrid.SelectedItem as Room).id;
-            EditKamarPage editKamarPage = new EditKamarPage();
+            int id = (kamar_datagrid.SelectedItem as Room).id;
+            EditKamarPage editKamarPage = new EditKamarPage(id);
             NavigationService.Navigate(editKamarPage);
         }
 

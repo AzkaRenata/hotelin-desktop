@@ -77,6 +77,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddKamar\AddKamarPage.xaml.cs">
+      <DependentUpon>AddKamarPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\DashboardWindow.xaml.cs">
       <DependentUpon>DashboardWindow.xaml</DependentUpon>
     </Compile>
@@ -139,14 +142,14 @@
     <Compile Include="Register\RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TambahHotel\TambahHotelController.cs" />
-    <Compile Include="TambahHotel\TambahHotelPage.xaml.cs">
-      <DependentUpon>TambahHotelPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TambahKamar\TambahKamarPage.xaml.cs">
       <DependentUpon>TambahKamarPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="TambahKamar\TambahKamarController.cs" />
+    <Page Include="AddKamar\AddKamarPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Dashboard\DashboardWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -219,10 +222,6 @@
     <Page Include="Register\RegisterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TambahHotel\TambahHotelPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="TambahKamar\TambahKamarPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -310,6 +309,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="TambahKamar\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AddKamar\down-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

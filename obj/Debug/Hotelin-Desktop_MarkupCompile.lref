@@ -1,5 +1,6 @@
 ﻿
 
+FC:\xampp\htdocs\hotelin-desktop\AddKamar\AddKamarPage.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\Dashboard\DashboardWindow.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\DetailKamar\DetailKamarPage.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\DetailPembatalan\DetailPembatalanPage.xaml;;
@@ -16,8 +17,5 @@ FC:\xampp\htdocs\hotelin-desktop\Pengunjung\PengunjungPage.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\Profile\ProfilePage.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\Register\FormRegisterWindow.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\Register\RegisterWindow.xaml;;
-FC:\xampp\htdocs\hotelin-desktop\TambahHotel\TambahHotelPage.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\TambahKamar\TambahKamarPage.xaml;;
-FC:\xampp\htdocs\hotelin-desktop\UpdateHotel\UpdateHotelPage.xaml;;
-FC:\xampp\htdocs\hotelin-desktop\UpdateKamar\UpdateKamarPage.xaml;;
 

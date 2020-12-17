@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\xampp\htdocs\hotelin-desktop\App.xaml
-187654726
+18-2089125003
 
-431580453059
-15442715386
-Dashboard\DashboardWindow.xaml;DetailKamar\DetailKamarPage.xaml;DetailPembatalan\DetailPembatalanPage.xaml;DetailPemesanan\DetailPemesananPage.xaml;DetailPengunjung\DetailPengunjungPage.xaml;Detail\DetailPage.xaml;EditKamar\EditKamarPage.xaml;EditHotel\EditHotelPage.xaml;Login\LoginWindow.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\FormRegisterWindow.xaml;Register\RegisterWindow.xaml;TambahHotel\TambahHotelPage.xaml;TambahKamar\TambahKamarPage.xaml;
+42-2100070332
+15-440815820
+AddKamar\AddKamarPage.xaml;Dashboard\DashboardWindow.xaml;DetailKamar\DetailKamarPage.xaml;DetailPembatalan\DetailPembatalanPage.xaml;DetailPemesanan\DetailPemesananPage.xaml;DetailPengunjung\DetailPengunjungPage.xaml;Detail\DetailPage.xaml;EditKamar\EditKamarPage.xaml;EditHotel\EditHotelPage.xaml;Login\LoginWindow.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\FormRegisterWindow.xaml;Register\RegisterWindow.xaml;TambahKamar\TambahKamarPage.xaml;
 
-True
+False
 
