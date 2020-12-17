@@ -56,6 +56,14 @@
             </DataGrid.Columns>
 
         </DataGrid>
+        <Button 
+            x:Name="add_kamar_btn"
+            Content="Add Kamar" 
+            HorizontalAlignment="Left" 
+            Height="20" Margin="510,62,0,0" 
+            VerticalAlignment="Top" 
+            Width="68"
+            Click="addKamarButton_Click"/>
     </Grid>
 
 </basic:MyPage>

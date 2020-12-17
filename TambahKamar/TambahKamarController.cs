@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Velacro.Basic;
 using Velacro.Api;
 using System.Net.Http;
+using System.IO;
 
 namespace Hotelin_Desktop.TambahKamar
 {
@@ -25,7 +26,7 @@ namespace Hotelin_Desktop.TambahKamar
             var client = new ApiClient(API);
             var request = new ApiRequestBuilder();
 
-            string bearerToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYwNzYwNjQ5MCwiZXhwIjoxNjA3NjEwMDkwLCJuYmYiOjE2MDc2MDY0OTAsImp0aSI6Ik1FRWR1TWU2bVU3Z0lWQkIiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.DjNwcrJbhratfEfo6zygB6YsERIolS_xfZ8xw5gnrQE";
+            string bearerToken = File.ReadAllText(@"userToken.txt");
 
             var req = request
                 .buildHttpRequest()

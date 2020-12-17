@@ -187,7 +187,8 @@
         </Grid>
 
         <Button 
-            Content="Edit Profile" 
+            x:Name="editProfileButton"
+            Content="Edit Hotel" 
             VerticalContentAlignment="Center"
             HorizontalContentAlignment="Center"
             HorizontalAlignment="Left" 
@@ -198,7 +199,8 @@
             Background="#5399af" 
             BorderBrush="{x:Null}" 
             FontWeight="Bold" 
-            Foreground="White"/>
+            Foreground="White"
+            Click="editProfileButton_Click"/>
 
         <Image 
             HorizontalAlignment="Left" 

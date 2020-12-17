@@ -1,5 +1,7 @@
 ﻿using Hotelin_Desktop.DetailKamar;
+using Hotelin_Desktop.EditKamar;
 using Hotelin_Desktop.Model;
+using Hotelin_Desktop.TambahKamar;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -38,6 +40,12 @@ namespace Hotelin_Desktop.Detail
             setController(new RoomListController(this));
             getRoomList();
            
+        }
+
+        private void addKamarButton_Click(object sender, RoutedEventArgs e)
+        {
+            TambahKamarPage tambahKamarPage = new TambahKamarPage();
+            NavigationService.Navigate(tambahKamarPage);
         }
 
         private void initUIBuilders()
@@ -93,6 +101,9 @@ namespace Hotelin_Desktop.Detail
 
         private void edit_btn_Click(object sender, RoutedEventArgs e)
         {
+            //int id = (kamar_datagrid.SelectedItem as Room).id;
+            EditKamarPage editKamarPage = new EditKamarPage();
+            NavigationService.Navigate(editKamarPage);
         }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)

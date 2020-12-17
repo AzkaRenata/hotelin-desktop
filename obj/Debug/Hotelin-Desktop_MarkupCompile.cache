@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\
+C:\xampp\htdocs\hotelin-desktop\obj\Debug\
 Hotelin_Desktop
 none
 false
 DEBUG;TRACE
-C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\App.xaml
-17-706852232
+C:\xampp\htdocs\hotelin-desktop\App.xaml
+187654726
 
-231608273885
-15-735649527
-AddKamar\AddKamarPage.xaml;Dashboard\DashboardWindow.xaml;DetailKamar\DetailKamarPage.xaml;DetailPembatalan\DetailPembatalanPage.xaml;DetailPemesanan\DetailPemesananPage.xaml;DetailPengunjung\DetailPengunjungPage.xaml;Detail\DetailPage.xaml;EditKamar\EditKamarPage.xaml;EditProfile\EditProfilePage.xaml;Login\LoginWindow.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\FormRegisterWindow.xaml;Register\RegisterWindow.xaml;
+42-1872154870
+15442715386
+Dashboard\DashboardWindow.xaml;DetailKamar\DetailKamarPage.xaml;DetailPembatalan\DetailPembatalanPage.xaml;DetailPemesanan\DetailPemesananPage.xaml;DetailPengunjung\DetailPengunjungPage.xaml;Detail\DetailPage.xaml;EditKamar\EditKamarPage.xaml;EditHotel\EditHotelPage.xaml;Login\LoginWindow.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\FormRegisterWindow.xaml;Register\RegisterWindow.xaml;TambahHotel\TambahHotelPage.xaml;TambahKamar\TambahKamarPage.xaml;
 
 False
 
