@@ -21,11 +21,11 @@
             Foreground="#707070"
             FontWeight="Bold"/>
         <TextBox 
-            x:Name="fasilitas_kamar_txt"
+            x:Name="tipe_kamar_txt"
             HorizontalAlignment="Left" 
             Height="34" 
             TextWrapping="Wrap" 
-            Text="Fasilitas Kamar" 
+            Text="Tipe Kamar" 
             VerticalAlignment="Top" 
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
@@ -37,31 +37,15 @@
             </TextBox.Resources>
         </TextBox>
         <TextBox 
-            x:Name="tipe_kamar_txt"
+            x:Name="tipe_kasur_txt"
             HorizontalAlignment="Left" 
             Height="34" 
             TextWrapping="Wrap" 
-            Text="Tipe Kamar" 
+            Text="Tipe Kasur" 
             VerticalAlignment="Top" 
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
             Padding="3,7,3,3" Margin="28,130,0,0">
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="6"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <TextBox 
-            x:Name="jumlah_kamar_txt"
-            HorizontalAlignment="Left" 
-            Height="34" 
-            TextWrapping="Wrap" 
-            Text="Jumlah Kamar" 
-            VerticalAlignment="Top" 
-            Width="279" 
-            RenderTransformOrigin="-0.132,0.621" 
-            Padding="3,7,3,3" Margin="28,175,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
@@ -77,6 +61,22 @@
             VerticalAlignment="Top" 
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
+            Padding="3,7,3,3" Margin="28,175,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox 
+            x:Name="kapasitas_tamu_txt"
+            HorizontalAlignment="Left" 
+            Height="34" 
+            TextWrapping="Wrap" 
+            Text="Kapasitas Tamu" 
+            VerticalAlignment="Top" 
+            Width="279" 
+            RenderTransformOrigin="-0.132,0.621" 
             Padding="3,7,3,3" Margin="28,218,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -87,7 +87,6 @@
 
         <Rectangle
             AllowDrop="True"
-            Drop="rectangle_drop"
             Fill="White"
             RadiusX="6"
             RadiusY="6"
@@ -134,8 +133,7 @@
             Foreground="White" 
             BorderBrush="{x:Null}" 
             Background="#FF5399AF"
-            Margin="28,286,0,0"
-            Click="edit_kamar_btn_Click" >
+            Margin="28,286,0,0">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>

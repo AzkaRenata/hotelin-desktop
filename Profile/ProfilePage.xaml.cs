@@ -1,4 +1,6 @@
-﻿using Hotelin_Desktop.DetailPengunjung;
+﻿using Hotelin_Desktop.Dashboard;
+using Hotelin_Desktop.DetailPengunjung;
+using Hotelin_Desktop.EditHotel;
 using Hotelin_Desktop.Model;
 using System;
 using System.Collections.Generic;
@@ -34,6 +36,12 @@ namespace Hotelin_Desktop.Profile
             setController(new ProfileController(this));
             
             getProfile();
+        }
+
+        private void editProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            EditHotelPage editHotelPage = new EditHotelPage();
+            NavigationService.Navigate(editHotelPage);
         }
 
         private void getProfile()

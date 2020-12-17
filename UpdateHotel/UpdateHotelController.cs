@@ -11,12 +11,12 @@ using Newtonsoft.Json;
 
 namespace Hotelin_Desktop.UpdateHotel
 {
-    public class UpdateHotelController : MyController
+    public class EditHotelController : MyController
     {
         private HotelModel currentHotel;
         private string bearerToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYwNzM0NDk5OSwiZXhwIjoxNjA3MzQ4NTk5LCJuYmYiOjE2MDczNDQ5OTksImp0aSI6InhXM3FCbEloeUFlcERTcWgiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.aivmXeX4tqVK7ZfeYbIQ2e4Y8vF_nVgSY9vvdHXw7qU"; // BEARER TOKEN GOES HERE
 
-        public UpdateHotelController(IMyView _myView, int _hotelID) : base(_myView) 
+        public EditHotelController(IMyView _myView, int _hotelID) : base(_myView) 
         {
             getCurrentHotelDetail(_hotelID);
         }

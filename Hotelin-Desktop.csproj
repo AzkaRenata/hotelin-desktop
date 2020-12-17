@@ -77,9 +77,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddKamar\AddKamarPage.xaml.cs">
-      <DependentUpon>AddKamarPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Dashboard\DashboardWindow.xaml.cs">
       <DependentUpon>DashboardWindow.xaml</DependentUpon>
     </Compile>
@@ -100,19 +97,23 @@
       <DependentUpon>DetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Detail\RoomListController.cs" />
+    <Compile Include="EditHotel\EditHotelController.cs" />
     <Compile Include="EditKamar\EditKamarPage.xaml.cs">
       <DependentUpon>EditKamarPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EditProfile\EditProfilePage.xaml.cs">
-      <DependentUpon>EditProfilePage.xaml</DependentUpon>
+    <Compile Include="EditHotel\EditHotelPage.xaml.cs">
+      <DependentUpon>EditHotelPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditKamar\EditKamarController.cs" />
     <Compile Include="Login\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\BookingModel.cs" />
+    <Compile Include="Model\HotelModel.cs" />
     <Compile Include="Model\HotelProfile.cs" />
     <Compile Include="Model\RoomDetail.cs" />
     <Compile Include="Model\RoomList.cs" />
+    <Compile Include="Model\RoomModel.cs" />
     <Compile Include="Model\SuccessMessage.cs" />
     <Compile Include="MyURL\MyURL.cs" />
     <Compile Include="Pembatalan\PembatalanController.cs" />
@@ -138,10 +139,14 @@
     <Compile Include="Register\RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddKamar\AddKamarPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="TambahHotel\TambahHotelController.cs" />
+    <Compile Include="TambahHotel\TambahHotelPage.xaml.cs">
+      <DependentUpon>TambahHotelPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TambahKamar\TambahKamarPage.xaml.cs">
+      <DependentUpon>TambahKamarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TambahKamar\TambahKamarController.cs" />
     <Page Include="Dashboard\DashboardWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -170,7 +175,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EditProfile\EditProfilePage.xaml">
+    <Page Include="EditHotel\EditHotelPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -215,6 +220,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TambahHotel\TambahHotelPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TambahKamar\TambahKamarPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -239,6 +252,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -281,6 +295,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Profile\star-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hotel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EditHotel\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Register\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EditKamar\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TambahKamar\down-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

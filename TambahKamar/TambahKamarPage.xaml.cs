@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotelin_Desktop.TambahKamar;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,8 +29,8 @@ namespace Hotelin_Desktop.TambahKamar
         private IMyButton addRoomButton;
         private IMyTextBox roomTypeTxtBox;
         private IMyTextBox bedTypeTxtBox;
-        private IMyTextBox roomPriceTxtBox;
         private IMyTextBox guestCapacityTxtBox;
+        private IMyTextBox roomPriceTxtBox;
 
         private int HOTEL_ID = 21;
 
@@ -49,12 +50,12 @@ namespace Hotelin_Desktop.TambahKamar
 
         private void initUIElements()
         {
-            addRoomButton = buttonBuilder.activate(this, "tambah_kamar_btn")
+            addRoomButton = buttonBuilder.activate(this, "add_kamar_btn")
                 .addOnClick(this, "onAddRoomButtonClick");
             roomTypeTxtBox = txtBoxBuilder.activate(this, "tipe_kamar_txt");
-            bedTypeTxtBox = txtBoxBuilder.activate(this, "tipe_bed_txt");
-            roomPriceTxtBox = txtBoxBuilder.activate(this, "harga_kamar_txt");
+            bedTypeTxtBox = txtBoxBuilder.activate(this, "tipe_kasur_txt");
             guestCapacityTxtBox = txtBoxBuilder.activate(this, "kapasitas_tamu_txt");
+            roomPriceTxtBox = txtBoxBuilder.activate(this, "harga_kamar_txt");
         }
 
         public void onAddRoomButtonClick()
@@ -71,6 +72,11 @@ namespace Hotelin_Desktop.TambahKamar
                 long.Parse(roomPriceTxtBox.getText()),
                 int.Parse(guestCapacityTxtBox.getText())
             );
+
+        }
+
+        private void tipe_kamar_txt_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
     }

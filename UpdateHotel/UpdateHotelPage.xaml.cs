@@ -21,7 +21,7 @@ namespace Hotelin_Desktop.UpdateHotel
     /// <summary>
     /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class UpdateHotelPage : MyPage
+    public partial class EditHotelPage : MyPage
     {
         private BuilderButton buttonBuilder;
         private BuilderTextBox txtBoxBuilder;
@@ -30,7 +30,7 @@ namespace Hotelin_Desktop.UpdateHotel
         private IMyTextBox hotelLocationTxtBox;
         private IMyTextBox hotelDescriptionTxtBox;
 
-        public UpdateHotelPage()
+        public EditHotelPage()
         {
             InitializeComponent();
             setController(new UpdateHotelController(this, 21));
