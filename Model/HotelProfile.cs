@@ -25,6 +25,7 @@ namespace Hotelin_Desktop.Model
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            
         }
     }
 
@@ -61,6 +62,7 @@ namespace Hotelin_Desktop.Model
 
     public class HotelProfile
     {
+        
         public List<Hotel> hotel { get; set; }
         public List<Room> room { get; set; }
         public List<RoomFacility> facility { get; set; }

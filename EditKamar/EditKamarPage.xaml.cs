@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotelin_Desktop.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,12 +32,13 @@ namespace Hotelin_Desktop.EditKamar
         private IMyTextBox roomPriceTxtBox;
         private IMyTextBox guestCapacityTxtBox;
 
-        public EditKamarPage()
+        public EditKamarPage(int id)
         {
             InitializeComponent();
-            setController(new EditKamarController(this, 10));
+            setController(new EditKamarController(this, id));
             initUIBuilders();
             initUIElements();
+            //initRoomData(id);
         }
 
         private void initUIBuilders()
@@ -67,17 +69,14 @@ namespace Hotelin_Desktop.EditKamar
                 );
         }
 
-        public void setCurrentRoomValue(
-            string _roomType,
-            string _bedType,
-            long _roomPrice,
-            int _guestCapacity
-            )
+        public void setCurrentRoomValue(RoomResponse roomResponse)
         {
-            roomTypeTxtBox.setText(_roomType);
-            bedTypeTxtBox.setText(_bedType);
-            roomPriceTxtBox.setText(Convert.ToString(_roomPrice));
-            guestCapacityTxtBox.setText(Convert.ToString(_guestCapacity));
+            RoomModel room = roomResponse.room;
+
+            roomTypeTxtBox.setText(room.room_type);
+            bedTypeTxtBox.setText(room.bed_type);
+            roomPriceTxtBox.setText(Convert.ToString(room.room_price));
+            guestCapacityTxtBox.setText(Convert.ToString(room.guest_capacity));
         }
     }
 }

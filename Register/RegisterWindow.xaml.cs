@@ -70,11 +70,8 @@ namespace Hotelin_Desktop.Register
                 usernameTxtBox.getText(),
                 emailTxtBox.getText(),
                 nameTxtBox.getText(),
-                passwordTxtBox.getText());
-            Console.WriteLine(usernameTxtBox.getText());
-            Console.WriteLine(emailTxtBox.getText());
-            Console.WriteLine(nameTxtBox.getText());
-            Console.WriteLine(passwordTxtBox.getText());
+                passwordTxtBox.getText(),
+                passwordcTxtBox.getText());
         }
 
         public void setRegisterStatus(string _status)

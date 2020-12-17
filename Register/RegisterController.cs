@@ -17,7 +17,8 @@ namespace Hotelin_Desktop.Register
             string _username,
             string _email,
             string _name,
-            string _password)
+            string _password,
+            string _passwordConfirmation)
         {
             string API = "http://192.168.1.2:8000/";
             string endPoint = "api/user/register";
@@ -27,22 +28,16 @@ namespace Hotelin_Desktop.Register
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .addParameters("username", "ajezz")
-                .addParameters("name", "ajezzK")
-                .addParameters("email", "ajezz@gmail.com")
-                .addParameters("password", "ajez123")
-                .addParameters("password_confirmation", "ajez123")
+                .addParameters("username", _username)
+                .addParameters("name", _name)
+                .addParameters("email", _email)
+                .addParameters("password", _password)
+                .addParameters("password_confirmation", _passwordConfirmation)
                 .setEndpoint(endPoint)
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
             client.setOnSuccessRequest(setViewRegisterStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
-            Console.WriteLine("tes1");
-            //Console.WriteLine(response.getJObject()["user"]);
-            Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-            Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-            Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
-
         }
 
         private void setViewRegisterStatus(HttpResponseBundle _response)
