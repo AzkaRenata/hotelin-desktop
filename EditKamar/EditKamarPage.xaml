@@ -5,6 +5,12 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Hotelin_Desktop.EditKamar"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      Background="{DynamicResource MaterialDesignPaper}"
+      TextElement.FontWeight="Medium"
+      TextElement.FontSize="14"
+      FontFamily="{materialDesign:MaterialDesignFont}"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="620"
       Title="EditKamarPage">
@@ -22,11 +28,12 @@
             FontWeight="Bold"/>
         <TextBox 
             x:Name="tipe_kamar_txt"
+            materialDesign:HintAssist.Hint="Tipe kamar"
             HorizontalAlignment="Left" 
-            Height="34" 
+            Height="46" 
             TextWrapping="Wrap" 
-            Text="Tipe Kamar" 
             VerticalAlignment="Top" 
+            VerticalContentAlignment="Center"
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
             Padding="3,7,3,3" Margin="28,87,0,0">
@@ -38,12 +45,13 @@
         </TextBox>
         <TextBox 
             x:Name="tipe_kasur_txt"
+            materialDesign:HintAssist.Hint="Tipe kasur"
             HorizontalAlignment="Left" 
-            Height="34" 
-            TextWrapping="Wrap" 
-            Text="Tipe Kasur" 
+            Height="46" 
+            TextWrapping="Wrap"
             VerticalAlignment="Top" 
             Width="279" 
+            VerticalContentAlignment="Center"
             RenderTransformOrigin="-0.132,0.621" 
             Padding="3,7,3,3" Margin="28,130,0,0">
             <TextBox.Resources>
@@ -54,12 +62,13 @@
         </TextBox>
         <TextBox 
             x:Name="harga_kamar_txt"
+            materialDesign:HintAssist.Hint="Harga kamar"
             HorizontalAlignment="Left" 
-            Height="34" 
-            TextWrapping="Wrap" 
-            Text="Harga Kamar" 
+            Height="46" 
+            TextWrapping="Wrap"
             VerticalAlignment="Top" 
             Width="279" 
+            VerticalContentAlignment="Center"
             RenderTransformOrigin="-0.132,0.621" 
             Padding="3,7,3,3" Margin="28,175,0,0">
             <TextBox.Resources>
@@ -70,14 +79,15 @@
         </TextBox>
         <TextBox 
             x:Name="kapasitas_tamu_txt"
+             materialDesign:HintAssist.Hint="Kapasitas Tamu"
             HorizontalAlignment="Left" 
-            Height="34" 
-            TextWrapping="Wrap" 
-            Text="Kapasitas Tamu" 
+            Height="46" 
+            TextWrapping="Wrap"
             VerticalAlignment="Top" 
             Width="279" 
+            VerticalContentAlignment="Center"
             RenderTransformOrigin="-0.132,0.621" 
-            Padding="3,7,3,3" Margin="28,218,0,0">
+            Padding="3,7,3,3" Margin="28,221,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
@@ -94,7 +104,7 @@
             StrokeThickness="1"
             StrokeDashCap="Round"
             Stroke="#707070" 
-            Margin="328,87,170,241" 
+            Margin="328,98,170,230" 
             Width="122" />
         <StackPanel
             Margin="328,87,170,241" 
@@ -121,7 +131,7 @@
              VerticalAlignment="Center" 
              VerticalContentAlignment="Center" 
              Height="34" 
-             Margin="457,86,21,330">
+             Margin="457,97,21,319">
         </Label>
         <Button 
             x:Name="edit_kamar_btn" 
