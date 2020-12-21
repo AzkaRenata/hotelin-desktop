@@ -5,6 +5,12 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Hotelin_Desktop.EditHotel"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      Background="{DynamicResource MaterialDesignPaper}"
+      TextElement.FontWeight="Medium"
+      TextElement.FontSize="14"
+      FontFamily="{materialDesign:MaterialDesignFont}"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="620"
       Title="EditHotelPage">
@@ -22,11 +28,12 @@
             FontWeight="Bold"/>
         <TextBox 
             x:Name="nama_hotel_txt"
+            materialDesign:HintAssist.Hint="Nama Hotel"
             HorizontalAlignment="Left" 
-            Height="34" 
-            TextWrapping="Wrap" 
-            Text="Nama Hotel" 
+            Height="46" 
+            TextWrapping="Wrap"
             VerticalAlignment="Top" 
+            VerticalContentAlignment="Center"
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
             Padding="3,7,3,3" Margin="28,87,0,0">
@@ -38,14 +45,15 @@
         </TextBox>
         <TextBox 
             x:Name="lokasi_hotel_txt"
+            materialDesign:HintAssist.Hint="Lokasi Hotel"
             HorizontalAlignment="Left" 
-            Height="34" 
-            TextWrapping="Wrap" 
-            Text="Lokasi Hotel" 
+            Height="46" 
+            TextWrapping="Wrap"
             VerticalAlignment="Top" 
+            VerticalContentAlignment="Center"
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
-            Padding="3,7,3,3" Margin="28,130,0,0">
+            Padding="3,7,3,3" Margin="28,131,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
@@ -54,14 +62,15 @@
         </TextBox>
         <TextBox 
             x:Name="fasilitas_hotel_txt"
+            materialDesign:HintAssist.Hint="Fasilitas Hotel"
             HorizontalAlignment="Left" 
-            Height="34" 
-            TextWrapping="Wrap" 
-            Text="Fasilitas Hotel" 
+            Height="46" 
+            TextWrapping="Wrap"
             VerticalAlignment="Top" 
+            VerticalContentAlignment="Center"
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
-            Padding="3,7,3,3" Margin="28,175,0,0">
+            Padding="3,7,3,3" Margin="28,176,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
@@ -70,14 +79,14 @@
         </TextBox>
         <TextBox 
             x:Name="deskripsi_hotel_txt"
+            materialDesign:HintAssist.Hint="Deskripsi Hotel"
             HorizontalAlignment="Left" 
             Height="77" 
-            TextWrapping="Wrap" 
-            Text="Deskripsi Hotel" 
+            TextWrapping="Wrap"
             VerticalAlignment="Top" 
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
-            Padding="3,7,3,3" Margin="28,220,0,0">
+            Padding="3,7,3,3" Margin="28,221,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>

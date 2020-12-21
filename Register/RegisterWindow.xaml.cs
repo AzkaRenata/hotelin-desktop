@@ -16,6 +16,7 @@ using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
+using Velacro.UIElements.PasswordBox;
 
 namespace Hotelin_Desktop.Register
 {
@@ -26,13 +27,14 @@ namespace Hotelin_Desktop.Register
     {
         private BuilderButton buttonBuilder;
         private BuilderTextBox txtBoxBuilder;
+        private BuilderPasswordBox passBoxBuilder;
         private BuilderTextBlock txtBlockBuilder;
         private IMyButton registerButton;
         private IMyTextBox usernameTxtBox;
         private IMyTextBox emailTxtBox;
         private IMyTextBox nameTxtBox;
-        private IMyTextBox passwordTxtBox;
-        private IMyTextBox passwordcTxtBox;
+        private IMyPasswordBox passwordPassBox;
+        private IMyPasswordBox passwordcPassBox;
         private IMyTextBlock registerStatusTxtBlock;
         private MyWindow loginWindow;
 
@@ -49,6 +51,7 @@ namespace Hotelin_Desktop.Register
         {
             buttonBuilder = new BuilderButton();
             txtBoxBuilder = new BuilderTextBox();
+            passBoxBuilder = new BuilderPasswordBox();
             txtBlockBuilder = new BuilderTextBlock();
         }
 
@@ -59,8 +62,8 @@ namespace Hotelin_Desktop.Register
             usernameTxtBox = txtBoxBuilder.activate(this, "username_txt");
             nameTxtBox = txtBoxBuilder.activate(this, "name_txt");
             emailTxtBox = txtBoxBuilder.activate(this, "email_txt");
-            passwordTxtBox = txtBoxBuilder.activate(this, "password_txt");
-            passwordcTxtBox = txtBoxBuilder.activate(this, "passwordConfirmation_txt");
+            passwordPassBox = passBoxBuilder.activate(this, "password_txt");
+            passwordcPassBox = passBoxBuilder.activate(this, "passwordConfirmation_txt");
             registerStatusTxtBlock = txtBlockBuilder.activate(this, "registerStatus");
         }
 
@@ -70,8 +73,8 @@ namespace Hotelin_Desktop.Register
                 usernameTxtBox.getText(),
                 emailTxtBox.getText(),
                 nameTxtBox.getText(),
-                passwordTxtBox.getText(),
-                passwordcTxtBox.getText());
+                passwordPassBox.getPassword(),
+                passwordcPassBox.getPassword());
         }
 
         public void setRegisterStatus(string _status)
