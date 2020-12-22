@@ -97,9 +97,9 @@ namespace Hotelin_Desktop.Pemesanan
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-          /*  int id = (pemesanan_datagrid.SelectedItem as Room).id;
+            int id = (pemesanan_datagrid.SelectedItem as Room).id;
             DetailPemesananPage detailKamarPage = new DetailPemesananPage(id);
-            NavigationService.Navigate(detailKamarPage);*/
+            NavigationService.Navigate(detailKamarPage);
         }
 
         // private void edit_btn_Click(object sender, RoutedEventArgs e)

@@ -19,6 +19,7 @@ using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
+using Hotelin_Desktop.DetailPemesanan;
 
 namespace Hotelin_Desktop.Pengunjung
 {
@@ -98,6 +99,9 @@ namespace Hotelin_Desktop.Pengunjung
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
             appFrame.Navigate(detailPengunjungPage);
+
+            DetailPengunjungPage detailPengunjungPage = new DetailPengunjungPage(id);
+            NavigationService.Navigate(detailPengunjungPage);
         }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)

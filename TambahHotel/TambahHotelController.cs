@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 using Velacro.Basic;
 using Velacro.Api;
 using System.Net.Http;
+using System.IO;
 
 namespace Hotelin_Desktop.TambahHotel
 {
     public class TambahHotelController : MyController
     {
         public TambahHotelController(IMyView _myView) : base(_myView) { }
+
+        public TambahHotelPage TambahHotelPage { get; }
 
         public async void addHotel(
             string _hotelName,
@@ -23,6 +26,8 @@ namespace Hotelin_Desktop.TambahHotel
             string endPoint = "api/hotel/create";
             var client = new ApiClient(API);
             var request = new ApiRequestBuilder();
+
+            string bearerToken = File.ReadAllText(@"userToken.txt");
 
             var req = request
                 .buildHttpRequest()
@@ -38,7 +43,7 @@ namespace Hotelin_Desktop.TambahHotel
                 .setEndpoint(endPoint)
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
-            client.setAuthorizationToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYwNzAxMTc4NywiZXhwIjoxNjA3MDE1Mzg3LCJuYmYiOjE2MDcwMTE3ODcsImp0aSI6ImNpaXljQVhMQ1hsSnN0NnAiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.f9VYhQq_5auhSa8yLJgjD77oAerBpUNeHO3K7X-x0hw"); // BEARER TOKEN GOES HERE
+            client.setAuthorizationToken(bearerToken); // BEARER TOKEN GOES HERE
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
             Console.WriteLine("tes1");

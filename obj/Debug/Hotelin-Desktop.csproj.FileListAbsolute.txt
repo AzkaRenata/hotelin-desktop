@@ -124,3 +124,5 @@ C:\xampp\htdocs\hotelin-desktop\obj\Debug\TambahKamar\TambahKamarPage1.g.cs
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\TambahKamar\TambahKamarPage1.baml
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\EditHotel\EditHotelPage.g.cs
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\EditHotel\EditHotelPage.baml
+C:\xampp\htdocs\hotelin-desktop\obj\Debug\TambahHotel\TambahHotelWindow.g.cs
+C:\xampp\htdocs\hotelin-desktop\obj\Debug\TambahHotel\TambahHotelWindow.baml

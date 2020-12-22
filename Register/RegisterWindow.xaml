@@ -119,8 +119,7 @@
                 Background="#FF5399AF" 
                 FontSize="14" 
                 Foreground="White" 
-                BorderBrush="{x:Null}"
-                >
+                BorderBrush="{x:Null}">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="6"/>

@@ -72,12 +72,6 @@ namespace Hotelin_Desktop.TambahKamar
                 long.Parse(roomPriceTxtBox.getText()),
                 int.Parse(guestCapacityTxtBox.getText())
             );
-
-        }
-
-        private void tipe_kamar_txt_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

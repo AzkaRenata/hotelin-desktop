@@ -98,9 +98,9 @@ namespace Hotelin_Desktop.Pembatalan
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-            /*int id = (pembatalan_datagrid.SelectedItem as Room).id;
+            int id = (pembatalan_datagrid.SelectedItem as Room).id;
             DetailPembatalanPage detailPembatalanPage = new DetailPembatalanPage(id);
-            NavigationService.Navigate(detailPembatalanPage);*/
+            NavigationService.Navigate(detailPembatalanPage);
            
         }
 

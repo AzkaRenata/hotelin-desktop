@@ -1,4 +1,5 @@
 ﻿using Hotelin_Desktop.Login;
+//using Hotelin_Desktop.TambahHotel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
@@ -45,6 +47,12 @@ namespace Hotelin_Desktop.Register
             initUIElements();
         }
 
+        //private void registerBtn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    TambahHotelPage tambahHotelPage = new TambahHotelPage();
+        //    NavigationService.Navigate(tambahHotelPage);
+        //}
+
         private void initUIBuilders()
         {
             buttonBuilder = new BuilderButton();
@@ -75,6 +83,8 @@ namespace Hotelin_Desktop.Register
             Console.WriteLine(emailTxtBox.getText());
             Console.WriteLine(nameTxtBox.getText());
             Console.WriteLine(passwordTxtBox.getText());
+            //TambahHotelPage tambahHotelPage = new TambahHotelPage();
+            //NavigationService.Navigate(tambahHotelPage);
         }
 
         public void setRegisterStatus(string _status)

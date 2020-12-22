@@ -132,16 +132,13 @@
     <Compile Include="Profile\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Register\FormRegisterWindow.xaml.cs">
-      <DependentUpon>FormRegisterWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Register\RegisterController.cs" />
     <Compile Include="Register\RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TambahHotel\TambahHotelController.cs" />
-    <Compile Include="TambahHotel\TambahHotelPage.xaml.cs">
-      <DependentUpon>TambahHotelPage.xaml</DependentUpon>
+    <Compile Include="TambahHotel\TambahHotelWindow.xaml.cs">
+      <DependentUpon>TambahHotelWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TambahKamar\TambahKamarPage.xaml.cs">
       <DependentUpon>TambahKamarPage.xaml</DependentUpon>
@@ -212,15 +209,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Register\FormRegisterWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Register\RegisterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TambahHotel\TambahHotelPage.xaml">
+    <Page Include="TambahHotel\TambahHotelWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -310,6 +303,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="TambahKamar\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pembatalan\delete.png" />
+    <Resource Include="Pembatalan\view.png" />
+    <Resource Include="Pemesanan\delete.png" />
+    <Resource Include="Pemesanan\view.png" />
+    <Resource Include="Pengunjung\delete.png" />
+    <Resource Include="Pengunjung\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TambahHotel\down-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
