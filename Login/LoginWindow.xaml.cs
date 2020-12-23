@@ -19,6 +19,7 @@ using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
+using Velacro.UIElements.PasswordBox;
 
 
 namespace Hotelin_Desktop.Login
@@ -30,10 +31,11 @@ namespace Hotelin_Desktop.Login
     {
         private BuilderButton buttonBuilder;
         private BuilderTextBox txtBoxBuilder;
+        private BuilderPasswordBox passBoxBuilder;
         private BuilderTextBlock txtBlockBuilder;
         private IMyButton loginButton;
         private IMyTextBox emailTxtBox;
-        private IMyTextBox passwordTxtBox;
+        private IMyPasswordBox passwordPassBox;
         private IMyTextBlock loginStatusTxtBlock;
         private MyWindow registerWindow;
         private MyWindow dashboardWindow;
@@ -71,6 +73,7 @@ namespace Hotelin_Desktop.Login
         {
             buttonBuilder = new BuilderButton();
             txtBoxBuilder = new BuilderTextBox();
+            passBoxBuilder = new BuilderPasswordBox();
             txtBlockBuilder = new BuilderTextBlock();
         }
 
@@ -80,13 +83,13 @@ namespace Hotelin_Desktop.Login
                 .activate(this, "login_btn")
                 .addOnClick(this, "onLoginButtonClick");
             emailTxtBox = txtBoxBuilder.activate(this, "email_txt");
-            passwordTxtBox = txtBoxBuilder.activate(this, "password_txt");
+            passwordPassBox = passBoxBuilder.activate(this, "password_txt");
             loginStatusTxtBlock = txtBlockBuilder.activate(this, "loginStatus");
         }
 
         public void onLoginButtonClick()
         {
-            getController().callMethod("login", email_txt.Text, password_txt.Text);
+            getController().callMethod("login", email_txt.Text, password_txt.Password);
         }
 
 

@@ -46,6 +46,7 @@ namespace Hotelin_Desktop.Profile
                 //var model = JsonConvert.DeserializeObject<BookingList>(JArray.Parse(_response.getJObject().Value));
                 //Console.WriteLine(model);
                 //Console.WriteLine("HAYO : " + _response.getParsedObject<BookingList>().booking.Count());
+                
                 getView().callMethod("setProfile", _response.getParsedObject<HotelProfile>());
             }
         }

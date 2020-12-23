@@ -21,6 +21,6 @@ namespace Hotelin_Desktop.Model
 
     public class HotelList
     {
-        public List<HotelModel> hotels { get; set; }
+        public List<HotelModel> hotel { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Hotelin_Desktop.Profile;
+﻿using Hotelin_Desktop.Model;
+using Hotelin_Desktop.Profile;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace Hotelin_Desktop.EditHotel
         private IMyTextBox hotelNameTxtBox;
         private IMyTextBox hotelLocationTxtBox;
         private IMyTextBox hotelDescriptionTxtBox;
+        private HotelProfile currentHotel;
 
         public EditHotelPage()
         {
@@ -66,16 +68,17 @@ namespace Hotelin_Desktop.EditHotel
                 hotelNameTxtBox.getText(),
                 hotelLocationTxtBox.getText(),
                 hotelDescriptionTxtBox.getText());
-            Console.WriteLine(hotelNameTxtBox.getText());
-            Console.WriteLine(hotelLocationTxtBox.getText());
-            Console.WriteLine(hotelDescriptionTxtBox.getText());
         }
 
-        public void setCurrentHotelValue(string _hotelName, string _hotelLocation, string _hotelDesc)
+        public void setCurrentHotelValue(HotelProfile hotelProfile)
         {
-            hotelNameTxtBox.setText(_hotelName);
-            hotelLocationTxtBox.setText(_hotelLocation);
-            hotelDescriptionTxtBox.setText(_hotelDesc);
+            foreach (Hotel hotel in hotelProfile.hotel)
+            {
+                hotelNameTxtBox.setText(hotel.hotel_name);
+                hotelLocationTxtBox.setText(hotel.hotel_location);
+                hotelDescriptionTxtBox.setText(hotel.hotel_desc);
+            }
+            
         }
     }
 }

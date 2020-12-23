@@ -1,5 +1,4 @@
 ﻿using Hotelin_Desktop.Login;
-//using Hotelin_Desktop.TambahHotel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +11,12 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
+using Velacro.UIElements.PasswordBox;
 
 namespace Hotelin_Desktop.Register
 {
@@ -28,13 +27,14 @@ namespace Hotelin_Desktop.Register
     {
         private BuilderButton buttonBuilder;
         private BuilderTextBox txtBoxBuilder;
+        private BuilderPasswordBox passBoxBuilder;
         private BuilderTextBlock txtBlockBuilder;
         private IMyButton registerButton;
         private IMyTextBox usernameTxtBox;
         private IMyTextBox emailTxtBox;
         private IMyTextBox nameTxtBox;
-        private IMyTextBox passwordTxtBox;
-        private IMyTextBox passwordcTxtBox;
+        private IMyPasswordBox passwordPassBox;
+        private IMyPasswordBox passwordcPassBox;
         private IMyTextBlock registerStatusTxtBlock;
         private MyWindow loginWindow;
 
@@ -47,16 +47,11 @@ namespace Hotelin_Desktop.Register
             initUIElements();
         }
 
-        //private void registerBtn_Click(object sender, RoutedEventArgs e)
-        //{
-        //    TambahHotelPage tambahHotelPage = new TambahHotelPage();
-        //    NavigationService.Navigate(tambahHotelPage);
-        //}
-
         private void initUIBuilders()
         {
             buttonBuilder = new BuilderButton();
             txtBoxBuilder = new BuilderTextBox();
+            passBoxBuilder = new BuilderPasswordBox();
             txtBlockBuilder = new BuilderTextBlock();
         }
 
@@ -67,8 +62,8 @@ namespace Hotelin_Desktop.Register
             usernameTxtBox = txtBoxBuilder.activate(this, "username_txt");
             nameTxtBox = txtBoxBuilder.activate(this, "name_txt");
             emailTxtBox = txtBoxBuilder.activate(this, "email_txt");
-            passwordTxtBox = txtBoxBuilder.activate(this, "password_txt");
-            passwordcTxtBox = txtBoxBuilder.activate(this, "passwordConfirmation_txt");
+            passwordPassBox = passBoxBuilder.activate(this, "password_txt");
+            passwordcPassBox = passBoxBuilder.activate(this, "passwordConfirmation_txt");
             registerStatusTxtBlock = txtBlockBuilder.activate(this, "registerStatus");
         }
 
@@ -78,13 +73,8 @@ namespace Hotelin_Desktop.Register
                 usernameTxtBox.getText(),
                 emailTxtBox.getText(),
                 nameTxtBox.getText(),
-                passwordTxtBox.getText());
-            Console.WriteLine(usernameTxtBox.getText());
-            Console.WriteLine(emailTxtBox.getText());
-            Console.WriteLine(nameTxtBox.getText());
-            Console.WriteLine(passwordTxtBox.getText());
-            //TambahHotelPage tambahHotelPage = new TambahHotelPage();
-            //NavigationService.Navigate(tambahHotelPage);
+                passwordPassBox.getPassword(),
+                passwordcPassBox.getPassword());
         }
 
         public void setRegisterStatus(string _status)
