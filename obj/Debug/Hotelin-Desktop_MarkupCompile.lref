@@ -2,6 +2,7 @@
 FC:\xampp\htdocs\hotelin-desktop\App.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\AddKamar\AddKamarPage.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\Dashboard\DashboardWindow.xaml;;
+FC:\xampp\htdocs\hotelin-desktop\DetailBooking\DetailBookingPage.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\DetailKamar\DetailKamarPage.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\DetailPembatalan\DetailPembatalanPage.xaml;;
 FC:\xampp\htdocs\hotelin-desktop\DetailPemesanan\DetailPemesananPage.xaml;;

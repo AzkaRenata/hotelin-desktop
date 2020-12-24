@@ -153,3 +153,5 @@ C:\xampp\htdocs\hotelin-desktop\bin\Debug\MaterialDesignColors.pdb
 C:\xampp\htdocs\hotelin-desktop\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\xampp\htdocs\hotelin-desktop\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\App.baml
+C:\xampp\htdocs\hotelin-desktop\obj\Debug\DetailBooking\DetailBookingPage.g.cs
+C:\xampp\htdocs\hotelin-desktop\obj\Debug\DetailBooking\DetailBookingPage.baml
