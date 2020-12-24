@@ -47,7 +47,7 @@ namespace Hotelin_Desktop.Login
             setController(new LoginController(this));
             initUIBuilders();
             initUIElements();
-            isLoggedIn();
+            //isLoggedIn();
         }
 
         private void isLoggedIn()
