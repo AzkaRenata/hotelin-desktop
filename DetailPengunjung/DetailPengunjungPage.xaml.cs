@@ -24,7 +24,7 @@ namespace Hotelin_Desktop.DetailPengunjung
     /// </summary>
     public partial class DetailPengunjungPage : MyPage
     {
-        public DetailPengunjungPage()
+        public DetailPengunjungPage(int id)
         {
             InitializeComponent();
         }

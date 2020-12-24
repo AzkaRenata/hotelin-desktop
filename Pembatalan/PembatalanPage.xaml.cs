@@ -37,7 +37,7 @@ namespace Hotelin_Desktop.Pembatalan
         {
             InitializeComponent();
             setController(new PembatalanController(this));
-            this.detailPembatalanPage = new DetailPembatalanPage();
+            this.detailPembatalanPage = new DetailPembatalanPage(1);
             /*Pembatalan olivia = new Pembatalan();
             olivia.namaPemesan = "Olivia";
             olivia.tanggalMenginap = "3-5 Oktober";

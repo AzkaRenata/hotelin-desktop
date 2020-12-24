@@ -37,6 +37,7 @@ namespace Hotelin_Desktop.Pengunjung
         {
             InitializeComponent();
             setController(new PengunjungController(this));
+            detailPengunjungPage = new DetailPengunjungPage(1);
             /*Pengunjung olivia = new Pengunjung();
             olivia.namaPemesan = "Olivia";
             olivia.tanggalMenginap = "3-5 Oktober";
@@ -98,9 +99,10 @@ namespace Hotelin_Desktop.Pengunjung
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
+            DetailPengunjungPage detailPengunjungPage = new DetailPengunjungPage(1);
             appFrame.Navigate(detailPengunjungPage);
 
-            DetailPengunjungPage detailPengunjungPage = new DetailPengunjungPage(id);
+            
             NavigationService.Navigate(detailPengunjungPage);
         }
 

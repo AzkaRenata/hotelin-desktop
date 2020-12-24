@@ -24,7 +24,7 @@ namespace Hotelin_Desktop.DetailPembatalan
     /// </summary>
     public partial class DetailPembatalanPage : MyPage
     {
-        public DetailPembatalanPage()
+        public DetailPembatalanPage(int id)
         {
             InitializeComponent();
         }
