@@ -4,17 +4,30 @@
 winexe
 C#
 .cs
+<<<<<<< Updated upstream
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\
+=======
+C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\
+>>>>>>> Stashed changes
 Hotelin_Desktop
 none
 false
 DEBUG;TRACE
+<<<<<<< Updated upstream
 C:\xampp\htdocs\hotelin-desktop\App.xaml
 13-1559226046
 
 241281187053
 15-440815820
 Dashboard\DashboardWindow.xaml;DetailKamar\DetailKamarPage.xaml;DetailPembatalan\DetailPembatalanPage.xaml;DetailPemesanan\DetailPemesananPage.xaml;DetailPengunjung\DetailPengunjungPage.xaml;Detail\DetailPage.xaml;Login\LoginWindow.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\RegisterWindow.xaml;
+=======
+C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\App.xaml
+18-2089125003
+
+43-1296576804
+25-875522247
+AddKamar\AddKamarPage.xaml;Dashboard\DashboardWindow.xaml;DetailKamar\DetailKamarPage.xaml;DetailPembatalan\DetailPembatalanPage.xaml;DetailPemesanan\DetailPemesananPage.xaml;DetailPengunjung\DetailPengunjungPage.xaml;Detail\DetailPage.xaml;EditKamar\EditKamarPage.xaml;EditHotel\EditHotelPage.xaml;Login\LoginWindow.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\FormRegisterWindow.xaml;Register\RegisterWindow.xaml;TambahKamar\TambahKamarPage.xaml;
+>>>>>>> Stashed changes
 
 False
 

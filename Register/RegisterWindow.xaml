@@ -27,9 +27,9 @@
             Content="LOGIN" 
             HorizontalAlignment="Left" 
             Height="34" 
-            Margin="467,74.495,0,0" 
+            Margin="466,74,0,0" 
             VerticalAlignment="Top" 
-            Width="90" 
+            Width="101" 
             Background="{x:Null}" 
             BorderBrush="{x:Null}" 
             FontFamily="Montserrat" 
@@ -38,9 +38,13 @@
             Content="REGISTER" 
             HorizontalAlignment="Left" 
             Height="34" 
-            Margin="578,74.495,0,0" 
+            Margin="560,74,0,0" 
             VerticalAlignment="Top" 
+<<<<<<< Updated upstream
             Width="112" 
+=======
+            Width="145" 
+>>>>>>> Stashed changes
             Background="{x:Null}" 
             BorderBrush="{x:Null}" 
             FontFamily="Montserrat" 
