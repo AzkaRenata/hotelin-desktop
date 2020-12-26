@@ -53,7 +53,7 @@ namespace Hotelin_Desktop.Login
         private void isLoggedIn()
         {
             string token = File.ReadAllText(@"userToken.txt");
-            getController().callMethod("validateToken",token);
+            getController().callMethod("validateToken", token);
         }
 
         public void setTokenStatus(SuccessMessage successMessage)
@@ -89,7 +89,7 @@ namespace Hotelin_Desktop.Login
 
         public void onLoginButtonClick()
         {
-            getController().callMethod("login", email_txt.Text, password_txt);
+            getController().callMethod("login", email_txt.Text, password_txt.Password);
         }
 
 
