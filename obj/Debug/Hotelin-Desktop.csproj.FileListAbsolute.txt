@@ -1,7 +1,5 @@
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\Hotelin-Desktop.csprojAssemblyReference.cache
-C:\xampp\htdocs\hotelin-desktop\obj\Debug\Login\LoginPage.g.cs
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\MainWindow.g.cs
-C:\xampp\htdocs\hotelin-desktop\obj\Debug\Register\RegisterPage.g.cs
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\App.g.cs
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\Hotelin-Desktop_MarkupCompile.cache
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\Hotelin-Desktop_MarkupCompile.lref
@@ -10,16 +8,8 @@ C:\xampp\htdocs\hotelin-desktop\bin\Debug\Hotelin-Desktop.exe
 C:\xampp\htdocs\hotelin-desktop\bin\Debug\Hotelin-Desktop.pdb
 C:\xampp\htdocs\hotelin-desktop\bin\Debug\Newtonsoft.Json.dll
 C:\xampp\htdocs\hotelin-desktop\bin\Debug\Velacro.dll
-C:\xampp\htdocs\hotelin-desktop\bin\Debug\RestSharp.dll
-C:\xampp\htdocs\hotelin-desktop\bin\Debug\CsvHelper.dll
-C:\xampp\htdocs\hotelin-desktop\bin\Debug\LiveCharts.Wpf.dll
-C:\xampp\htdocs\hotelin-desktop\bin\Debug\LiveCharts.dll
-C:\xampp\htdocs\hotelin-desktop\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\xampp\htdocs\hotelin-desktop\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\xampp\htdocs\hotelin-desktop\bin\Debug\Newtonsoft.Json.xml
-C:\xampp\htdocs\hotelin-desktop\obj\Debug\Login\LoginPage.baml
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\MainWindow.baml
-C:\xampp\htdocs\hotelin-desktop\obj\Debug\Register\RegisterPage.baml
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\Hotelin-Desktop.g.resources
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\Hotelin_Desktop.Properties.Resources.resources
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\Hotelin-Desktop.csproj.GenerateResource.cache
@@ -49,10 +39,6 @@ C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Register\RegisterW
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Register\RegisterWindow.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Login\LoginWindow.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Login\LoginWindow.baml
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Register\FormRegisterWindow.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Register\FormRegisterWindow.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\AddKamar\AddKamarPage.g.cs
@@ -69,8 +55,6 @@ C:\xampp\htdocs\hotelin-desktop\obj\Debug\Register\FormRegisterWindow.baml
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\TambahKamar\TambahKamarPage.baml
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\EditHotel\EditHotelPage.g.cs
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\EditHotel\EditHotelPage.baml
-C:\xampp\htdocs\hotelin-desktop\bin\Debug\Velacro.dll
->>>>>>> Stashed changes
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\Dashboard\DashboardWindow.g.cs
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\DetailKamar\DetailKamarPage.g.cs
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\DetailPembatalan\DetailPembatalanPage.g.cs
@@ -95,8 +79,6 @@ C:\xampp\htdocs\hotelin-desktop\obj\Debug\Pemesanan\PemesananPage.baml
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\Pengunjung\PengunjungPage.baml
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\Profile\ProfilePage.baml
 C:\xampp\htdocs\hotelin-desktop\obj\Debug\Register\RegisterWindow.baml
-<<<<<<< Updated upstream
-=======
 C:\hotelin-desktop\bin\Debug\Hotelin-Desktop.exe.config
 C:\hotelin-desktop\bin\Debug\Hotelin-Desktop.exe
 C:\hotelin-desktop\bin\Debug\Hotelin-Desktop.pdb
@@ -159,23 +141,17 @@ C:\hotelin-desktop\bin\Debug\MaterialDesignColors.pdb
 C:\hotelin-desktop\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\hotelin-desktop\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\hotelin-desktop\obj\Debug\App.baml
->>>>>>> Stashed changes
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Dashboard\DashboardWindow.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\DetailKamar\DetailKamarPage.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPembatalan\DetailPembatalanPage.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPemesanan\DetailPemesananPage.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPengunjung\DetailPengunjungPage.g.cs
-<<<<<<< Updated upstream
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Detail\DetailPage.g.cs
-=======
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\EditHotel\EditHotelPage.g.cs
->>>>>>> Stashed changes
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Pembatalan\PembatalanPage.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Pemesanan\PemesananPage.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Pengunjung\PengunjungPage.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Profile\ProfilePage.g.cs
-<<<<<<< Updated upstream
-=======
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\TambahKamar\TambahKamarPage.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\bin\Debug\ICSharpCode.AvalonEdit.dll
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\bin\Debug\MaterialDesignColors.dll
@@ -186,33 +162,30 @@ C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\bin\Debug\ICSharpCode.Avalon
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\bin\Debug\MaterialDesignColors.pdb
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Detail\DetailPage.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\App.baml
->>>>>>> Stashed changes
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Dashboard\DashboardWindow.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\DetailKamar\DetailKamarPage.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPembatalan\DetailPembatalanPage.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPemesanan\DetailPemesananPage.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPengunjung\DetailPengunjungPage.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Detail\DetailPage.baml
-<<<<<<< Updated upstream
-=======
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\EditHotel\EditHotelPage.baml
->>>>>>> Stashed changes
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Pembatalan\PembatalanPage.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Pemesanan\PemesananPage.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Pengunjung\PengunjungPage.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Profile\ProfilePage.baml
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Register\FormRegisterWindow.g.cs
-C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\Register\FormRegisterWindow.baml
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\EditProfile\EditProfilePage.g.cs
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\EditProfile\EditProfilePage.baml
-C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\AddKamar\AddKamarPage.g.cs
-C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\EditKamar\EditKamarPage.g.cs
-C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\AddKamar\AddKamarPage.baml
-C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\EditKamar\EditKamarPage.baml
-=======
 C:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\obj\Debug\TambahKamar\TambahKamarPage.baml
->>>>>>> Stashed changes
+C:\xampp\htdocs\hotelin-desktop\obj\Debug\DetailBooking\DetailBookingPage.g.cs
+C:\xampp\htdocs\hotelin-desktop\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\xampp\htdocs\hotelin-desktop\bin\Debug\MaterialDesignColors.dll
+C:\xampp\htdocs\hotelin-desktop\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\xampp\htdocs\hotelin-desktop\bin\Debug\ShowMeTheXAML.AvalonEdit.dll
+C:\xampp\htdocs\hotelin-desktop\bin\Debug\ShowMeTheXAML.dll
+C:\xampp\htdocs\hotelin-desktop\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\xampp\htdocs\hotelin-desktop\bin\Debug\MaterialDesignColors.pdb
+C:\xampp\htdocs\hotelin-desktop\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\xampp\htdocs\hotelin-desktop\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\xampp\htdocs\hotelin-desktop\obj\Debug\App.baml
+C:\xampp\htdocs\hotelin-desktop\obj\Debug\DetailBooking\DetailBookingPage.baml

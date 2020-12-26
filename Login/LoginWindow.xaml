@@ -39,11 +39,7 @@
             Height="34" 
             Margin="560,74,0,0" 
             VerticalAlignment="Top" 
-<<<<<<< Updated upstream
-            Width="112" 
-=======
             Width="145" 
->>>>>>> Stashed changes
             Background="{x:Null}" 
             BorderBrush="{x:Null}" 
             FontFamily="Montserrat" 

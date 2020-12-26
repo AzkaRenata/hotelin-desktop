@@ -50,7 +50,7 @@
                     <Setter Property="VerticalAlignment" Value="Center"/>
                 </Style>
             </DataGrid.CellStyle>
-            
+
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding tipeKamar}" Width="130"/>
                 <DataGridTextColumn Header="Harga" Binding="{Binding harga}" Width="130"/>
@@ -59,11 +59,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-<<<<<<< Updated upstream
-                                <Button Name="view_btn" Content="View" Click="view_btn_Click"/>
-                                <Button Name="edit_btn" Content="Edit" Click="edit_btn_Click"/>
-                                <Button Name="delete_btn" Content="Delete" Click="delete_btn_Click"/>
-=======
+
                                 <Button x:Name="view_btn" 
                                         Click="view_btn_Click" 
                                         Background="Transparent"
@@ -97,7 +93,7 @@
                                         VerticalAlignment="Center"
                                         Foreground="#707070"/>
                                 </Button>
->>>>>>> Stashed changes
+
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -105,8 +101,7 @@
             </DataGrid.Columns>
 
         </DataGrid>
-<<<<<<< Updated upstream
-=======
+
         <Button 
             x:Name="add_kamar_btn"
             Content="Add Kamar" 
@@ -123,7 +118,6 @@
                 </Style>
             </Button.Resources>
         </Button>
->>>>>>> Stashed changes
     </Grid>
 
 </basic:MyPage>
