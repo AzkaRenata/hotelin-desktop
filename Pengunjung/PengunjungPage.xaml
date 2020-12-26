@@ -1,5 +1,7 @@
 ﻿<basic:MyPage  xmlns:basic="clr-namespace:Velacro.UIElements.Basic;assembly=Velacro" x:Name="pengunjungPage"
     x:Class="Hotelin_Desktop.Pengunjung.PengunjungPage"
+               
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -26,17 +28,29 @@
             Height="207" 
             Margin="20,102,0,0" 
             VerticalAlignment="Top" 
-            Width="578">
+            Width="578"
+            RowHeight="30"
+            GridLinesVisibility="Horizontal"
+            CanUserAddRows="False"
+            CanUserResizeColumns="False"
+            HorizontalGridLinesBrush="#5399AF">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="LightGray"/>
+                    <Setter Property="Background" Value="#5399AF"/>
+                    <Setter Property="Foreground" Value="White"/>
                     <Setter Property="FontWeight" Value="SemiBold"/>
                     <Setter Property="Padding" Value="7"/>
-                    <Setter Property="BorderBrush" Value="Black"/>
-                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
                 </Style>
             </DataGrid.Resources>
+
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.CellStyle>
+            
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nama Pemesan" Binding="{Binding name}" Width="125"/>
                 <DataGridTextColumn Header="Tanggal Menginap" Binding="{Binding check_in}" Width="135"/>
@@ -46,8 +60,28 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Button Name="view_btn" Content="View" Click="view_btn_Click"/>
-                                <Button Name="delete_btn" Content="Delete" Click="delete_btn_Click"/>
+                                <Button x:Name="view_btn" 
+                                        Click="view_btn_Click" 
+                                        Background="Transparent"
+                                        BorderThickness="0">
+                                    <materialDesign:PackIcon 
+                                        Kind="EyeOutline" 
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center"
+                                        Foreground="#707070"
+                                        />
+                                </Button>
+                                <Button 
+                                    x:Name="delete_btn" 
+                                    Click="delete_btn_Click"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                    <materialDesign:PackIcon 
+                                        Kind="TrashCan" 
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center"
+                                        Foreground="#707070"/>
+                                </Button>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

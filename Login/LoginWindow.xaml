@@ -5,12 +5,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hotelin_Desktop.Login"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        Background="{DynamicResource MaterialDesignPaper}"
-        TextElement.FontWeight="Medium"
-        TextElement.FontSize="14"
-        FontFamily="{materialDesign:MaterialDesignFont}"
         mc:Ignorable="d"
         Title="LoginWindow" Height="450" Width="800">
     <Grid HorizontalAlignment="Center" Height="450" VerticalAlignment="Center" Width="800">
@@ -32,9 +26,9 @@
             Content="LOGIN" 
             HorizontalAlignment="Left" 
             Height="34" 
-            Margin="467,74.495,0,0" 
+            Margin="466,74,0,0" 
             VerticalAlignment="Top" 
-            Width="90" 
+            Width="101" 
             Background="{x:Null}" 
             BorderBrush="{x:Null}" 
             FontFamily="Montserrat" 
@@ -43,18 +37,26 @@
             Content="REGISTER" 
             HorizontalAlignment="Left" 
             Height="34" 
-            Margin="578,74.495,0,0" 
+            Margin="560,74,0,0" 
             VerticalAlignment="Top" 
-            Width="120" 
+<<<<<<< Updated upstream
+            Width="112" 
+=======
+            Width="145" 
+>>>>>>> Stashed changes
             Background="{x:Null}" 
             BorderBrush="{x:Null}" 
             FontFamily="Montserrat" 
             FontSize="20" Click="register_window_btn_Click"/>
-        <Grid HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Margin="438,158,0,0" Visibility="Visible">
+        <Grid 
+            HorizontalAlignment="Left" 
+            Height="188" 
+            VerticalAlignment="Top" 
+            Margin="438,158,0,0" 
+            Visibility="Visible">
             <TextBox x:Name="email_txt" 
-                materialDesign:HintAssist.Hint="Email"
                 HorizontalAlignment="Left" 
-                Height="30"
+                Height="30" Text="Email" 
                 TextWrapping="Wrap" 
                 VerticalAlignment="Top" 
                 Width="285" 
@@ -73,10 +75,11 @@
                 Stroke="Black"
                 VerticalAlignment="Top" 
                 Width="285"/>
-            <PasswordBox x:Name="password_txt" 
-                materialDesign:HintAssist.Hint="Password"
+            <TextBox x:Name="password_txt" 
                 HorizontalAlignment="Left" 
-                Height="30" Margin="0,60,0,0"  
+                Height="30" Margin="0,60,0,0" 
+                Text="Password" 
+                TextWrapping="Wrap" 
                 VerticalAlignment="Top" 
                 Width="285" Background="{x:Null}" 
                 BorderBrush="{x:Null}" 
@@ -122,15 +125,15 @@
         <Label 
             Content="Belum punya akun?" 
             HorizontalAlignment="Left" 
-            Margin="481,351,0,0" 
+            Margin="501.249,351,0,0" 
             VerticalAlignment="Top"/>
         <Button 
             x:Name="register_link" 
             Content="Register" 
             HorizontalAlignment="Left" 
-            Margin="605,348,0,0" 
+            Margin="600.689,353.599,0,0" 
             VerticalAlignment="Top" 
-            Width="86" 
+            Width="75" 
             Background="{x:Null}" 
             BorderBrush="{x:Null}" 
             Foreground="#FF5399AF" 
