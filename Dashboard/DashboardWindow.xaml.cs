@@ -1,4 +1,5 @@
 ﻿using Hotelin_Desktop.Detail;
+using Hotelin_Desktop.Login;
 using Hotelin_Desktop.Pembatalan;
 using Hotelin_Desktop.Pemesanan;
 using Hotelin_Desktop.Pengunjung;
@@ -63,7 +64,10 @@ namespace Hotelin_Desktop.Dashboard
 
         private void logoutButton_Click(object sender, RoutedEventArgs e)
         {
-
+            LoginWindow loginWindow;
+            loginWindow = new LoginWindow();
+            loginWindow.Show();
+            this.Close();
         }
     }
 }

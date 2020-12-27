@@ -19,17 +19,25 @@ namespace Hotelin_Desktop.DetailBooking
 
         public async void requestBookingDetail(string token, int id)
         {
+            Console.WriteLine("ID IKI : " + id);
+            Console.WriteLine("TOKEN IKI : " + token);
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
+            String endpoint = "booking/show/" + id;
+            Console.WriteLine(MyURL.MyURL.baseURL + endpoint);
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint("booking/show/" + id)
+                .setEndpoint(endpoint)
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);
             var response = await client.sendRequest(request.getApiRequestBundle());
 
+            Booking booking = response.getParsedObject<Booking>();
+            Console.WriteLine("BOOKNAME : " + booking.booking.name);
+
+            getView().callMethod("setBookingDetail", booking);
         }
 
         private void setItem(HttpResponseBundle _response)
@@ -38,7 +46,6 @@ namespace Hotelin_Desktop.DetailBooking
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
 
-                getView().callMethod("setBookingDetail", _response.getParsedObject<BookingDetail>());
             }
         }
     }

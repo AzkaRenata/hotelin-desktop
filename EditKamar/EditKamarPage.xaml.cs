@@ -1,4 +1,5 @@
-﻿using Hotelin_Desktop.Model;
+﻿using Hotelin_Desktop.Detail;
+using Hotelin_Desktop.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,6 +68,9 @@ namespace Hotelin_Desktop.EditKamar
                 long.Parse(roomPriceTxtBox.getText()),
                 int.Parse(guestCapacityTxtBox.getText())
                 );
+
+            DetailPage detail = new DetailPage();
+            NavigationService.Navigate(detail);
         }
 
         public void setCurrentRoomValue(RoomResponse roomResponse)

@@ -19,6 +19,7 @@ using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
+using Hotelin_Desktop.DetailBooking;
 
 namespace Hotelin_Desktop.Pemesanan
 {
@@ -36,14 +37,6 @@ namespace Hotelin_Desktop.Pemesanan
         {
             InitializeComponent();
             setController(new PemesananController(this));
-            this.detailPemesananPage = new DetailPemesananPage(1);
-            /*Pemesanan olivia = new Pemesanan();
-            olivia.namaPemesan = "Olivia";
-            olivia.tanggalMenginap = "3-5 Oktober";
-            olivia.tipeKamar = "Presidental Suite";
-            olivia.harga = "Rp. 1.626.804";
-
-            pemesanan_datagrid.Items.Add(olivia);*/
             
             getBookingHistory();
         }
@@ -86,34 +79,32 @@ namespace Hotelin_Desktop.Pemesanan
 
             }
         }
-/*
-        public class Pemesanan
-        {
-            public string namaPemesan { get; set; }
-            public string tanggalMenginap { get; set; }
-            public string tipeKamar { get; set; }
-            public string harga { get; set; }
-        }*/
+        /*
+                public class Pemesanan
+                {
+                    public string namaPemesan { get; set; }
+                    public string tanggalMenginap { get; set; }
+                    public string tipeKamar { get; set; }
+                    public string harga { get; set; }
+                }*/
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-            int id = (pemesanan_datagrid.SelectedItem as Room).id;
-            DetailPemesananPage detailKamarPage = new DetailPemesananPage(id);
-            NavigationService.Navigate(detailKamarPage);
-        }
+            int id = (pemesanan_datagrid.SelectedItem as BookingModel).id;
+            Console.WriteLine("ID : " + id);
+            DetailBookingPage detailBooking = new DetailBookingPage(id);
+            NavigationService.Navigate(detailBooking);
 
-        // private void edit_btn_Click(object sender, RoutedEventArgs e)
-        // {
-        // }
+        }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
-            /*int id = (pemesanan_datagrid.SelectedItem as Room).id;
+            int id = (pemesanan_datagrid.SelectedItem as BookingDetail).id;
             MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
-            if(result == MessageBoxResult.Yes)
+            if (result == MessageBoxResult.Yes)
             {
                 getController().callMethod("deleteRoom", token, id);
-            }*/
+            }
         }
     }
 }

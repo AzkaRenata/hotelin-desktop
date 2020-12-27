@@ -19,6 +19,8 @@ using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
+using Hotelin_Desktop.DetailBooking;
+using Hotelin_Desktop.EditKamar;
 
 namespace Hotelin_Desktop.Pembatalan
 {
@@ -27,29 +29,31 @@ namespace Hotelin_Desktop.Pembatalan
     /// </summary>
     public partial class PembatalanPage : MyPage
     {
-        private List<BookingModel> bookingList;
-        private List<int> actualId = new List<int>();
-        private DetailPembatalanPage detailPembatalanPage;
         private string token;
+        private BuilderButton buttonBuilder;
 
 
         public PembatalanPage()
         {
             InitializeComponent();
+            initUIBuilders();
             setController(new PembatalanController(this));
-            this.detailPembatalanPage = new DetailPembatalanPage(1);
-            /*Pembatalan olivia = new Pembatalan();
-            olivia.namaPemesan = "Olivia";
-            olivia.tanggalMenginap = "3-5 Oktober";
-            olivia.tipeKamar = "Presidental Suite";
-            olivia.harga = "Rp. 1.626.804";
-
-            pembatalan_datagrid.Items.Add(olivia);*/
             getBookingHistory();
+        }
+
+        private void initUIBuilders()
+        {
+            buttonBuilder = new BuilderButton();
+            /*txtBoxBuilder = new BuilderTextBox();
+            txtBlockBuilder = new BuilderTextBlock();*/
         }
 
         private void getBookingHistory()
         {
+            this.Dispatcher.Invoke(() =>
+            {
+                pembatalan_datagrid.Items.Clear();
+            });
             token = File.ReadAllText(@"userToken.txt");
             Console.WriteLine("MASUK : " + token);
             getController().callMethod("requestBookingHistory", token);
@@ -76,8 +80,8 @@ namespace Hotelin_Desktop.Pembatalan
 
         public void setPembatalan(List<BookingModel> bookingList)
         {
-            string base_url = MyURL.MyURL.baseURL;
-            Console.WriteLine("DATA KAMAR");
+            string image_url = MyURL.MyURL.imageURL;
+            Console.WriteLine("DATA BOOKING");
             foreach (BookingModel booking in bookingList)
             {
                 this.Dispatcher.Invoke(() =>
@@ -88,29 +92,18 @@ namespace Hotelin_Desktop.Pembatalan
             }
         }
 
-        public class Pembatalan
-        {
-            public string namaPemesan { get; set; }
-            public string tanggalMenginap { get; set; }
-            public string tipeKamar { get; set; }
-            public string harga { get; set; }
-        }
-
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-            int id = (pembatalan_datagrid.SelectedItem as Room).id;
-            DetailPembatalanPage detailPembatalanPage = new DetailPembatalanPage(id);
-            NavigationService.Navigate(detailPembatalanPage);
+            int id = (pembatalan_datagrid.SelectedItem as BookingModel).id;
+            Console.WriteLine("ID : " + id);
+            DetailBookingPage detailBooking = new DetailBookingPage(id);
+            NavigationService.Navigate(detailBooking);
            
         }
 
-        // private void edit_btn_Click(object sender, RoutedEventArgs e)
-        // {
-        // }
-
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
-            int id = (pembatalan_datagrid.SelectedItem as Room).id;
+            int id = (pembatalan_datagrid.SelectedItem as BookingDetail).id;
             MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
             if(result == MessageBoxResult.Yes)
             {

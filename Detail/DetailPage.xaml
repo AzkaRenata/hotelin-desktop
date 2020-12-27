@@ -52,14 +52,13 @@
             </DataGrid.CellStyle>
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding tipeKamar}" Width="130"/>
-                <DataGridTextColumn Header="Harga" Binding="{Binding harga}" Width="130"/>
-                <DataGridTextColumn Header="Jumlah Kamar" Binding="{Binding jumlahKamar}" Width="150"/>
+                <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding room_type}" Width="130"/>
+                <DataGridTextColumn Header="Kapasitas (orang)" Binding="{Binding guest_capacity}" Width="130"/>
+                <DataGridTextColumn Header="Harga Kamar (Rp.)" Binding="{Binding room_price}" Width="150"/>
                 <DataGridTemplateColumn Header="Action">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-
                                 <Button x:Name="view_btn" 
                                         Click="view_btn_Click" 
                                         Background="Transparent"

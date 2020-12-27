@@ -20,6 +20,7 @@ using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
 using Hotelin_Desktop.DetailPemesanan;
+using Hotelin_Desktop.DetailBooking;
 
 namespace Hotelin_Desktop.Pengunjung
 {
@@ -99,15 +100,21 @@ namespace Hotelin_Desktop.Pengunjung
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-            DetailPengunjungPage detailPengunjungPage = new DetailPengunjungPage(1);
-            appFrame.Navigate(detailPengunjungPage);
+            int id = (pengunjung_datagrid.SelectedItem as BookingModel).id;
+            Console.WriteLine("ID : " + id);
+            DetailBookingPage detailBooking = new DetailBookingPage(id);
+            NavigationService.Navigate(detailBooking);
 
-            
-            NavigationService.Navigate(detailPengunjungPage);
         }
 
         private void delete_btn_Click(object sender, RoutedEventArgs e)
         {
+            int id = (pengunjung_datagrid.SelectedItem as BookingDetail).id;
+            MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                getController().callMethod("deleteRoom", token, id);
+            }
         }
     }
 }
