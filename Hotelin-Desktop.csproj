@@ -137,6 +137,7 @@
     <Compile Include="Login\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Booking.cs" />
     <Compile Include="Model\BookingDetail.cs" />
     <Compile Include="Model\BookingModel.cs" />
     <Compile Include="Model\HotelModel.cs" />

@@ -63,7 +63,7 @@ namespace Hotelin_Desktop.Profile
                     hotel_location_label.Content = hotel.hotel_location;
                     hotel_desc_label.Text = hotel.hotel_desc;
                     hotel_price_label.Content = "Rp. "+hotel.hotel_price;
-                    hotel_rating_label.Content = hotel.hotel_rating;
+                    hotel_rating_label.Content = hotel.hotel_rating + "/5";
                     BitmapImage bitmap = new BitmapImage();
                     bitmap.BeginInit();
                     bitmap.UriSource = new Uri(@image_url+hotel.hotel_picture);

@@ -41,7 +41,7 @@
             FontWeight="Bold"/>
         <Button 
             x:Name="detailButton" 
-            Content="    Detail" 
+            Content="    Daftar Kamar" 
             HorizontalAlignment="Left" 
             Margin="0,174,0,0" 
             VerticalAlignment="Top" 

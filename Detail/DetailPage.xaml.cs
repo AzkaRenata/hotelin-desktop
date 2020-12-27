@@ -36,7 +36,6 @@ namespace Hotelin_Desktop.Detail
             InitializeComponent();
             initUIBuilders();
             initUIElements();
-            
             setController(new RoomListController(this));
             getRoomList();
            
@@ -51,8 +50,6 @@ namespace Hotelin_Desktop.Detail
         private void initUIBuilders()
         {
             buttonBuilder = new BuilderButton();
-            /*txtBoxBuilder = new BuilderTextBox();
-            txtBlockBuilder = new BuilderTextBlock();*/
         }
 
         private void initUIElements()
@@ -83,6 +80,7 @@ namespace Hotelin_Desktop.Detail
             Console.WriteLine("DATA KAMAR");
             foreach (Room room in roomList)
             {
+                Console.WriteLine(room.bed_type);
                 this.Dispatcher.Invoke(() =>
                 {
                     kamar_datagrid.Items.Add(room);

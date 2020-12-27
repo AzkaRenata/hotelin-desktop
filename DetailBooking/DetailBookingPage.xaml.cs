@@ -28,7 +28,6 @@ namespace Hotelin_Desktop.DetailBooking
     {
         public DetailBookingPage(int id)
         {
-            id = 6;
             InitializeComponent();
             setController(new DetailBookingController(this));
             getBookingDetail(id);
@@ -41,22 +40,23 @@ namespace Hotelin_Desktop.DetailBooking
 
         }
 
-        public void setRoomDetail(BookingDetail bookingDetail)
+        public void setBookingDetail(Booking bookingDetail)
         {
             string image_url = MyURL.MyURL.imageURL;
+            //Console.WriteLine("NAME : " + bookingDetail.name);
             this.Dispatcher.Invoke(() =>
             {
-                name_label.Content = bookingDetail.name;
-                email_label.Content = bookingDetail.email;
-                telp_label.Content = bookingDetail.telp;
-                check_in_label.Content = bookingDetail.check_in;
-                check_out_label.Content = bookingDetail.check_out;
-                booking_time_label.Content = bookingDetail.booking_time;
-                room_type_label.Content = bookingDetail.room_type;
-                price_label.Content = bookingDetail.room_price;
+                name_label.Content = bookingDetail.booking.name;
+                email_label.Content = bookingDetail.booking.email;
+                telp_label.Content = bookingDetail.booking.telp;
+                check_in_label.Content = bookingDetail.booking.check_in;
+                check_out_label.Content = bookingDetail.booking.check_out;
+                booking_time_label.Content = bookingDetail.booking.booking_time;
+                room_type_label.Content = bookingDetail.booking.room_type;
+                price_label.Content = bookingDetail.booking.room_price;
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
-                bitmap.UriSource = new Uri(@image_url + bookingDetail.user_picture);
+                bitmap.UriSource = new Uri(@image_url + bookingDetail.booking.user_picture);
                 bitmap.EndInit();
                 user_picture.Source = bitmap;
             });

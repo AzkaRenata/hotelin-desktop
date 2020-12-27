@@ -97,27 +97,37 @@
                 Foreground="#707070"/>
 
             <Label 
-                Content="(No Rating)"
+                Content="0/5"
                 x:Name="hotel_rating_label"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
-                Margin="21,99,0,0" 
+                Margin="20,79,0,0" 
                 Height="28" 
-                Width="77" 
+                Width="38" 
+                FontSize="14" 
+                Foreground="#707070" FontWeight="Bold"/>
+            <Label 
+                Content="(0 Reviews)"
+                x:Name="reviewer_label"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top"
+                Margin="164,79,0,0" 
+                Height="28" 
+                Width="88" 
                 FontSize="12" 
                 Foreground="#707070" FontWeight="Bold"/>
-
             <Label 
                 Content="Price Not Set"
                 x:Name="hotel_price_label"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
-                Margin="20,121,0,0" 
+                Margin="20,112,0,0" 
                 Height="28" 
                 Width="110" 
-                FontSize="12" 
+                FontSize="18" 
                 Foreground="#5399af" FontWeight="Bold"/>
 
             <Label 
@@ -215,7 +225,7 @@
             x:Name="star1"
             HorizontalAlignment="Left" 
             Height="17" 
-            Margin="309,172,0,0" 
+            Margin="342,178,0,0" 
             VerticalAlignment="Top" 
             Width="16"  
             Stretch="Fill"
@@ -224,7 +234,7 @@
             x:Name="star2"
             HorizontalAlignment="Left" 
             Height="17" 
-            Margin="329,172,0,0" 
+            Margin="362,178,0,0" 
             VerticalAlignment="Top" 
             Width="16" 
             Stretch="Fill"
@@ -233,7 +243,7 @@
             x:Name="star3"
             HorizontalAlignment="Left" 
             Height="17" 
-            Margin="349,172,0,0" 
+            Margin="382,178,0,0" 
             VerticalAlignment="Top" 
             Width="16" 
             Stretch="Fill"
@@ -242,7 +252,7 @@
             x:Name="star4"
             HorizontalAlignment="Left" 
             Height="17" 
-            Margin="369,172,0,0" 
+            Margin="402,178,0,0" 
             VerticalAlignment="Top" 
             Width="16"  
             Stretch="Fill"
@@ -251,7 +261,7 @@
             x:Name="star5"
             HorizontalAlignment="Left" 
             Height="17" 
-            Margin="389,172,0,0" 
+            Margin="422,178,0,0" 
             VerticalAlignment="Top" 
             Width="17"  
             Stretch="Fill"

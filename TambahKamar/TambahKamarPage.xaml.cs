@@ -1,4 +1,5 @@
-﻿using Hotelin_Desktop.TambahKamar;
+﻿using Hotelin_Desktop.Detail;
+using Hotelin_Desktop.TambahKamar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,6 +73,9 @@ namespace Hotelin_Desktop.TambahKamar
                 long.Parse(roomPriceTxtBox.getText()),
                 int.Parse(guestCapacityTxtBox.getText())
             );
+
+            DetailPage detail = new DetailPage();
+            NavigationService.Navigate(detail);
         }
     }
 }

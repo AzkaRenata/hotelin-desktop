@@ -68,6 +68,9 @@ namespace Hotelin_Desktop.EditHotel
                 hotelNameTxtBox.getText(),
                 hotelLocationTxtBox.getText(),
                 hotelDescriptionTxtBox.getText());
+
+            ProfilePage profile = new ProfilePage();
+            NavigationService.Navigate(profile);
         }
 
         public void setCurrentHotelValue(HotelProfile hotelProfile)
