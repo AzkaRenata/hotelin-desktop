@@ -1,22 +1,47 @@
 ﻿
-FC:\hotelin-desktop\App.xaml;;
-FC:\hotelin-desktop\AddKamar\AddKamarPage.xaml;;
-FC:\hotelin-desktop\Dashboard\DashboardWindow.xaml;;
-FC:\hotelin-desktop\DetailBooking\DetailBookingPage.xaml;;
-FC:\hotelin-desktop\DetailKamar\DetailKamarPage.xaml;;
-FC:\hotelin-desktop\DetailPembatalan\DetailPembatalanPage.xaml;;
-FC:\hotelin-desktop\DetailPemesanan\DetailPemesananPage.xaml;;
-FC:\hotelin-desktop\DetailPengunjung\DetailPengunjungPage.xaml;;
-FC:\hotelin-desktop\Detail\DetailPage.xaml;;
-FC:\hotelin-desktop\EditKamar\EditKamarPage.xaml;;
-FC:\hotelin-desktop\EditHotel\EditHotelPage.xaml;;
-FC:\hotelin-desktop\Login\LoginWindow.xaml;;
-FC:\hotelin-desktop\MainWindow.xaml;;
-FC:\hotelin-desktop\Pembatalan\PembatalanPage.xaml;;
-FC:\hotelin-desktop\Pemesanan\PemesananPage.xaml;;
-FC:\hotelin-desktop\Pengunjung\PengunjungPage.xaml;;
-FC:\hotelin-desktop\Profile\ProfilePage.xaml;;
-FC:\hotelin-desktop\Register\FormRegisterWindow.xaml;;
-FC:\hotelin-desktop\Register\RegisterWindow.xaml;;
-FC:\hotelin-desktop\TambahKamar\TambahKamarPage.xaml;;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+
+=======
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\App.xaml;;
+>>>>>>> Stashed changes
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\AddKamar\AddKamarPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Dashboard\DashboardWindow.xaml;;
+=======
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\App.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\AddKamar\AddKamarPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Dashboard\DashboardWindow.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\DetailBooking\DetailBookingPage.xaml;;
+>>>>>>> Stashed changes
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\DetailKamar\DetailKamarPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\DetailPembatalan\DetailPembatalanPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\DetailPemesanan\DetailPemesananPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\DetailPengunjung\DetailPengunjungPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Detail\DetailPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\EditKamar\EditKamarPage.xaml;;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\EditProfile\EditProfilePage.xaml;;
+=======
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\EditHotel\EditHotelPage.xaml;;
+>>>>>>> Stashed changes
+=======
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\EditHotel\EditHotelPage.xaml;;
+>>>>>>> Stashed changes
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Login\LoginWindow.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\MainWindow.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Pembatalan\PembatalanPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Pemesanan\PemesananPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Pengunjung\PengunjungPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Profile\ProfilePage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Register\FormRegisterWindow.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Register\RegisterWindow.xaml;;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\TambahKamar\TambahKamarPage.xaml;;
+>>>>>>> Stashed changes
+=======
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\TambahKamar\TambahKamarPage.xaml;;
+>>>>>>> Stashed changes
 

@@ -5,12 +5,6 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Hotelin_Desktop.EditKamar"
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-      Background="{DynamicResource MaterialDesignPaper}"
-      TextElement.FontWeight="Medium"
-      TextElement.FontSize="14"
-      FontFamily="{materialDesign:MaterialDesignFont}"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="620"
       Title="EditKamarPage">
@@ -26,17 +20,18 @@
             FontSize="26" 
             Foreground="#707070"
             FontWeight="Bold"/>
+        
         <TextBox 
-            x:Name="tipe_kamar_txt"
-            materialDesign:HintAssist.Hint="Tipe kamar"
+            x:Name="kode_kamar_txt"
+            materialDesign:HintAssist.Hint="Kode Kamar"
             HorizontalAlignment="Left" 
             Height="46" 
             TextWrapping="Wrap" 
             VerticalAlignment="Top" 
             VerticalContentAlignment="Center"
-            Width="279" 
+            Width="257" 
             RenderTransformOrigin="-0.132,0.621" 
-            Padding="3,7,3,3" Margin="28,87,0,0">
+            Padding="3,7,3,3" Margin="28,81,0,0" BorderBrush="#FFABADB3">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
@@ -44,16 +39,78 @@
             </TextBox.Resources>
         </TextBox>
         <TextBox 
-            x:Name="tipe_kasur_txt"
-            materialDesign:HintAssist.Hint="Tipe kasur"
+<<<<<<< Updated upstream
+            x:Name="fasilitas_kamar_txt"
+=======
+            x:Name="tipe_kamar_txt"
+            materialDesign:HintAssist.Hint="Tipe Kamar"
+>>>>>>> Stashed changes
             HorizontalAlignment="Left" 
-            Height="46" 
-            TextWrapping="Wrap"
+            Height="34" 
+            TextWrapping="Wrap" 
+            Text="Fasilitas Kamar" 
             VerticalAlignment="Top" 
+<<<<<<< Updated upstream
             Width="279" 
+=======
             VerticalContentAlignment="Center"
+            Width="257" 
+>>>>>>> Stashed changes
             RenderTransformOrigin="-0.132,0.621" 
-            Padding="3,7,3,3" Margin="28,130,0,0">
+            Padding="3,7,3,3" Margin="28,135,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox 
+<<<<<<< Updated upstream
+            x:Name="tipe_kamar_txt"
+=======
+            x:Name="tipe_kasur_txt"
+            materialDesign:HintAssist.Hint="Tipe Kasur"
+>>>>>>> Stashed changes
+            HorizontalAlignment="Left" 
+            Height="34" 
+            TextWrapping="Wrap" 
+            Text="Tipe Kamar" 
+            VerticalAlignment="Top" 
+<<<<<<< Updated upstream
+            Width="279" 
+=======
+            Width="257" 
+            VerticalContentAlignment="Center"
+>>>>>>> Stashed changes
+            RenderTransformOrigin="-0.132,0.621" 
+            Padding="3,7,3,3" Margin="28,187,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox 
+<<<<<<< Updated upstream
+            x:Name="jumlah_kamar_txt"
+=======
+            x:Name="jumlah_kasur_txt"
+            materialDesign:HintAssist.Hint="Jumlah Kasur"
+>>>>>>> Stashed changes
+            HorizontalAlignment="Left" 
+            Height="34" 
+            TextWrapping="Wrap" 
+            Text="Jumlah Kamar" 
+            VerticalAlignment="Top" 
+<<<<<<< Updated upstream
+            Width="279" 
+=======
+            Width="257" 
+            VerticalContentAlignment="Center"
+>>>>>>> Stashed changes
+            RenderTransformOrigin="-0.132,0.621" 
+            Padding="3,7,3,3" Margin="28,238,0,0" 
+            BorderBrush="#FFABADB3">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
@@ -62,15 +119,20 @@
         </TextBox>
         <TextBox 
             x:Name="harga_kamar_txt"
-            materialDesign:HintAssist.Hint="Harga kamar"
             HorizontalAlignment="Left" 
-            Height="46" 
-            TextWrapping="Wrap"
+            Height="34" 
+            TextWrapping="Wrap" 
+            Text="Harga Kamar" 
             VerticalAlignment="Top" 
+<<<<<<< Updated upstream
             Width="279" 
+            RenderTransformOrigin="-0.132,0.621" 
+            Padding="3,7,3,3" Margin="28,218,0,0">
+=======
+            Width="257" 
             VerticalContentAlignment="Center"
             RenderTransformOrigin="-0.132,0.621" 
-            Padding="3,7,3,3" Margin="28,175,0,0">
+            Padding="3,7,3,3" Margin="28,293,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
@@ -78,16 +140,34 @@
             </TextBox.Resources>
         </TextBox>
         <TextBox 
-            x:Name="kapasitas_tamu_txt"
-             materialDesign:HintAssist.Hint="Kapasitas Tamu"
+            x:Name="harga_kamar_txt"
+            materialDesign:HintAssist.Hint="Harga Kamar"
             HorizontalAlignment="Left" 
             Height="46" 
             TextWrapping="Wrap"
             VerticalAlignment="Top" 
-            Width="279" 
+            Width="257" 
             VerticalContentAlignment="Center"
             RenderTransformOrigin="-0.132,0.621" 
-            Padding="3,7,3,3" Margin="28,221,0,0">
+            Padding="3,7,3,3" Margin="320,81,0,0" BorderBrush="#FFABADB3">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox 
+            x:Name="fasilitas_kamar_txt"
+            materialDesign:HintAssist.Hint="Fasilitas Kamar"
+            HorizontalAlignment="Left" 
+            Height="46" 
+            TextWrapping="Wrap"
+            VerticalAlignment="Top" 
+            Width="257" 
+            VerticalContentAlignment="Center"
+            RenderTransformOrigin="-0.132,0.621" 
+            Padding="3,7,3,3" Margin="320,135,0,0" BorderBrush="#FFABADB3">
+>>>>>>> Stashed changes
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
@@ -97,6 +177,7 @@
 
         <Rectangle
             AllowDrop="True"
+            Drop="rectangle_drop"
             Fill="White"
             RadiusX="6"
             RadiusY="6"
@@ -104,35 +185,61 @@
             StrokeThickness="1"
             StrokeDashCap="Round"
             Stroke="#707070" 
-            Margin="328,98,170,230" 
-            Width="122" />
-        <StackPanel
+<<<<<<< Updated upstream
             Margin="328,87,170,241" 
+            Width="122" />
+=======
+            Margin="320,198,127,136" />
+>>>>>>> Stashed changes
+        <StackPanel
+            Margin="346,233,153,170" 
             HorizontalAlignment="Center"
-            VerticalAlignment="Center">
+            VerticalAlignment="Center" Width="121">
             <Image 
                 Source="down-arrow.png"
                 Stretch="Uniform"
                 Height="28" Width="67"/>
             <TextBlock
-                Text="Pilih Gambar Hotel" 
+                Text="Tarik dan Lepas Gambar Disini" 
                 FontFamily="Montserrat" 
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center" 
                 FontSize="7" 
                 Margin="0,10,0,0"/>
         </StackPanel>
+        <Button 
+            x:Name="pilih_gambar_btn"
+            Content="Pilih Gambar" 
+            HorizontalAlignment="Left" 
+            Margin="320,326,0,0" 
+            VerticalAlignment="Top" 
+            Width="173"
+            Foreground="White" 
+            BorderBrush="{x:Null}" 
+            Background="#FF5399AF" 
+            Click="pilih_gambar_btn_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Label 
              x:Name="file_name_lbl"
              Content="File Name" 
              HorizontalAlignment="Center" 
              FontSize="12" 
-             Width="142"
+             Width="173"
              VerticalAlignment="Center" 
              VerticalContentAlignment="Center" 
              Height="34" 
-             Margin="457,97,21,319">
+<<<<<<< Updated upstream
+             Margin="457,86,21,330">
+=======
+             Margin="320,363,127,53">
+>>>>>>> Stashed changes
         </Label>
+        
         <Button 
             x:Name="edit_kamar_btn" 
             Content="SIMPAN" 
@@ -143,12 +250,18 @@
             Foreground="White" 
             BorderBrush="{x:Null}" 
             Background="#FF5399AF"
-            Margin="28,286,0,0">
+<<<<<<< Updated upstream
+            Margin="28,286,0,0"
+            Click="edit_kamar_btn_Click" >
+=======
+            Margin="28,377,0,0">
+>>>>>>> Stashed changes
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
                 </Style>
             </Button.Resources>
         </Button>
+        
     </Grid>
 </basic:MyPage>
