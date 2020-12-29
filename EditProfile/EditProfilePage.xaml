@@ -61,6 +61,7 @@
             VerticalAlignment="Top" 
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
+<<<<<<< Updated upstream:EditProfile/EditProfilePage.xaml
             Padding="3,7,3,3" Margin="28,175,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -94,6 +95,9 @@
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
             Padding="3,7,3,3" Margin="28,263,0,0">
+=======
+            Padding="3,7,3,3" Margin="28,139,0,0">
+>>>>>>> Stashed changes:EditHotel/EditHotelPage.xaml
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
@@ -103,6 +107,7 @@
         <TextBox 
             x:Name="deskripsi_hotel_txt"
             HorizontalAlignment="Left" 
+<<<<<<< Updated upstream:EditProfile/EditProfilePage.xaml
             Height="77" 
             TextWrapping="Wrap" 
             Text="Deskripsi Hotel" 
@@ -110,6 +115,14 @@
             Width="279" 
             RenderTransformOrigin="-0.132,0.621" 
             Padding="3,7,3,3" Margin="316,87,0,0">
+=======
+            Height="108" 
+            TextWrapping="Wrap"
+            VerticalAlignment="Top" 
+            Width="279" 
+            RenderTransformOrigin="-0.132,0.621" 
+            Padding="3,7,3,3" Margin="28,196,0,0">
+>>>>>>> Stashed changes:EditHotel/EditHotelPage.xaml
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
@@ -126,10 +139,10 @@
             StrokeThickness="1"
             StrokeDashCap="Round"
             Stroke="#707070" 
-            Margin="316,175,182,153" 
-            Width="122" />
+            Margin="344,87,97,241" Width="173" />
+        
         <StackPanel
-            Margin="316,175,182,153" 
+            Margin="381,128,133,275" 
             HorizontalAlignment="Center"
             VerticalAlignment="Center">
             <Image 
@@ -137,7 +150,7 @@
                 Stretch="Uniform"
                 Height="28" Width="67"/>
             <TextBlock
-                Text="Pilih Gambar Hotel" 
+                Text="Tarik dan Lepas Gambar Disini" 
                 FontFamily="Montserrat" 
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center" 
@@ -149,12 +162,29 @@
              Content="File Name" 
              HorizontalAlignment="Center" 
              FontSize="12" 
-             Width="142"
+             Width="173"
              VerticalAlignment="Center" 
              VerticalContentAlignment="Center" 
              Height="34" 
-             Margin="452,173,26,243">
+             Margin="345,259,97,157">
         </Label>
+        <Button 
+            x:Name="pilih_gambar_btn"
+            Content="Pilih Gambar" 
+            HorizontalAlignment="Left" 
+            Margin="347,222,0,0" 
+            VerticalAlignment="Top" 
+            Width="173"
+            Foreground="White" 
+            BorderBrush="{x:Null}" 
+            Background="#FF5399AF">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
         <Button 
             x:Name="simpan_btn" 
             Content="SIMPAN" 
@@ -165,8 +195,12 @@
             Foreground="White" 
             BorderBrush="{x:Null}" 
             Background="#FF5399AF"
+<<<<<<< Updated upstream:EditProfile/EditProfilePage.xaml
             Margin="28,335,0,0"
             Click="simpan_btn_Click" >
+=======
+            Margin="28,343,0,0">
+>>>>>>> Stashed changes:EditHotel/EditHotelPage.xaml
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>

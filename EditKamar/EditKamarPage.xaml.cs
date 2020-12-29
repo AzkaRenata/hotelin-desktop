@@ -41,5 +41,22 @@ namespace Hotelin_Desktop.EditKamar
 
         }
 
+<<<<<<< Updated upstream
+=======
+        public void setCurrentRoomValue(RoomResponse roomResponse)
+        {
+            RoomModel room = roomResponse.room;
+
+            roomTypeTxtBox.setText(room.room_type);
+            bedTypeTxtBox.setText(room.bed_type);
+            roomPriceTxtBox.setText(Convert.ToString(room.room_price));
+            guestCapacityTxtBox.setText(Convert.ToString(room.guest_capacity));
+        }
+
+        private void pilih_gambar_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
     }
 }

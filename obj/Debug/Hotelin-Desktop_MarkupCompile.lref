@@ -1,11 +1,18 @@
 ﻿
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 =======
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\App.xaml;;
 >>>>>>> Stashed changes
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\AddKamar\AddKamarPage.xaml;;
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Dashboard\DashboardWindow.xaml;;
+=======
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\App.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\AddKamar\AddKamarPage.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Dashboard\DashboardWindow.xaml;;
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\DetailBooking\DetailBookingPage.xaml;;
+>>>>>>> Stashed changes
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\DetailKamar\DetailKamarPage.xaml;;
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\DetailPembatalan\DetailPembatalanPage.xaml;;
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\DetailPemesanan\DetailPemesananPage.xaml;;
@@ -13,7 +20,11 @@ FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\DetailPengunjung\DetailPeng
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Detail\DetailPage.xaml;;
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\EditKamar\EditKamarPage.xaml;;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\EditProfile\EditProfilePage.xaml;;
+=======
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\EditHotel\EditHotelPage.xaml;;
+>>>>>>> Stashed changes
 =======
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\EditHotel\EditHotelPage.xaml;;
 >>>>>>> Stashed changes
@@ -26,6 +37,10 @@ FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Profile\ProfilePage.xaml;;
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Register\FormRegisterWindow.xaml;;
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\Register\RegisterWindow.xaml;;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\TambahKamar\TambahKamarPage.xaml;;
+>>>>>>> Stashed changes
 =======
 FC:\Users\TALITAKUM\Documents\GitHub\hotelin-desktop\TambahKamar\TambahKamarPage.xaml;;
 >>>>>>> Stashed changes

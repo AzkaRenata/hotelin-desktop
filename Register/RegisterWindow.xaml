@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:Hotelin_Desktop.Register"
         mc:Ignorable="d"
         Title="RegisterWindow" Height="450" Width="800">
-    <Grid HorizontalAlignment="Center" Height="450" VerticalAlignment="Center" Width="800">
+    <Grid 
+        HorizontalAlignment="Center" 
+        Height="450" 
+        VerticalAlignment="Center" 
+        Width="800">
         <Rectangle 
             HorizontalAlignment="Center" 
             Height="450" 
@@ -27,7 +31,7 @@
             Content="LOGIN" 
             HorizontalAlignment="Left" 
             Height="34" 
-            Margin="466,74,0,0" 
+            Margin="466,64,0,0" 
             VerticalAlignment="Top" 
             Width="101" 
             Background="{x:Null}" 
@@ -38,7 +42,7 @@
             Content="REGISTER" 
             HorizontalAlignment="Left" 
             Height="34" 
-            Margin="560,74,0,0" 
+            Margin="560,64,0,0" 
             VerticalAlignment="Top" 
 <<<<<<< Updated upstream
             Width="112" 
@@ -49,7 +53,39 @@
             BorderBrush="{x:Null}" 
             FontFamily="Montserrat" 
             FontSize="20" Foreground="#FF5399AF"/>
-        <Grid HorizontalAlignment="Left" Height="240" VerticalAlignment="Top" Margin="438,150.194,0,0">
+
+        <Grid 
+            HorizontalAlignment="Left" 
+            Height="240" 
+            VerticalAlignment="Top" 
+            Margin="438,137,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="nama_txt" 
+                materialDesign:HintAssist.Hint="Nama"
+                HorizontalAlignment="Left" 
+                Height="30"
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" 
+                Width="285" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                FontSize="14" 
+                FontFamily="Montserrat" 
+                VerticalContentAlignment="Center" 
+                Margin="0,-18,0,0" Grid.RowSpan="2"/>
+            <Path 
+                Data="M483.75,114.375 L706.875,114.375" 
+                Fill="#FFF4F4F5" 
+                HorizontalAlignment="Left" 
+                Height="1" 
+                Margin="0,66.194,0,0" 
+                Stretch="Fill" 
+                Stroke="Black"
+                VerticalAlignment="Top" 
+                Width="285" Grid.RowSpan="2"/>
             <TextBox x:Name="email_txt" 
                 HorizontalAlignment="Left" 
                 Height="30" Text="Email" 
@@ -60,70 +96,87 @@
                 BorderBrush="{x:Null}" 
                 FontSize="14" 
                 FontFamily="Montserrat" 
-                VerticalContentAlignment="Center" Margin="0,-6.602,0,0"/>
+                VerticalContentAlignment="Center" 
+                Margin="0,31,0,0" Grid.RowSpan="2"/>
             <Path 
                 Data="M483.75,114.375 L706.875,114.375" 
                 Fill="#FFF4F4F5" 
                 HorizontalAlignment="Left" 
                 Height="1" 
-                Margin="0,28.194,0,0" 
+                Margin="0,15.194,0,0" 
                 Stretch="Fill" 
                 Stroke="Black"
                 VerticalAlignment="Top" 
+<<<<<<< Updated upstream
                 Width="285"/>
             <TextBox x:Name="password_txt" 
                 HorizontalAlignment="Left" 
                 Height="30" Margin="0,52.194,0,0" 
                 Text="Password" 
                 TextWrapping="Wrap" 
+=======
+                Width="285" Grid.RowSpan="2"/>
+            <PasswordBox x:Name="password_txt" 
+                materialDesign:HintAssist.Hint="Password"
+                HorizontalAlignment="Left" 
+                Height="30" Margin="0,82,0,0" 
+>>>>>>> Stashed changes
                 VerticalAlignment="Top" 
                 Width="285" Background="{x:Null}" 
                 BorderBrush="{x:Null}" 
                 FontFamily="Montserrat" 
                 FontSize="14" 
-                VerticalContentAlignment="Center"/>
+                VerticalContentAlignment="Center" Grid.RowSpan="2"/>
             <Path 
                 Data="M483.75,114.375 L706.875,114.375" 
                 Fill="#FFF4F4F5" 
                 HorizontalAlignment="Left" 
                 Height="1" 
-                Margin="0,87.689,0,0" 
+                Margin="0,116.689,0,0" 
                 Stretch="Fill" 
                 Stroke="Black" 
                 VerticalAlignment="Top" 
+<<<<<<< Updated upstream
                 Width="285"/>
             <TextBox x:Name="confirm_password_txt" 
                 HorizontalAlignment="Left" 
                 Height="30" Margin="0,112.786,0,0" 
                 Text="Confirm Password" 
                 TextWrapping="Wrap" 
+=======
+                Width="285" Grid.RowSpan="2"/>
+            <PasswordBox x:Name="confirm_password_txt" 
+                materialDesign:HintAssist.Hint="Confirm Password"
+                HorizontalAlignment="Left" 
+                Height="30" Margin="0,133,0,0" 
+>>>>>>> Stashed changes
                 VerticalAlignment="Top" 
                 Width="285" Background="{x:Null}" 
                 BorderBrush="{x:Null}" 
                 FontFamily="Montserrat" 
                 FontSize="14" 
-                VerticalContentAlignment="Center"/>
+                VerticalContentAlignment="Center" Grid.RowSpan="2"/>
             <Path 
                 Data="M483.75,114.375 L706.875,114.375" 
                 Fill="#FFF4F4F5" 
                 HorizontalAlignment="Left" 
                 Height="1" 
-                Margin="0,146.485,0,0" 
+                Margin="0,166.485,0,0" 
                 Stretch="Fill" 
                 Stroke="Black" 
                 VerticalAlignment="Top" 
-                Width="285"/>
+                Width="285" Grid.RowSpan="2"/>
             <Button x:Name="register_btn" 
                 Content="LANJUT" 
                 HorizontalAlignment="Left" 
                 Height="38" 
-                Margin="0,180,0,0" 
+                Margin="0,195,0,0" 
                 VerticalAlignment="Top" 
                 Width="285" 
                 Background="#FF5399AF" 
                 FontSize="14" 
                 Foreground="White" 
-                BorderBrush="{x:Null}">
+                BorderBrush="{x:Null}" Grid.RowSpan="2">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="6"/>
@@ -142,13 +195,21 @@
         <Label 
             Content="Sudah punya akun?" 
             HorizontalAlignment="Left" 
+<<<<<<< Updated upstream
             Margin="498.647,373.94,0,0" 
+=======
+            Margin="485,378,0,0" 
+>>>>>>> Stashed changes
             VerticalAlignment="Top"/>
         <Button 
             x:Name="login_link" 
             Content="Login" 
             HorizontalAlignment="Left" 
+<<<<<<< Updated upstream
             Margin="592.883,376.538,0,0" 
+=======
+            Margin="603,375,0,0" 
+>>>>>>> Stashed changes
             VerticalAlignment="Top"
             Width="75" Background="{x:Null}" 
             BorderBrush="{x:Null}" 
