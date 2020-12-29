@@ -5,6 +5,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hotelin_Desktop.Register"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
         mc:Ignorable="d"
         Title="FormRegisterWindow" Height="450" Width="800">
     <Grid>
@@ -28,11 +34,11 @@
                 Foreground="#FF707070"/>
             <TextBox 
                 x:Name="nama_hotel_txt" 
+                materialDesign:HintAssist.Hint="Nama Hotel"
                 HorizontalAlignment="Left" 
                 Height="34" 
                 Margin="42,71,0,0" 
                 TextWrapping="Wrap" 
-                Text="Nama Hotel" 
                 VerticalAlignment="Top" 
                 Width="321" 
                 RenderTransformOrigin="-0.132,0.621" 
@@ -46,11 +52,11 @@
             </TextBox>
             <TextBox 
                 x:Name="lokasi_txt" 
+                materialDesign:HintAssist.Hint="Lokasi"
                 HorizontalAlignment="Left" 
                 Height="34" 
-                Margin="42,115,0,0" 
+                Margin="42,117,0,0" 
                 TextWrapping="Wrap" 
-                Text="Lokasi" 
                 VerticalAlignment="Top" 
                 Width="321" 
                 RenderTransformOrigin="-0.132,0.621" 
@@ -63,13 +69,12 @@
                 </TextBox.Resources>
             </TextBox>
             <TextBox 
-<<<<<<< Updated upstream
                 x:Name="fasilitas_txt" 
+                materialDesign:HintAssist.Hint="Fasilitas"
                 HorizontalAlignment="Left" 
                 Height="34" 
                 Margin="388,71,0,0" 
-                TextWrapping="Wrap" 
-                Text="Fasilitas" 
+                TextWrapping="Wrap"
                 VerticalAlignment="Top" 
                 Width="321" 
                 RenderTransformOrigin="-0.132,0.621" 
@@ -83,11 +88,11 @@
             </TextBox>
             <TextBox 
                 x:Name="harga_txt" 
+                materialDesign:HintAssist.Hint="Harga"
                 HorizontalAlignment="Left" 
-                Height="34" 
+                Height="38" 
                 Margin="42,159,0,0" 
-                TextWrapping="Wrap" 
-                Text="Harga" 
+                TextWrapping="Wrap"
                 VerticalAlignment="Top" 
                 Width="321" 
                 RenderTransformOrigin="-0.132,0.621" 
@@ -101,11 +106,11 @@
             </TextBox>
             <TextBox 
                 x:Name="rating_txt" 
+                materialDesign:HintAssist.Hint="Rating"
                 HorizontalAlignment="Left" 
-                Height="34" 
-                Margin="388,115,0,0" 
-                TextWrapping="Wrap" 
-                Text="Rating" 
+                Height="38" 
+                Margin="388,113,0,0" 
+                TextWrapping="Wrap"
                 VerticalAlignment="Top" 
                 Width="321" 
                 RenderTransformOrigin="-0.132,0.621" 
@@ -118,20 +123,12 @@
                 </TextBox.Resources>
             </TextBox>
             <TextBox 
-=======
->>>>>>> Stashed changes
                 x:Name="deskripsi_txt"
+                materialDesign:HintAssist.Hint="Deskripsi"
                 HorizontalAlignment="Left" 
-<<<<<<< Updated upstream
                 Height="79" 
                 Margin="42,206,0,0" 
-                TextWrapping="Wrap" 
-                Text="Deskripsi" 
-=======
-                Height="126" 
-                Margin="42,159,0,0" 
                 TextWrapping="Wrap"
->>>>>>> Stashed changes
                 VerticalAlignment="Top" 
                 Width="321" 
                 RenderTransformOrigin="-0.132,0.621" 
@@ -142,7 +139,6 @@
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            
             <Rectangle
                 AllowDrop="True"
                 Drop="rectangle_drop"
@@ -153,50 +149,32 @@
                 StrokeThickness="1"
                 StrokeDashCap="Round"
                 Stroke="#707070" 
-                Margin="406,71,173,177" Width="173"/>
+                Margin="388,159,233,89"/>
             <StackPanel
-                Margin="426,115,193,217" 
+                Margin="388,159,233,89" 
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center" Width="133">
+                VerticalAlignment="Center">
                 <Image 
                     Source="down-arrow.png"
                     Stretch="Uniform"
                     Height="28" Width="67"/>
                 <TextBlock
-                    Text="Tarik dan Lepas Gambar Disini" 
+                    Text="Pilih Gambar Hotel" 
                     FontFamily="Montserrat" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
                     FontSize="7" 
                     Margin="0,10,0,0"/>
             </StackPanel>
-            <Button 
-                x:Name="pilih_gambar_btn"
-                Content="Pilih Gambar" 
-                HorizontalAlignment="Left" 
-                Margin="406,217,0,0" 
-                VerticalAlignment="Top" 
-                Width="173"
-                Foreground="White" 
-                BorderBrush="{x:Null}" 
-                Background="#FF5399AF" 
-                Click="pilih_gambar_btn_Click">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="6"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
             <Label 
                 x:Name="file_name_lbl"
                 Content="File Name" 
                 HorizontalAlignment="Center" 
-                Margin="406,254,173,91" 
+                Margin="530,159,43,186" 
                 FontSize="12" 
-                Width="173"
+                Width="179"
                 VerticalAlignment="Center" 
                 VerticalContentAlignment="Center" Height="34"/>
-            
             <Button 
                 x:Name="register_btn" 
                 Content="REGISTER" 
@@ -215,7 +193,6 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            
         </Grid>
 
     </Grid>
