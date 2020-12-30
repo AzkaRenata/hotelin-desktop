@@ -35,7 +35,7 @@
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 Height="30" 
-                Margin="86,185,0,96"
+                Margin="86,174,0,107"
                 VerticalAlignment="Center" 
                 Width="111" 
                 HorizontalAlignment="Left"
@@ -47,7 +47,7 @@
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 Height="30" 
-                Margin="88,212,0,69"
+                Margin="88,200,0,81"
                 VerticalAlignment="Center" 
                 Width="111" 
                 HorizontalAlignment="Left"
@@ -59,13 +59,24 @@
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 Height="30" 
-                Margin="86,238,0,43"
+                Margin="86,226,0,55"
                 VerticalAlignment="Center" 
                 Width="111" 
                 HorizontalAlignment="Left"
                 FontWeight="SemiBold"
                  Foreground="#707070"/>
 
+            <Label 
+                Content="Status : ..." 
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Height="30" 
+                Margin="86,248,0,33"
+                VerticalAlignment="Center" 
+                Width="111" 
+                HorizontalAlignment="Left"
+                FontWeight="SemiBold"
+                Foreground="#707070"/>
         </Grid>
 
         <Grid Background="White" Margin="320,94,24,45" >
@@ -186,13 +197,18 @@
                 Foreground="#707070"/>
         </Grid>
 
-        <Image 
-            HorizontalAlignment="Left" 
-            Height="120" 
-            VerticalAlignment="Top" 
-            Width="120" 
-            Margin="106,136,0,0" 
-            Source="profile.png"/>
+        <Ellipse
+            Height="120"
+            Width="120"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0,128,396,0">
+            <Ellipse.Fill>
+                <ImageBrush 
+                    ImageSource="profile.jpg"
+                    Stretch="UniformToFill"/>
+            </Ellipse.Fill>
+        </Ellipse>
     </Grid>
 
 </basic:MyPage>
