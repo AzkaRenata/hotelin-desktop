@@ -82,5 +82,10 @@ namespace Hotelin_Desktop.EditKamar
             roomPriceTxtBox.setText(Convert.ToString(room.room_price));
             guestCapacityTxtBox.setText(Convert.ToString(room.guest_capacity));
         }
+
+        private void pilih_gambar_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

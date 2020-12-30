@@ -77,5 +77,10 @@ namespace Hotelin_Desktop.TambahKamar
             DetailPage detail = new DetailPage();
             NavigationService.Navigate(detail);
         }
+
+        private void pilih_gambar_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

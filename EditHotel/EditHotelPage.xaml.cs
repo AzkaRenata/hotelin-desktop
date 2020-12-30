@@ -83,5 +83,10 @@ namespace Hotelin_Desktop.EditHotel
             }
             
         }
+
+        private void pilih_gambar_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
