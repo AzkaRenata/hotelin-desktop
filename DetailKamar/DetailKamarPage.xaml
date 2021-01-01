@@ -29,10 +29,10 @@
             Margin="26,113,0,0" 
             VerticalAlignment="Top" 
             Width="235" 
-            Source="bedroom.jpg" 
+            Source="default.jpg" 
             Stretch="Fill"/>
 
-        <Grid Background="White" Margin="294,94,20,160" >
+        <Grid Background="White" Margin="294,94,20,56" >
             <Grid.Effect>
                 <DropShadowEffect 
                     BlurRadius="20" 
@@ -54,7 +54,7 @@
                 FontWeight="Bold"/>
 
             <Label 
-                Content="Harga"
+                Content="Kode Kamar"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -66,8 +66,7 @@
                 FontWeight="Bold"/>
 
             <Label 
-                x:Name="room_price_label"
-                Content="No Price"
+                Content="001"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -78,7 +77,7 @@
                 Foreground="#707070"/>
 
             <Label 
-                Content="Jumlah Tamu"
+                Content="Harga"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -90,8 +89,8 @@
                 FontWeight="Bold"/>
 
             <Label 
-                x:Name="guest_capacity_label"
-                Content="0"
+                x:Name="room_price_label"
+                Content="No Price"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
@@ -148,20 +147,71 @@
                 Width="110" 
                 FontSize="12" 
                 Foreground="#707070"/>
+
+            <Label 
+                Content="Kapasitas Tamu"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top"
+                Margin="20,150,0,0" 
+                Height="28" 
+                Width="110" 
+                FontSize="12" 
+                Foreground="#707070"
+                FontWeight="Bold"/>
+
+            <Label 
+                x:Name="guest_capacity_label"
+                Content="0"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top"
+                Margin="20,170,0,0" 
+                Height="28" 
+                Width="110" 
+                FontSize="12" 
+                Foreground="#707070"/>
+            <Label 
+                Content="Tipe Kasur"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top"
+                Margin="20,200,0,0" 
+                Height="28" 
+                Width="110" 
+                FontSize="12" 
+                Foreground="#707070"
+                FontWeight="Bold"/>
+            <Label 
+                Content="Queen Bed"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top"
+                Margin="20,220,0,0" 
+                Height="28" 
+                Width="110" 
+                FontSize="12" 
+                Foreground="#707070"/>
         </Grid>
 
         <Button 
           x:Name="room_edit_btn"
           Content="Edit Kamar" 
           HorizontalAlignment="Left" 
-          Margin="496,49,0,0" 
+          Margin="495,33,0,0" 
           VerticalAlignment="Top" 
           Width="105" 
           Height="30" 
           Background="#5399af" 
           BorderBrush="{x:Null}" 
           FontWeight="Bold" 
-          Foreground="White" Click="room_edit_btn_Click"/>
+          Foreground="White" Click="room_edit_btn_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 
 </basic:MyPage>
