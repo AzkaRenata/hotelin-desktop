@@ -71,17 +71,6 @@
                                         Foreground="#707070"
                                         />
                                 </Button>
-                                <Button 
-                                    x:Name="delete_btn" 
-                                    Click="delete_btn_Click"
-                                    Background="Transparent"
-                                    BorderThickness="0">
-                                    <materialDesign:PackIcon 
-                                        Kind="TrashCan" 
-                                        HorizontalAlignment="Center" 
-                                        VerticalAlignment="Center"
-                                        Foreground="#707070"/>
-                                </Button>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
