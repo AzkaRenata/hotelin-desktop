@@ -175,7 +175,7 @@
                 Margin="0,10,0,0"/>
         </StackPanel>
         <Button 
-            x:Name="pilih_gambar_btn"
+            x:Name="choose_image_btn"
             Content="Pilih Gambar" 
             HorizontalAlignment="Left" 
             Margin="320,326,0,0" 
@@ -183,25 +183,13 @@
             Width="173"
             Foreground="White" 
             BorderBrush="{x:Null}" 
-            Background="#FF5399AF" 
-            Click="pilih_gambar_btn_Click">
+            Background="#FF5399AF">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="6"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Label 
-             x:Name="file_name_lbl"
-             Content="File Name" 
-             HorizontalAlignment="Center" 
-             FontSize="12" 
-             Width="173"
-             VerticalAlignment="Center" 
-             VerticalContentAlignment="Center" 
-             Height="34" 
-             Margin="320,363,127,53">
-        </Label>
 
         <Button 
             x:Name="edit_kamar_btn" 
@@ -220,6 +208,13 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <TextBlock
+            x:Name="selected_image_tb"
+            HorizontalAlignment="Left"       
+            Margin="322,364,0,0" 
+            TextWrapping="Wrap" 
+            Text="No Image Selected" 
+            VerticalAlignment="Top"/>
 
     </Grid>
 </basic:MyPage>
