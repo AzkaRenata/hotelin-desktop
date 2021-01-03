@@ -96,15 +96,5 @@ namespace Hotelin_Desktop.Pemesanan
             NavigationService.Navigate(detailBooking);
 
         }
-
-        private void delete_btn_Click(object sender, RoutedEventArgs e)
-        {
-            int id = (pemesanan_datagrid.SelectedItem as BookingDetail).id;
-            MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
-            if (result == MessageBoxResult.Yes)
-            {
-                getController().callMethod("deleteRoom", token, id);
-            }
-        }
     }
 }
