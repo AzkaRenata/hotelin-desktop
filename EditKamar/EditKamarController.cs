@@ -32,7 +32,7 @@ namespace Hotelin_Desktop.EditKamar
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint("room/detail/"+_roomID)
+                .setEndpoint(MyURL.MyURL.detailRoomURL + _roomID)
                 .setRequestMethod(HttpMethod.Get);
                 Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);
@@ -74,7 +74,7 @@ namespace Hotelin_Desktop.EditKamar
                 multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "room_picture", fullFileName);
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))
-                .setEndpoint("room/update/"+id)
+                .setEndpoint(MyURL.MyURL.updateRoomURL + id)
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);

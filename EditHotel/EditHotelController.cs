@@ -27,12 +27,11 @@ namespace Hotelin_Desktop.EditHotel
         {
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
-            string endPoint = "hotel/profile";
 
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.hotelDetailURL)
                 .setRequestMethod(HttpMethod.Get);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);

@@ -26,7 +26,7 @@ namespace Hotelin_Desktop.Pengunjung
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint("booking/list/1")
+                .setEndpoint(MyURL.MyURL.onGoingBookingURL)
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);

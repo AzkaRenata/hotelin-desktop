@@ -49,7 +49,7 @@ namespace Hotelin_Desktop.Login
                 .buildHttpRequest()
                 .addParameters("email", _email)
                 .addParameters("password", _password)
-                .setEndpoint("user/login")
+                .setEndpoint(MyURL.MyURL.loginURL)
                 .setRequestMethod(HttpMethod.Post);
             client.setOnSuccessRequest(setViewLoginStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());

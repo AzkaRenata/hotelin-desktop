@@ -89,7 +89,7 @@ namespace Hotelin_Desktop.Login
 
         public void onLoginButtonClick()
         {
-            getController().callMethod("login", email_txt.Text, password_txt.Password);
+            getController().callMethod("loginURL", email_txt.Text, password_txt.Password);
         }
 
 
