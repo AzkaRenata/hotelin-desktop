@@ -24,7 +24,7 @@ namespace Hotelin_Desktop.Profile
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint(MyURL.MyURL.hotelDetailURL)
+                .setEndpoint(MyURL.MyURL.detailHotelURL)
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);

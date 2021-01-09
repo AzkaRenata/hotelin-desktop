@@ -22,9 +22,8 @@ namespace Hotelin_Desktop.TambahHotel
             string _hotelDescription,
             int _userID)
         {
-            string API = "http://localhost:8000/";
-            string endPoint = "api/hotel/create";
-            var client = new ApiClient(API);
+            
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             string bearerToken = File.ReadAllText(@"userToken.txt");
@@ -40,7 +39,7 @@ namespace Hotelin_Desktop.TambahHotel
                 //.addParameters("hotel_location", "Surabaya, Jawa Timur")
                 //.addParameters("hotel_desc", "mantap")
                 //.addParameters("user_id", "3")
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.addHotelURL)
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken); // BEARER TOKEN GOES HERE

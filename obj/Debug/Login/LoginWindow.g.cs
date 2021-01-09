@@ -104,7 +104,7 @@ namespace Hotelin_Desktop.Login {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Hotelin-Desktop;component/loginURL/loginwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Hotelin-Desktop;component/login/loginwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Login\LoginWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

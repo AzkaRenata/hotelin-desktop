@@ -31,7 +31,7 @@ namespace Hotelin_Desktop.EditHotel
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint(MyURL.MyURL.hotelDetailURL)
+                .setEndpoint(MyURL.MyURL.detailHotelURL)
                 .setRequestMethod(HttpMethod.Get);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
@@ -73,9 +73,8 @@ namespace Hotelin_Desktop.EditHotel
             string _hotelLocation,
             string _hotelDescription)
         {
-            string API = "http://localhost:8000/";
-            string endPoint = "api/hotel/update";
-            var client = new ApiClient(API);
+    
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             var req = request
@@ -84,7 +83,7 @@ namespace Hotelin_Desktop.EditHotel
                 .addParameters("hotel_name", _hotelName)
                 .addParameters("hotel_location", _hotelLocation)
                 .addParameters("hotel_desc", _hotelDescription)
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.updateHotelURL)
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
