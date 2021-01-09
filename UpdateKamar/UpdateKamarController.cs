@@ -63,7 +63,7 @@ namespace Hotelin_Desktop.UpdateKamar
             )
         {
             
-            var client = new ApiClient(API);
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             if (hasUserEdited(_roomType, _bedType, _roomPrice, _guestCapacity) == true) // HANDLING IF USER DID CHANGE SOMETHING

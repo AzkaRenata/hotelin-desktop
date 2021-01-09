@@ -29,7 +29,7 @@
             Margin="26,113,0,0" 
             VerticalAlignment="Top" 
             Width="235" 
-            Source="hotel.jpg" 
+            Source="default.jpg" 
             Stretch="Fill"/>
         <Image 
             x:Name="room_img1"

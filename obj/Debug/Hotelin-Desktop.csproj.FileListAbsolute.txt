@@ -255,3 +255,9 @@ C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Hotelin-Desktop.cspro
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Hotelin-Desktop.csproj.CopyComplete
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Hotelin-Desktop.exe
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Hotelin-Desktop.pdb
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\TambahHotel\TambahHotelWindow.g.cs
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\UpdateHotel\UpdateHotelPage.g.cs
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\UpdateKamar\UpdateKamarPage.g.cs
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\TambahHotel\TambahHotelWindow.baml
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\UpdateHotel\UpdateHotelPage.baml
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\UpdateKamar\UpdateKamarPage.baml

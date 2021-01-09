@@ -31,7 +31,7 @@ namespace Hotelin_Desktop.EditHotel
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint(MyURL.MyURL.detailHotelURL)
+                .setEndpoint(MyURL.MyURL.profileHotelURL)
                 .setRequestMethod(HttpMethod.Get);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);

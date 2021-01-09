@@ -11,7 +11,7 @@
 
     <Grid Background="White">
         <Label 
-            Content="Daftar Kamar"
+            Content="Detail Kamar"
             VerticalContentAlignment="Center"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top"

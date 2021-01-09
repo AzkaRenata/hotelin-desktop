@@ -19,7 +19,7 @@
             VerticalAlignment="Top"
             Margin="20,20,0,0" 
             Height="47" 
-            Width="242" 
+            Width="259" 
             FontSize="26" 
             Foreground="#707070"
             FontWeight="Bold"/>
