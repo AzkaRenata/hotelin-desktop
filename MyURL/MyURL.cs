@@ -18,7 +18,6 @@ namespace Hotelin_Desktop.MyURL
         public static String updateHotelURL = "hotel/update";
         public static String addHotelURL = "hotel/create";
         public static String detailHotelURL = "hotel/detail/";
-        public static String detailRoomURL = "room/detail/";
         public static String updateRoomURL = "room/update/";
         public static String loginURL = "user/login";
         public static String canceledBookingURL = "booking/list/3";
