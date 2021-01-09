@@ -66,6 +66,7 @@
                 FontWeight="Bold"/>
 
             <Label 
+                x:Name="room_code_label"
                 Content="001"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
@@ -171,6 +172,7 @@
                 Width="110" 
                 FontSize="12" 
                 Foreground="#707070"/>
+            
             <Label 
                 Content="Tipe Kasur"
                 VerticalContentAlignment="Center"
@@ -182,7 +184,9 @@
                 FontSize="12" 
                 Foreground="#707070"
                 FontWeight="Bold"/>
-            <Label 
+            
+            <Label
+                x:Name="bed_type_label"
                 Content="Queen Bed"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 

@@ -68,6 +68,20 @@
                 HorizontalAlignment="Left"
                 FontWeight="SemiBold"
                  Foreground="#707070"/>
+            
+            <Label 
+                x:Name="status_label"
+                Content="status" 
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Height="30" 
+                Margin="86,268,0,13"
+                VerticalAlignment="Center" 
+                Width="111" 
+                HorizontalAlignment="Left"
+                FontWeight="SemiBold"
+                Foreground="#707070"/>
+
 
         </Grid>
 
@@ -146,7 +160,7 @@
                 Width="111"
                  Foreground="#707070"/>
             <Label 
-                x:Name="room_type_label"
+                x:Name="room_code_label"
                 Content="C102" 
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
