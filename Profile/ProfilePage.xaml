@@ -29,7 +29,7 @@
             Margin="26,113,0,0" 
             VerticalAlignment="Top" 
             Width="235" 
-            Source="default.jpg" 
+            Source="hotel.jpg" 
             Stretch="Fill"/>
         <Image 
             x:Name="room_img1"
@@ -125,8 +125,8 @@
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
                 Margin="20,112,0,0" 
-                Height="28" 
-                Width="110" 
+                Height="32" 
+                Width="144" 
                 FontSize="18" 
                 Foreground="#5399af" FontWeight="Bold"/>
 
