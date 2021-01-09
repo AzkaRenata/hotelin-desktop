@@ -13,7 +13,7 @@
 
     <Grid Background="White">
         <Label 
-            Content="Data Pemesanan"
+            Content="Riwayat Pemesanan"
             VerticalContentAlignment="Center"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top"

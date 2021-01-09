@@ -54,6 +54,7 @@ namespace Hotelin_Desktop.DetailBooking
                 booking_time_label.Content = bookingDetail.booking.booking_time;
                 room_type_label.Content = bookingDetail.booking.room_type;
                 price_label.Content = bookingDetail.booking.room_price;
+
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
                 bitmap.UriSource = new Uri(@image_url + bookingDetail.booking.user_picture);

@@ -21,6 +21,7 @@ namespace Hotelin_Desktop.Model
         public string email { get; set; }
         public string telp { get; set; }
         public string user_picture { get; set; }
+        public string days_count { get; set; }
         public string hotel_name { get; set; }
         public string hotel_picture { get; set; }
         public string hotel_location { get; set; }

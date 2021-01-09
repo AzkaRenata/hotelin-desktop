@@ -13,13 +13,13 @@
 
     <Grid Background="White">
         <Label 
-            Content="Data Pembatalan"
+            Content="Riwayat Pembatalan"
             VerticalContentAlignment="Center"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top"
             Margin="20,20,0,0" 
             Height="47" 
-            Width="242" 
+            Width="283" 
             FontSize="26" 
             Foreground="#707070"
             FontWeight="Bold"/>

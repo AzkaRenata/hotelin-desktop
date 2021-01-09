@@ -13,7 +13,7 @@
 
     <Grid Background="White">
         <Label 
-            Content="Data Pengunjung"
+            Content="Pengunjung Saat Ini"
             VerticalContentAlignment="Center"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top"
