@@ -18,7 +18,7 @@ namespace Hotelin_Desktop.EditHotel
         private HotelProfile hotel;
         private string bearerToken = File.ReadAllText(@"userToken.txt"); // BEARER TOKEN GOES HERE
 
-        public EditHotelController(IMyView _myView, int _hotelID) : base(_myView) 
+        public EditHotelController(IMyView _myView) : base(_myView) 
         {
             getCurrentHotelDetail();
         }
@@ -69,27 +69,29 @@ namespace Hotelin_Desktop.EditHotel
             }
         }
 
-        public async void updateHotel(
-            string _hotelName,
-            string _hotelLocation,
-            string _hotelDescription)
+        public async void updateHotel(HotelModel hotel, byte[] fileByte, string fullFileName)
         {
-            string API = "http://localhost:8000/";
-            string endPoint = "api/hotel/update";
-            var client = new ApiClient(API);
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
+            string bearerToken = File.ReadAllText(@"userToken.txt");
+            var multiPartContent = new MultipartFormDataContent();
+            multiPartContent.Add(new StringContent(hotel.hotel_name), "hotel_name");
+            multiPartContent.Add(new StringContent(hotel.hotel_location), "hotel_location");
+            multiPartContent.Add(new StringContent(hotel.hotel_desc), "hotel_desc");
+            if (fileByte != null)
+                multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "hotel_picture", fullFileName);
             var req = request
-                .buildHttpRequest()
+                .buildMultipartRequest(new MultiPartContent(multiPartContent))
                 .addHeaders("Accept", "application/json")
-                .addParameters("hotel_name", _hotelName)
-                .addParameters("hotel_location", _hotelLocation)
-                .addParameters("hotel_desc", _hotelDescription)
-                .setEndpoint(endPoint)
+                .setEndpoint("hotel/update")
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
+            client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
+
+            Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
         }
 
         private Boolean hasUserEdited(

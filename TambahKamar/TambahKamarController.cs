@@ -36,19 +36,19 @@ namespace Hotelin_Desktop.TambahKamar
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
-            client.setOnSuccessRequest(setViewAddHotelStatus);
+            client.setOnSuccessRequest(setViewAddRoomStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
             
             Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
 
         }
 
-        private void setViewAddHotelStatus(HttpResponseBundle _response)
+        private void setViewAddRoomStatus(HttpResponseBundle _response)
         {
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                //getView().callMethod("setRegisterStatus", status);
+                getView().callMethod("redirectToRoomFacility", _response.getParsedObject<RoomModel>());
             }
         }
     }

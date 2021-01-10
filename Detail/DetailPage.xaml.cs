@@ -1,5 +1,6 @@
 ﻿using Hotelin_Desktop.DetailKamar;
 using Hotelin_Desktop.EditKamar;
+using Hotelin_Desktop.FasilitasKamar;
 using Hotelin_Desktop.Model;
 using Hotelin_Desktop.TambahKamar;
 using System;
