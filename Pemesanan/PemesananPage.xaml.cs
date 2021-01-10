@@ -1,5 +1,4 @@
 using Hotelin_Desktop.Model;
-using Hotelin_Desktop.DetailPemesanan;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,7 +28,6 @@ namespace Hotelin_Desktop.Pemesanan
     public partial class PemesananPage : MyPage
     {
         //private List<int> actualId = new List<int>();
-        private DetailPemesananPage detailPemesananPage;
         private string token;
 
 

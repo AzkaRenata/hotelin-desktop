@@ -210,9 +210,6 @@ C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\AddKamar\AddKamarPage
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Dashboard\DashboardWindow.g.cs
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailBooking\DetailBookingPage.g.cs
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailKamar\DetailKamarPage.g.cs
-C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPembatalan\DetailPembatalanPage.g.cs
-C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPemesanan\DetailPemesananPage.g.cs
-C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPengunjung\DetailPengunjungPage.g.cs
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Detail\DetailPage.g.cs
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\EditKamar\EditKamarPage.g.cs
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\EditHotel\EditHotelPage.g.cs
@@ -233,9 +230,6 @@ C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\AddKamar\AddKamarPage
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Dashboard\DashboardWindow.baml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailBooking\DetailBookingPage.baml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailKamar\DetailKamarPage.baml
-C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPembatalan\DetailPembatalanPage.baml
-C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPemesanan\DetailPemesananPage.baml
-C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailPengunjung\DetailPengunjungPage.baml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Detail\DetailPage.baml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\EditKamar\EditKamarPage.baml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\EditHotel\EditHotelPage.baml

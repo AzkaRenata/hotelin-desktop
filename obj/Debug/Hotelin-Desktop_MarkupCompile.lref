@@ -4,9 +4,6 @@ FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\AddKamar\AddKamarPage.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\Dashboard\DashboardWindow.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\DetailBooking\DetailBookingPage.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\DetailKamar\DetailKamarPage.xaml;;
-FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\DetailPembatalan\DetailPembatalanPage.xaml;;
-FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\DetailPemesanan\DetailPemesananPage.xaml;;
-FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\DetailPengunjung\DetailPengunjungPage.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\Detail\DetailPage.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\EditKamar\EditKamarPage.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\EditHotel\EditHotelPage.xaml;;
@@ -18,8 +15,8 @@ FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\Pengunjung\PengunjungPage.xaml
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\Profile\ProfilePage.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\Register\FormRegisterWindow.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\Register\RegisterWindow.xaml;;
-FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\TambahKamar\TambahKamarPage.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\TambahHotel\TambahHotelWindow.xaml;;
+FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\TambahKamar\TambahKamarPage.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\UpdateHotel\UpdateHotelPage.xaml;;
 FC:\Users\IrfanS\Documents\GitHub\hotelin-desktop\UpdateKamar\UpdateKamarPage.xaml;;
 

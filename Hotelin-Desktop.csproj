@@ -114,15 +114,6 @@
       <DependentUpon>DetailKamarPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="DetailKamar\RoomDetailController.cs" />
-    <Compile Include="DetailPembatalan\DetailPembatalanPage.xaml.cs">
-      <DependentUpon>DetailPembatalanPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DetailPemesanan\DetailPemesananPage.xaml.cs">
-      <DependentUpon>DetailPemesananPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DetailPengunjung\DetailPengunjungPage.xaml.cs">
-      <DependentUpon>DetailPengunjungPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Detail\DetailPage.xaml.cs">
       <DependentUpon>DetailPage.xaml</DependentUpon>
     </Compile>
@@ -209,18 +200,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="DetailKamar\DetailKamarPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="DetailPembatalan\DetailPembatalanPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="DetailPemesanan\DetailPemesananPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="DetailPengunjung\DetailPengunjungPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -353,9 +332,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="DetailKamar\bedroom.jpg" />
-    <Resource Include="DetailPembatalan\profile.png" />
-    <Resource Include="DetailPemesanan\profile.png" />
-    <Resource Include="DetailPengunjung\profile.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Profile\ac.png" />
@@ -391,19 +367,13 @@
     <Resource Include="Profile\default.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="DetailPembatalan\profile.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="DetailPemesanan\profile.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="DetailPengunjung\profile.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="DetailKamar\default.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="TambahHotel\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DetailBooking\profile.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="AddHotel\down-arrow.png" />
