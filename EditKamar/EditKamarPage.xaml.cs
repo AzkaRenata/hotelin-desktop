@@ -1,5 +1,4 @@
 ﻿using Hotelin_Desktop.Detail;
-using Hotelin_Desktop.EditFasilitasKamar;
 using Hotelin_Desktop.Model;
 using System;
 using System.Collections.Generic;
@@ -44,10 +43,8 @@ namespace Hotelin_Desktop.EditKamar
         private IMyTextBlock imageTxtBlock;
         private byte[] fileByte = null;
         private string fullFileName = "";
-        private int room_id;
         public EditKamarPage(int id)
         {
-            this.room_id = id;
             InitializeComponent();
             setController(new EditKamarController(this, id));
             initUIBuilders();
@@ -87,8 +84,8 @@ namespace Hotelin_Desktop.EditKamar
             room.guest_capacity = int.Parse(guestCapacityTxtBox.getText());
             getController().callMethod("updateKamar",room, fileByte, fullFileName);
 
-            EditRoomFacilityPage pg = new EditRoomFacilityPage(room_id);
-            NavigationService.Navigate(pg);
+            DetailPage detail = new DetailPage();
+            NavigationService.Navigate(detail);
         }
 
         public void setCurrentRoomValue(RoomResponse roomResponse)

@@ -1,6 +1,5 @@
 ﻿using Hotelin_Desktop.Detail;
 using Hotelin_Desktop.Model;
-using Hotelin_Desktop.FasilitasKamar;
 using Hotelin_Desktop.TambahKamar;
 using System;
 using System.Collections.Generic;
@@ -87,17 +86,9 @@ namespace Hotelin_Desktop.TambahKamar
             room.room_price = long.Parse(roomPriceTxtBox.getText());
             room.guest_capacity = int.Parse(guestCapacityTxtBox.getText());
             getController().callMethod("addKamar", room, fileByte, fullFileName);
-        }
 
-        public void redirectToRoomFacility(RoomModel room)
-        {
-            this.Dispatcher.Invoke(() =>
-            {
-                Console.WriteLine(room.id);
-                RoomFacilityPage facility = new RoomFacilityPage(room.id);
-                NavigationService.Navigate(facility);
-            });
-           
+            DetailPage detail = new DetailPage();
+            NavigationService.Navigate(detail);
         }
 
         private bool checkFileSize(string path)
