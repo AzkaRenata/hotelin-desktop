@@ -51,30 +51,31 @@ namespace Hotelin_Desktop.Login
             {
                 var client = new ApiClient(MyURL.MyURL.baseURL);
                 var request = new ApiRequestBuilder();
-            var req = request
-                .buildHttpRequest()
-                .addParameters("email", _email)
-                .addParameters("password", _password)
-                .setEndpoint(MyURL.MyURL.loginURL)
-                .setRequestMethod(HttpMethod.Post);
-            client.setOnSuccessRequest(setViewLoginStatus);
-            var response = await client.sendRequest(request.getApiRequestBundle());
-            Console.WriteLine("token : " + response.getJObject()["token"]);
-        }
-
-        private void setViewLoginStatus(HttpResponseBundle _response)
-        {
-            if (_response.getHttpResponseMessage().Content != null)
-            {
-                string status = _response.getHttpResponseMessage().ReasonPhrase;
-                int statusCode = (int)_response.getHttpResponseMessage().StatusCode;
-
-                Console.WriteLine(_response.getHttpResponseMessage());
-                string token = _response.getJObject()["token"].ToString();
-                getView().callMethod("saveToken", token);
-                //getView().callMethod("tesPrint");
-                //getView().callMethod("moveToDashboard");
+                var req = request
+                    .buildHttpRequest()
+                    .addParameters("email", _email)
+                    .addParameters("password", _password)
+                    .setEndpoint(MyURL.MyURL.loginURL)
+                    .setRequestMethod(HttpMethod.Post);
+                client.setOnSuccessRequest(setViewLoginStatus);
+                var response = await client.sendRequest(request.getApiRequestBundle());
+                Console.WriteLine("token : " + response.getJObject()["token"]);
             }
         }
-    }
+           private void setViewLoginStatus(HttpResponseBundle _response)
+            {
+                if (_response.getHttpResponseMessage().Content != null)
+                {
+                    string status = _response.getHttpResponseMessage().ReasonPhrase;
+                    int statusCode = (int)_response.getHttpResponseMessage().StatusCode;
+
+                    Console.WriteLine(_response.getHttpResponseMessage());
+                    string token = _response.getJObject()["token"].ToString();
+                    getView().callMethod("saveToken", token);
+                    //getView().callMethod("tesPrint");
+                    //getView().callMethod("moveToDashboard");
+                }
+            }
+        }
+    
 }

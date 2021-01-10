@@ -52,9 +52,9 @@
             </DataGrid.CellStyle>
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Kode Kamar" Binding="{Binding room_code}" Width="130"/>
-                <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding room_type}" Width="130"/>
-                <DataGridTextColumn Header="Kapasitas (orang)" Binding="{Binding guest_capacity}" Width="130"/>
+                <DataGridTextColumn Header="Kode Kamar" Binding="{Binding room_code}" Width="100"/>
+                <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding room_type}" Width="100"/>
+                <DataGridTextColumn Header="Kapasitas (orang)" Binding="{Binding guest_capacity}" Width="110"/>
                 <DataGridTextColumn Header="Harga (Rp)" Binding="{Binding room_price}" Width="130"/>
                 <DataGridTemplateColumn Header="Action">
                     <DataGridTemplateColumn.CellTemplate>

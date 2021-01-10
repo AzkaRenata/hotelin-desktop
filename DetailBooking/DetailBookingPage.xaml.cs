@@ -43,6 +43,7 @@ namespace Hotelin_Desktop.DetailBooking
         public void setBookingDetail(Booking bookingDetail)
         {
             string image_url = MyURL.MyURL.imageURL;
+            string status;
             //Console.WriteLine("NAME : " + bookingDetail.name);
             this.Dispatcher.Invoke(() =>
             {
@@ -57,20 +58,22 @@ namespace Hotelin_Desktop.DetailBooking
                 room_code_label.Content = bookingDetail.booking.room_code;
 
                 if (bookingDetail.booking.booking_status == 1)
-                    status_label.Content = "Status : Ongoing";
+                    status = "Ongoing";
                 else if (bookingDetail.booking.booking_status == 2)
-                    status_label.Content = "Status : Done"; 
+                    status = "Done";
                 else
-                    status_label.Content = "Status : Canceled"; 
+                    status = "Canceled";
+                status_label.Content = "Status : " + status;
 
 
 
                 BitmapImage bitmap = new BitmapImage();
-                if (bookingDetail.booking.user_picture != null) { 
-                bitmap.BeginInit();
-                bitmap.UriSource = new Uri(@image_url + bookingDetail.booking.user_picture);
-                bitmap.EndInit();
-                user_picture.Source = bitmap;
+                if (bookingDetail.booking.user_picture != null)
+                {
+                    bitmap.BeginInit();
+                    bitmap.UriSource = new Uri(@image_url + bookingDetail.booking.user_picture);
+                    bitmap.EndInit();
+                    user_picture.Source = bitmap;
                 }
             });
         }

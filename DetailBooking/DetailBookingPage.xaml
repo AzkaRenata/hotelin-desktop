@@ -4,7 +4,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Hotelin_Desktop.DetailPembatalan"
+      xmlns:local="clr-namespace:Hotelin_Desktop.DetailBooking"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="620"
       Title="DetailPembatalanPage">
@@ -79,7 +79,7 @@
                 VerticalAlignment="Center" 
                 Width="111" 
                 HorizontalAlignment="Left"
-                FontWeight="SemiBold"
+                FontWeight="Bold"
                 Foreground="#707070"/>
 
 
@@ -216,7 +216,7 @@
             VerticalAlignment="Top" 
             Width="120" 
             Margin="106,136,0,0" 
-            Source="profile.png"/>
+            Source="profile.jpg"/>
     </Grid>
 
 </basic:MyPage>

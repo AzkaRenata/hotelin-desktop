@@ -1,5 +1,4 @@
 using Hotelin_Desktop.Model;
-using Hotelin_Desktop.DetailPengunjung;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,7 +18,6 @@ using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
-using Hotelin_Desktop.DetailPemesanan;
 using Hotelin_Desktop.DetailBooking;
 
 namespace Hotelin_Desktop.Pengunjung
@@ -31,14 +29,12 @@ namespace Hotelin_Desktop.Pengunjung
     {
         private List<BookingModel> bookingList;
         private List<int> actualId = new List<int>();
-        private DetailPengunjungPage detailPengunjungPage;
         private String token;
 
         public PengunjungPage()
         {
             InitializeComponent();
             setController(new PengunjungController(this));
-            detailPengunjungPage = new DetailPengunjungPage(1);
             /*Pengunjung olivia = new Pengunjung();
             olivia.namaPemesan = "Olivia";
             olivia.tanggalMenginap = "3-5 Oktober";

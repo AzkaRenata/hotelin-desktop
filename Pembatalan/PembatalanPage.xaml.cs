@@ -1,5 +1,4 @@
 using Hotelin_Desktop.Model;
-using Hotelin_Desktop.DetailPembatalan;
 using System;
 using System.Collections.Generic;
 using System.IO;
