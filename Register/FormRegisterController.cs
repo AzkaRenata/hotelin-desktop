@@ -9,20 +9,18 @@ using System.Net.Http;
 using System.IO;
 using System.Windows;
 
-namespace Hotelin_Desktop.TambahKamar
+namespace Hotelin_Desktop.Register
 {
-    public class TambahKamarController : MyController
+    public class FormRegisterController : MyController
     {
-        public TambahKamarController(IMyView _myView) : base(_myView) { }
+        public FormRegisterController(IMyView _myView) : base(_myView) { }
 
-        public async void addKamar(
-            string _hotelID,
-            string _roomType,
-            string _bedType,
-            string _roomPrice,
-            string _guestCapacity)
+        public async void addHotel(
+            string _hotel_name,
+            string _hotel_location,
+            string _hotel_desc)
         {
-            if (validateAddInput(_hotelID, _roomType, _bedType, _roomPrice, _guestCapacity))
+            if (validateAddInput(_hotel_name, _hotel_location, _hotel_desc))
             {
                 //string API = "http://localhost:8000/";
                 //var client = new ApiClient(API);
@@ -36,11 +34,9 @@ namespace Hotelin_Desktop.TambahKamar
                 var req = request
                     .buildHttpRequest()
                     .addHeaders("Accept", "application/json")
-                    .addParameters("hotel_id", Convert.ToString(_hotelID))
-                    .addParameters("room_type", _roomType)
-                    .addParameters("bed_type", _bedType)
-                    .addParameters("room_price", Convert.ToString(_roomPrice))
-                    .addParameters("guest_capacity", Convert.ToString(_guestCapacity))
+                    .addParameters("nama_hotel_txt", _hotel_name)
+                    .addParameters("lokasi_txt", _hotel_location)
+                    .addParameters("deskripsi_txt", _hotel_desc)
                     .setEndpoint(endPoint)
                     .setRequestMethod(HttpMethod.Post);
                 Console.WriteLine("tes2");
@@ -54,19 +50,17 @@ namespace Hotelin_Desktop.TambahKamar
             }
             else
             {
-                MessageBox.Show("One of the required field is empty. Please try again.", "Failed");
+                MessageBox.Show("One of the required field is empty. Please try again.", "Try Again");
                 // Console.WriteLine("One of the required field is empty. Please try again.");
             }
 
         }
 
-        private bool validateAddInput(string _hotelID, string _roomType, string _bedType, string _roomPrice, string _guestCapacity)
+        private bool validateAddInput(string _hotel_name, string _hotel_location, string _hotel_desc)
         {
-            if (_hotelID.Length == 0) return false;
-            if (_roomType.Length == 0) return false;
-            if (_bedType.Length == 0) return false;
-            if (_roomPrice.Length == 0) return false;
-            if (_guestCapacity.Length == 0) return false;
+            if (_hotel_name.Length == 0) return false;
+            if (_hotel_location.Length == 0) return false;
+            if (_hotel_desc.Length == 0) return false;
             return true;
         }
 
