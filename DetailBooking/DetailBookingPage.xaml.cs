@@ -52,13 +52,26 @@ namespace Hotelin_Desktop.DetailBooking
                 check_in_label.Content = bookingDetail.booking.check_in;
                 check_out_label.Content = bookingDetail.booking.check_out;
                 booking_time_label.Content = bookingDetail.booking.booking_time;
-                room_type_label.Content = bookingDetail.booking.room_type;
-                price_label.Content = bookingDetail.booking.room_price;
+                price_label.Content = bookingDetail.booking.total_price;
+                days_count_label.Content = bookingDetail.booking.days_count + " Hari";
+                room_code_label.Content = bookingDetail.booking.room_code;
+
+                if (bookingDetail.booking.booking_status == 1)
+                    status_label.Content = "Status : Ongoing";
+                else if (bookingDetail.booking.booking_status == 2)
+                    status_label.Content = "Status : Done"; 
+                else
+                    status_label.Content = "Status : Canceled"; 
+
+
+
                 BitmapImage bitmap = new BitmapImage();
+                if (bookingDetail.booking.user_picture != null) { 
                 bitmap.BeginInit();
                 bitmap.UriSource = new Uri(@image_url + bookingDetail.booking.user_picture);
                 bitmap.EndInit();
                 user_picture.Source = bitmap;
+                }
             });
         }
     }
