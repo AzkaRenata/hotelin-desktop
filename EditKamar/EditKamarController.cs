@@ -18,7 +18,7 @@ namespace Hotelin_Desktop.EditKamar
         private string bearerToken = File.ReadAllText(@"userToken.txt"); // BEARER TOKEN GOES HERE
         int id;
 
-        public EditKamarController(IMyView _myView, int _roomID) : base(_myView) 
+        public EditKamarController(IMyView _myView, int _roomID) : base(_myView)
         {
             this.id = _roomID;
             getCurrentRoomDetail(_roomID);
@@ -32,27 +32,31 @@ namespace Hotelin_Desktop.EditKamar
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint(MyURL.MyURL.detailRoomURL + _roomID)
+                .setEndpoint("room/detail/" + _roomID)
                 .setRequestMethod(HttpMethod.Get);
-                Console.WriteLine("tes2");
-                client.setAuthorizationToken(bearerToken);
-                client.setOnSuccessRequest(setViewAddHotelStatus);
-                var response = await client.sendRequest(request.getApiRequestBundle());
-                Console.WriteLine("tes1");
+            Console.WriteLine("tes2");
+            client.setAuthorizationToken(bearerToken);
+            client.setOnSuccessRequest(setViewAddHotelStatus);
+            var response = await client.sendRequest(request.getApiRequestBundle());
+            Console.WriteLine("tes1");
             //var hotelData = response.getParsedObject<HotelList>().hotels;
 
             string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
-                
+
             Console.WriteLine(anotherResponse);
+
+            //currentRoom = JsonConvert.DeserializeObject<RoomResponse>(anotherResponse).room;
             currentRoom = response.getParsedObject<RoomResponse>();
 
-            getView().callMethod("setCurrentRoomValue", currentRoom);            
+            // Console.WriteLine(currentRoom.room_type);
+
+            getView().callMethod("setCurrentRoomValue", currentRoom);
 
             // Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
             // Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
             // Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
         }
-        
+
         public async void updateKamar(RoomModel room, byte[] fileByte, string fullFileName)
         {
             var client = new ApiClient(MyURL.MyURL.baseURL);
@@ -70,7 +74,7 @@ namespace Hotelin_Desktop.EditKamar
                 multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "room_picture", fullFileName);
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))
-                .setEndpoint(MyURL.MyURL.updateRoomURL + id)
+                .setEndpoint("room/update/" + id)
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
@@ -78,15 +82,22 @@ namespace Hotelin_Desktop.EditKamar
             var response = await client.sendRequest(request.getApiRequestBundle());
         }
 
-        private Boolean hasUserEdited(string _roomType, string _bedType, long _roomPrice, int _guestCapacity)
+        /*
+        private Boolean hasUserEdited(
+            string _roomType,
+            string _bedType,
+            long _roomPrice,
+            int _guestCapacity
+            )
         {
             if (String.Compare(_roomType, currentRoom.room_type) != 0) return true;
             if (String.Compare(_bedType, currentRoom.bed_type) != 0) return true;
             if (_roomPrice - currentRoom.room_price != 0) return true;
             if (_guestCapacity - currentRoom.guest_capacity != 0) return true;
+
             return false;
         }
-
+        */
         private void setViewAddHotelStatus(HttpResponseBundle _response)
         {
             if (_response.getHttpResponseMessage().Content != null)

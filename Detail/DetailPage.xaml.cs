@@ -1,5 +1,6 @@
 ﻿using Hotelin_Desktop.DetailKamar;
 using Hotelin_Desktop.EditKamar;
+using Hotelin_Desktop.FasilitasKamar;
 using Hotelin_Desktop.Model;
 using Hotelin_Desktop.TambahKamar;
 using System;
@@ -39,7 +40,7 @@ namespace Hotelin_Desktop.Detail
             setController(new RoomListController(this));
             token = File.ReadAllText(@"userToken.txt");
             getRoomList();
-           
+
         }
 
         private void initUIBuilders()
@@ -109,9 +110,9 @@ namespace Hotelin_Desktop.Detail
         {
             int id = (kamar_datagrid.SelectedItem as Room).id;
             MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
-            if(result == MessageBoxResult.Yes)
+            if (result == MessageBoxResult.Yes)
             {
-                getController().callMethod("deleteRoomURL", token, id);
+                getController().callMethod("deleteRoom", token, id);
             }
         }
     }
