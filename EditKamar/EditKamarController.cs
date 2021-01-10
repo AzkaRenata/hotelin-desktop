@@ -32,7 +32,7 @@ namespace Hotelin_Desktop.EditKamar
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint("room/detail/"+_roomID)
+                .setEndpoint(MyURL.MyURL.detailRoomURL + _roomID)
                 .setRequestMethod(HttpMethod.Get);
                 Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);
@@ -44,11 +44,7 @@ namespace Hotelin_Desktop.EditKamar
             string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
                 
             Console.WriteLine(anotherResponse);
-
-            //currentRoom = JsonConvert.DeserializeObject<RoomResponse>(anotherResponse).room;
             currentRoom = response.getParsedObject<RoomResponse>();
-
-            // Console.WriteLine(currentRoom.room_type);
 
             getView().callMethod("setCurrentRoomValue", currentRoom);            
 
@@ -74,7 +70,7 @@ namespace Hotelin_Desktop.EditKamar
                 multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "room_picture", fullFileName);
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))
-                .setEndpoint("room/update/"+id)
+                .setEndpoint(MyURL.MyURL.updateRoomURL + id)
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
@@ -82,22 +78,15 @@ namespace Hotelin_Desktop.EditKamar
             var response = await client.sendRequest(request.getApiRequestBundle());
         }
 
-        /*
-        private Boolean hasUserEdited(
-            string _roomType,
-            string _bedType,
-            long _roomPrice,
-            int _guestCapacity
-            )
+        private Boolean hasUserEdited(string _roomType, string _bedType, long _roomPrice, int _guestCapacity)
         {
             if (String.Compare(_roomType, currentRoom.room_type) != 0) return true;
             if (String.Compare(_bedType, currentRoom.bed_type) != 0) return true;
             if (_roomPrice - currentRoom.room_price != 0) return true;
             if (_guestCapacity - currentRoom.guest_capacity != 0) return true;
-
             return false;
         }
-        */
+
         private void setViewAddHotelStatus(HttpResponseBundle _response)
         {
             if (_response.getHttpResponseMessage().Content != null)

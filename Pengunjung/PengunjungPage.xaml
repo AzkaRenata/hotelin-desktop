@@ -13,13 +13,13 @@
 
     <Grid Background="White">
         <Label 
-            Content="Data Pengunjung"
+            Content="Pengunjung Saat Ini"
             VerticalContentAlignment="Center"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top"
             Margin="20,20,0,0" 
             Height="47" 
-            Width="242" 
+            Width="263" 
             FontSize="26" 
             Foreground="#707070"
             FontWeight="Bold"/>
@@ -53,9 +53,9 @@
             
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nama Pemesan" Binding="{Binding name}" Width="125"/>
-                <DataGridTextColumn Header="Tanggal Menginap" Binding="{Binding check_in}" Width="135"/>
-                <DataGridTextColumn Header="Tipe Kamar" Binding="{Binding room_type}" Width="110"/>
-                <DataGridTextColumn Header="Harga" Binding="{Binding room_price}" Width="100"/>
+                <DataGridTextColumn Header="Kode Kamar" Binding="{Binding room_code}" Width="85"/>
+                <DataGridTextColumn Header="Waktu Check-in" Binding="{Binding check_in}" Width="120"/>
+                <DataGridTextColumn Header="Waktu Check-out" Binding="{Binding check_out}" Width="120"/>
                 <DataGridTemplateColumn Header="Action">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

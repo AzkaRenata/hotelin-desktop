@@ -21,6 +21,11 @@ namespace Hotelin_Desktop.Model
 
     public class RoomResponse
     {
+        internal string room_type;
+        internal string bed_type;
+        internal long room_price;
+        internal int guest_capacity;
+
         public HotelModel hotel { get; set; }
         public RoomModel room { get; set; }
         public List<object> facility { get; set; }

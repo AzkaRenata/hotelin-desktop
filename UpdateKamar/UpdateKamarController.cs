@@ -23,15 +23,14 @@ namespace Hotelin_Desktop.UpdateKamar
 
         public async void getCurrentRoomDetail(int _roomID)
         {
-            string API = "http://localhost:8000/";
-            string endPoint = "api/room/detail/" + _roomID;
-            var client = new ApiClient(API);
+            
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.detailRoomURL + _roomID)
                 .setRequestMethod(HttpMethod.Get);
                 Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);
@@ -63,9 +62,8 @@ namespace Hotelin_Desktop.UpdateKamar
             int _guestCapacity
             )
         {
-            string API = "http://localhost:8000/";
-            string endPoint = "api/room/update/" + currentRoom.id;
-            var client = new ApiClient(API);
+            
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             if (hasUserEdited(_roomType, _bedType, _roomPrice, _guestCapacity) == true) // HANDLING IF USER DID CHANGE SOMETHING
@@ -78,7 +76,7 @@ namespace Hotelin_Desktop.UpdateKamar
                 .addParameters("bed_type", _bedType)
                 .addParameters("room_price", Convert.ToString(_roomPrice))
                 .addParameters("guest_capacity", Convert.ToString(_guestCapacity))
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.updateRoomURL+ currentRoom.id)
                 .setRequestMethod(HttpMethod.Post);
                 Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);

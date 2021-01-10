@@ -111,7 +111,7 @@ namespace Hotelin_Desktop.Detail
             MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
             if(result == MessageBoxResult.Yes)
             {
-                getController().callMethod("deleteRoom", token, id);
+                getController().callMethod("deleteRoomURL", token, id);
             }
         }
     }

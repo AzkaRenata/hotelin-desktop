@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Velacro.Basic;
 using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBox;
@@ -69,6 +70,28 @@ namespace Hotelin_Desktop.UpdateHotel
             hotelNameTxtBox.setText(_hotelName);
             hotelLocationTxtBox.setText(_hotelLocation);
             hotelDescriptionTxtBox.setText(_hotelDesc);
+        }
+    }
+
+    internal class UpdateHotelController : IMyController
+    {
+        private EditHotelPage editHotelPage;
+        private int v;
+
+        public UpdateHotelController(EditHotelPage editHotelPage, int v)
+        {
+            this.editHotelPage = editHotelPage;
+            this.v = v;
+        }
+
+        public void callMethod(string _methodName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void callMethod(string _methodName, params object[] _parameters)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Hotelin_Desktop.DetailKamar
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint("room/detail/"+id)
+                .setEndpoint(MyURL.MyURL.detailRoomURL + id)
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);

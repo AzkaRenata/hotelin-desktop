@@ -24,7 +24,7 @@ namespace Hotelin_Desktop.Pembatalan
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint("booking/list/3")
+                .setEndpoint(MyURL.MyURL.canceledBookingURL)
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Velacro.Api;
 using Velacro.Basic;
 
@@ -16,12 +17,10 @@ namespace Hotelin_Desktop.Login
         {
 
         }
-
         public async void validateToken(string token)
         {
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
-
             var req = request
                 .buildHttpRequest()
                 .setEndpoint("test")
@@ -29,7 +28,6 @@ namespace Hotelin_Desktop.Login
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setTokenStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
-
         }
 
         private void setTokenStatus(HttpResponseBundle _response)
@@ -40,21 +38,28 @@ namespace Hotelin_Desktop.Login
             }
         }
 
+        private bool validateLoginInput(string _email, string _password)
+        {
+            if (_email.Length == 0) return false;
+            if (_password.Length == 0) return false;
+            return true;
+        }
+
         public async void login(string _email, string _password)
         {
-            var client = new ApiClient(MyURL.MyURL.baseURL);
-            var request = new ApiRequestBuilder();
-
+            if (validateLoginInput(_email, _password))
+            {
+                var client = new ApiClient(MyURL.MyURL.baseURL);
+                var request = new ApiRequestBuilder();
             var req = request
                 .buildHttpRequest()
                 .addParameters("email", _email)
                 .addParameters("password", _password)
-                .setEndpoint("user/login")
+                .setEndpoint(MyURL.MyURL.loginURL)
                 .setRequestMethod(HttpMethod.Post);
             client.setOnSuccessRequest(setViewLoginStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
             Console.WriteLine("token : " + response.getJObject()["token"]);
-            //client.setAuthorizationToken(response.getJObject()["access_token"].ToString());
         }
 
         private void setViewLoginStatus(HttpResponseBundle _response)
@@ -62,6 +67,9 @@ namespace Hotelin_Desktop.Login
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
+                int statusCode = (int)_response.getHttpResponseMessage().StatusCode;
+
+                Console.WriteLine(_response.getHttpResponseMessage());
                 string token = _response.getJObject()["token"].ToString();
                 getView().callMethod("saveToken", token);
                 //getView().callMethod("tesPrint");

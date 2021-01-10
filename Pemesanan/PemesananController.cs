@@ -24,7 +24,7 @@ namespace Hotelin_Desktop.Pemesanan
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint("booking/list/2")
+                .setEndpoint(MyURL.MyURL.doneBookingURL)
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);

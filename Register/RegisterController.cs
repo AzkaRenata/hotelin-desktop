@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Velacro.Api;
 using Velacro.Basic;
 
@@ -20,9 +21,7 @@ namespace Hotelin_Desktop.Register
             string _password,
             string _passwordConfirmation)
         {
-            string API = "http://192.168.1.2:8000/";
-            string endPoint = "api/user/register";
-            var client = new ApiClient(API);
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             var req = request
@@ -33,7 +32,7 @@ namespace Hotelin_Desktop.Register
                 .addParameters("email", _email)
                 .addParameters("password", _password)
                 .addParameters("password_confirmation", _passwordConfirmation)
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.registerOwneURL)
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
             client.setOnSuccessRequest(setViewRegisterStatus);
