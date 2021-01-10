@@ -32,6 +32,7 @@ namespace Hotelin_Desktop.Model
     public class Room : INotifyPropertyChanged
     {
         public int id { get; set; }
+        public string room_code { get; set; }
         public string room_type { get; set; }
         public double room_price { get; set; }
         public string bed_type { get; set; }

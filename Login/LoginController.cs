@@ -51,30 +51,15 @@ namespace Hotelin_Desktop.Login
             {
                 var client = new ApiClient(MyURL.MyURL.baseURL);
                 var request = new ApiRequestBuilder();
-
-                var req = request
-                    .buildHttpRequest()
-                    .addParameters("email", _email)
-                    .addParameters("password", _password)
-                    .setEndpoint("user/login")
-                    .setRequestMethod(HttpMethod.Post);
-                client.setOnSuccessRequest(setViewLoginStatus);
-                client.setOnFailedRequest(onFailedRequest);
-                var response = await client.sendRequest(request.getApiRequestBundle());
-                // Console.WriteLine("token : " + response.getJObject()["token"]);
-                //client.setAuthorizationToken(response.getJObject()["access_token"].ToString());
-            }
-            else
-            {
-                MessageBox.Show("One of the required field is empty. Please try again.", "Login Failed");
-                // Console.WriteLine("One of the required field is empty. Please try again.");
-            }
-        }
-
-        private void onFailedRequest(HttpResponseBundle _response)
-        {
-            MessageBox.Show("Email-Password combination doesn't match. Please try again.", "Login Failed");
-            //Console.WriteLine("Email-Password combination doesn't match. Please try again");
+            var req = request
+                .buildHttpRequest()
+                .addParameters("email", _email)
+                .addParameters("password", _password)
+                .setEndpoint(MyURL.MyURL.loginURL)
+                .setRequestMethod(HttpMethod.Post);
+            client.setOnSuccessRequest(setViewLoginStatus);
+            var response = await client.sendRequest(request.getApiRequestBundle());
+            Console.WriteLine("token : " + response.getJObject()["token"]);
         }
 
         private void setViewLoginStatus(HttpResponseBundle _response)

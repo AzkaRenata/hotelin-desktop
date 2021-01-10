@@ -26,15 +26,13 @@ namespace Hotelin_Desktop.EditKamar
 
         public async void getCurrentRoomDetail(int _roomID)
         {
-            string API = "http://localhost:8000/";
-            string endPoint = "api/room/detail/" + _roomID;
-            var client = new ApiClient(API);
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.detailRoomURL + _roomID)
                 .setRequestMethod(HttpMethod.Get);
                 Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);
@@ -55,33 +53,29 @@ namespace Hotelin_Desktop.EditKamar
             // Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
         }
         
-        public async void updateKamar(
-            string _roomType,
-            string _bedType,
-            long _roomPrice,
-            int _guestCapacity
-            )
+        public async void updateKamar(RoomModel room, byte[] fileByte, string fullFileName)
         {
-            if (hasUserEdited(_roomType, _bedType, _roomPrice, _guestCapacity))
-            {
-                string API = "http://localhost:8000/";
-                string endPoint = "api/room/update/" + id;
-                var client = new ApiClient(API);
-                var request = new ApiRequestBuilder();
+            var client = new ApiClient(MyURL.MyURL.baseURL);
+            var request = new ApiRequestBuilder();
 
-                var req = request
-                    .buildHttpRequest()
-                    .addHeaders("Accept", "application/json")
-                    .addParameters("room_type", _roomType)
-                    .addParameters("bed_type", _bedType)
-                    .addParameters("room_price", Convert.ToString(_roomPrice))
-                    .addParameters("guest_capacity", Convert.ToString(_guestCapacity))
-                    .setEndpoint(endPoint)
-                    .setRequestMethod(HttpMethod.Post);
-                Console.WriteLine("tes2");
-                client.setAuthorizationToken(bearerToken);
-                var response = await client.sendRequest(request.getApiRequestBundle());
-            }
+            string bearerToken = File.ReadAllText(@"userToken.txt");
+            var multiPartContent = new MultipartFormDataContent();
+            multiPartContent.Add(new StringContent(room.room_code), "room_code");
+            multiPartContent.Add(new StringContent(room.room_type), "room_type");
+            multiPartContent.Add(new StringContent(room.bed_type), "bed_type");
+            multiPartContent.Add(new StringContent(Convert.ToString(room.bed_count)), "bed_count");
+            multiPartContent.Add(new StringContent(Convert.ToString(room.room_price)), "room_price");
+            multiPartContent.Add(new StringContent(Convert.ToString(room.guest_capacity)), "guest_capacity");
+            if (fileByte != null)
+                multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "room_picture", fullFileName);
+            var req = request
+                .buildMultipartRequest(new MultiPartContent(multiPartContent))
+                .setEndpoint(MyURL.MyURL.updateRoomURL + id)
+                .setRequestMethod(HttpMethod.Post);
+            Console.WriteLine("tes2");
+            client.setAuthorizationToken(bearerToken);
+            client.setOnSuccessRequest(setViewAddHotelStatus);
+            var response = await client.sendRequest(request.getApiRequestBundle());
         }
 
         private Boolean hasUserEdited(string _roomType, string _bedType, long _roomPrice, int _guestCapacity)

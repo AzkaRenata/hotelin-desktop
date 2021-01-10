@@ -65,10 +65,12 @@ namespace Hotelin_Desktop.Profile
                     hotel_price_label.Content = "Rp. "+hotel.hotel_price;
                     hotel_rating_label.Content = hotel.hotel_rating + "/5";
                     BitmapImage bitmap = new BitmapImage();
+                    if(hotel.hotel_picture != null) { 
                     bitmap.BeginInit();
                     bitmap.UriSource = new Uri(@image_url+hotel.hotel_picture);
                     bitmap.EndInit();
                     hotel_img.Source = bitmap;
+                    }
                 });
                 
 

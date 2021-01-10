@@ -27,28 +27,20 @@ namespace Hotelin_Desktop.EditHotel
         {
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
-            string endPoint = "hotel/profile";
 
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.profileHotelURL)
                 .setRequestMethod(HttpMethod.Get);
-            Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
-            Console.WriteLine("tes1");
-            //Console.WriteLine(bearerToken);
 
             string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
 
             hotel = response.getParsedObject<HotelProfile>();
             getView().callMethod("setCurrentHotelValue", hotel);
-
-            // Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-            // Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-            // Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
         }
 
         private void setItem(HttpResponseBundle _response)
@@ -64,26 +56,21 @@ namespace Hotelin_Desktop.EditHotel
             string _hotelName,
             string _hotelLocation,
             string _hotelDescription)
-        {
-            if (hasUserEdited(_hotelName, _hotelLocation, _hotelDescription))
-            {
-                string API = "http://localhost:8000/";
-                string endPoint = "api/hotel/update";
-                var client = new ApiClient(API);
-                var request = new ApiRequestBuilder();
+        {    
+            var client = new ApiClient(MyURL.MyURL.baseURL);
+            var request = new ApiRequestBuilder();
 
-                var req = request
-                    .buildHttpRequest()
-                    .addHeaders("Accept", "application/json")
-                    .addParameters("hotel_name", _hotelName)
-                    .addParameters("hotel_location", _hotelLocation)
-                    .addParameters("hotel_desc", _hotelDescription)
-                    .setEndpoint(endPoint)
-                    .setRequestMethod(HttpMethod.Post);
-                Console.WriteLine("tes2");
-                client.setAuthorizationToken(bearerToken);
-                var response = await client.sendRequest(request.getApiRequestBundle());
-            }
+            var req = request
+                .buildHttpRequest()
+                .addHeaders("Accept", "application/json")
+                .addParameters("hotel_name", _hotelName)
+                .addParameters("hotel_location", _hotelLocation)
+                .addParameters("hotel_desc", _hotelDescription)
+                .setEndpoint(MyURL.MyURL.updateHotelURL)
+                .setRequestMethod(HttpMethod.Post);
+            Console.WriteLine("tes2");
+            client.setAuthorizationToken(bearerToken);
+            var response = await client.sendRequest(request.getApiRequestBundle());
         }
 
         private Boolean hasUserEdited(string _hotelName, string _hotelLocation, string _hotelDescription) 

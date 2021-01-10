@@ -9,8 +9,10 @@ namespace Hotelin_Desktop.Model
     public class RoomModel
     {
         public int id { get; set; }
+        public string room_code { get; set; }
         public string room_type { get; set; }
         public string bed_type { get; set; }
+        public int bed_count { get; set; }
         public long room_price { get; set; }
         public int guest_capacity { get; set; }
         public string room_picture { get; set; }

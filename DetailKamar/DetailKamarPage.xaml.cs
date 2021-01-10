@@ -48,11 +48,15 @@ namespace Hotelin_Desktop.DetailKamar
                 room_type_label.Content = roomDetail.room.room_type;
                 room_price_label.Content = roomDetail.room.room_price;
                 guest_capacity_label.Content = roomDetail.room.guest_capacity;
+                bed_type_label.Content = roomDetail.room.bed_type;
+                room_code_label.Content = roomDetail.room.room_code;
                 BitmapImage bitmap = new BitmapImage();
+                if(roomDetail.room.room_picture != null) { 
                 bitmap.BeginInit();
                 bitmap.UriSource = new Uri(@image_url + roomDetail.room.room_picture);
                 bitmap.EndInit();
                 room_image.Source = bitmap;
+                }
             });
 
             Label[] facility_label = { facility1, facility2, facility3};

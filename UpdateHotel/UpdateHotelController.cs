@@ -23,15 +23,14 @@ namespace Hotelin_Desktop.UpdateHotel
 
         public async void getCurrentHotelDetail(int _hotelID)
         {
-            string API = "http://localhost:8000/";
-            string endPoint = "api/hotel/detail/" + _hotelID;
-            var client = new ApiClient(API);
+            
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.detailHotelURL+ _hotelID)
                 .setRequestMethod(HttpMethod.Get);
                 Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);
@@ -61,9 +60,8 @@ namespace Hotelin_Desktop.UpdateHotel
             string _hotelLocation,
             string _hotelDescription)
         {
-            string API = "http://localhost:8000/";
-            string endPoint = "api/hotel/update";
-            var client = new ApiClient(API);
+            
+            var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
             if (hasUserEdited(_hotelName, _hotelLocation, _hotelDescription) == true) // HANDLING IF USER DID CHANGE SOMETHING
@@ -75,7 +73,7 @@ namespace Hotelin_Desktop.UpdateHotel
                 .addParameters("hotel_location", _hotelLocation)
                 .addParameters("hotel_desc", _hotelDescription)
                 .addParameters("user_id", currentHotel.user_id.ToString())
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.updateHotelURL)
                 .setRequestMethod(HttpMethod.Post);
                 Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);

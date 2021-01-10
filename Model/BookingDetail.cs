@@ -21,10 +21,13 @@ namespace Hotelin_Desktop.Model
         public string email { get; set; }
         public string telp { get; set; }
         public string user_picture { get; set; }
+        public int days_count { get; set; }
+        public double total_price { get; set; }
         public string hotel_name { get; set; }
         public string hotel_picture { get; set; }
         public string hotel_location { get; set; }
         public string room_type { get; set; }
+        public string room_code { get; set; }
         public string bed_type { get; set; }
         public int room_price { get; set; }
         public int guest_capacity { get; set; }

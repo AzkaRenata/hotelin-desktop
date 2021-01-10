@@ -13,6 +13,7 @@ namespace Hotelin_Desktop.Model
         public int id { get; set; }
         public int user_id { get; set; }
         public int room_id { get; set; }
+        public string room_code { get; set; }
         public int booking_status { get; set; }
         public string check_in { get; set; }
         public string check_out { get; set; }

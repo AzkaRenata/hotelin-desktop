@@ -37,14 +37,9 @@ namespace Hotelin_Desktop.Detail
             initUIBuilders();
             initUIElements();
             setController(new RoomListController(this));
+            token = File.ReadAllText(@"userToken.txt");
             getRoomList();
            
-        }
-
-        private void addKamarButton_Click(object sender, RoutedEventArgs e)
-        {
-            TambahKamarPage tambahKamarPage = new TambahKamarPage();
-            NavigationService.Navigate(tambahKamarPage);
         }
 
         private void initUIBuilders()
@@ -68,8 +63,7 @@ namespace Hotelin_Desktop.Detail
             {
                 kamar_datagrid.Items.Clear();
             });
-            token = File.ReadAllText(@"userToken.txt");
-            Console.WriteLine("MASUK : " + token);
+            Console.WriteLine("MASUK COYYYY: " + token);
             getController().callMethod("requestRoomList", token);
 
         }
@@ -90,8 +84,15 @@ namespace Hotelin_Desktop.Detail
 
         }
 
+        private void addKamarButton_Click(object sender, RoutedEventArgs e)
+        {
+            TambahKamarPage tambahKamarPage = new TambahKamarPage();
+            NavigationService.Navigate(tambahKamarPage);
+        }
+
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine("MASUK VIEWWWWWW ");
             int id = (kamar_datagrid.SelectedItem as Room).id;
             DetailKamarPage detailKamarPage = new DetailKamarPage(id);
             NavigationService.Navigate(detailKamarPage);
@@ -110,7 +111,7 @@ namespace Hotelin_Desktop.Detail
             MessageBoxResult result = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
             if(result == MessageBoxResult.Yes)
             {
-                getController().callMethod("deleteRoom", token, id);
+                getController().callMethod("deleteRoomURL", token, id);
             }
         }
     }

@@ -23,12 +23,10 @@ namespace Hotelin_Desktop.DetailBooking
             Console.WriteLine("TOKEN IKI : " + token);
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
-            String endpoint = "booking/show/" + id;
-            Console.WriteLine(MyURL.MyURL.baseURL + endpoint);
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint(endpoint)
+                .setEndpoint(MyURL.MyURL.detailBookingURL + id)
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);

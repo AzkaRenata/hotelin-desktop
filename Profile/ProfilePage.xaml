@@ -11,7 +11,7 @@
 
     <Grid Background="White">
         <Label 
-            Content="Detail Hotel"
+            Content="Profile Hotel"
             VerticalContentAlignment="Center"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top"
@@ -125,8 +125,8 @@
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
                 Margin="20,112,0,0" 
-                Height="28" 
-                Width="110" 
+                Height="32" 
+                Width="144" 
                 FontSize="18" 
                 Foreground="#5399af" FontWeight="Bold"/>
 
