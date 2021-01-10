@@ -7,6 +7,7 @@ using Velacro.Basic;
 using Velacro.Api;
 using System.Net.Http;
 using System.IO;
+using System.Windows;
 using Hotelin_Desktop.Model;
 
 namespace Hotelin_Desktop.TambahKamar
@@ -14,6 +15,7 @@ namespace Hotelin_Desktop.TambahKamar
     public class TambahKamarController : MyController
     {
         public TambahKamarController(IMyView _myView) : base(_myView) { }
+
 
         public async void addKamar(RoomModel room, byte[] fileByte, string fullFileName)
         {
@@ -41,6 +43,16 @@ namespace Hotelin_Desktop.TambahKamar
             
             Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
 
+        }
+
+        private bool validateAddInput(string _hotelID, string _roomType, string _bedType, string _roomPrice, string _guestCapacity)
+        {
+            if (_hotelID.Length == 0) return false;
+            if (_roomType.Length == 0) return false;
+            if (_bedType.Length == 0) return false;
+            if (_roomPrice.Length == 0) return false;
+            if (_guestCapacity.Length == 0) return false;
+            return true;
         }
 
         private void setViewAddHotelStatus(HttpResponseBundle _response)

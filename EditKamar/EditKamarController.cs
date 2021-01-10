@@ -44,11 +44,7 @@ namespace Hotelin_Desktop.EditKamar
             string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
                 
             Console.WriteLine(anotherResponse);
-
-            //currentRoom = JsonConvert.DeserializeObject<RoomResponse>(anotherResponse).room;
             currentRoom = response.getParsedObject<RoomResponse>();
-
-            // Console.WriteLine(currentRoom.room_type);
 
             getView().callMethod("setCurrentRoomValue", currentRoom);            
 
@@ -82,22 +78,15 @@ namespace Hotelin_Desktop.EditKamar
             var response = await client.sendRequest(request.getApiRequestBundle());
         }
 
-        /*
-        private Boolean hasUserEdited(
-            string _roomType,
-            string _bedType,
-            long _roomPrice,
-            int _guestCapacity
-            )
+        private Boolean hasUserEdited(string _roomType, string _bedType, long _roomPrice, int _guestCapacity)
         {
             if (String.Compare(_roomType, currentRoom.room_type) != 0) return true;
             if (String.Compare(_bedType, currentRoom.bed_type) != 0) return true;
             if (_roomPrice - currentRoom.room_price != 0) return true;
             if (_guestCapacity - currentRoom.guest_capacity != 0) return true;
-
             return false;
         }
-        */
+
         private void setViewAddHotelStatus(HttpResponseBundle _response)
         {
             if (_response.getHttpResponseMessage().Content != null)
