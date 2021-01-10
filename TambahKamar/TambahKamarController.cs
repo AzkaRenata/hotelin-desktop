@@ -7,7 +7,6 @@ using Velacro.Basic;
 using Velacro.Api;
 using System.Net.Http;
 using System.IO;
-using System.Windows;
 using Hotelin_Desktop.Model;
 
 namespace Hotelin_Desktop.TambahKamar
@@ -15,7 +14,6 @@ namespace Hotelin_Desktop.TambahKamar
     public class TambahKamarController : MyController
     {
         public TambahKamarController(IMyView _myView) : base(_myView) { }
-
 
         public async void addKamar(RoomModel room, byte[] fileByte, string fullFileName)
         {
@@ -30,37 +28,27 @@ namespace Hotelin_Desktop.TambahKamar
             multiPartContent.Add(new StringContent(Convert.ToString(room.bed_count)), "bed_count");
             multiPartContent.Add(new StringContent(Convert.ToString(room.room_price)), "room_price");
             multiPartContent.Add(new StringContent(Convert.ToString(room.guest_capacity)), "guest_capacity");
-            if(fileByte != null)
+            if (fileByte != null)
                 multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "room_picture", fullFileName);
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))
-                .setEndpoint(MyURL.MyURL.addRoomURL)
+                .setEndpoint("room/create")
                 .setRequestMethod(HttpMethod.Post);
             Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
-            client.setOnSuccessRequest(setViewAddHotelStatus);
+            client.setOnSuccessRequest(setViewAddRoomStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
-            
+
             Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
 
         }
 
-        private bool validateAddInput(string _hotelID, string _roomType, string _bedType, string _roomPrice, string _guestCapacity)
-        {
-            if (_hotelID.Length == 0) return false;
-            if (_roomType.Length == 0) return false;
-            if (_bedType.Length == 0) return false;
-            if (_roomPrice.Length == 0) return false;
-            if (_guestCapacity.Length == 0) return false;
-            return true;
-        }
-
-        private void setViewAddHotelStatus(HttpResponseBundle _response)
+        private void setViewAddRoomStatus(HttpResponseBundle _response)
         {
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                //getView().callMethod("setRegisterStatus", status);
+                getView().callMethod("redirectToRoomFacility", _response.getParsedObject<RoomModel>());
             }
         }
     }

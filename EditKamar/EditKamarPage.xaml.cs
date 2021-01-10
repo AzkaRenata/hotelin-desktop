@@ -1,4 +1,5 @@
 ﻿using Hotelin_Desktop.Detail;
+using Hotelin_Desktop.EditFasilitasKamar;
 using Hotelin_Desktop.Model;
 using System;
 using System.Collections.Generic;
@@ -43,8 +44,10 @@ namespace Hotelin_Desktop.EditKamar
         private IMyTextBlock imageTxtBlock;
         private byte[] fileByte = null;
         private string fullFileName = "";
+        private int room_id;
         public EditKamarPage(int id)
         {
+            this.room_id = id;
             InitializeComponent();
             setController(new EditKamarController(this, id));
             initUIBuilders();
@@ -82,10 +85,10 @@ namespace Hotelin_Desktop.EditKamar
             room.bed_count = int.Parse(bedCountTxtBox.getText());
             room.room_price = long.Parse(roomPriceTxtBox.getText());
             room.guest_capacity = int.Parse(guestCapacityTxtBox.getText());
-            getController().callMethod("updateKamar",room, fileByte, fullFileName);
+            getController().callMethod("updateKamar", room, fileByte, fullFileName);
 
-            DetailPage detail = new DetailPage();
-            NavigationService.Navigate(detail);
+            EditRoomFacilityPage pg = new EditRoomFacilityPage(room_id);
+            NavigationService.Navigate(pg);
         }
 
         public void setCurrentRoomValue(RoomResponse roomResponse)
@@ -97,13 +100,13 @@ namespace Hotelin_Desktop.EditKamar
             bedCountTxtBox.setText(Convert.ToString(room.bed_count));
             roomPriceTxtBox.setText(Convert.ToString(room.room_price));
             guestCapacityTxtBox.setText(Convert.ToString(room.guest_capacity));
-            if(room.room_picture != null)
+            if (room.room_picture != null)
             {
                 string longFileName = room.room_picture;
                 string fileName = longFileName.Substring(13, longFileName.Length - 13);
                 selected_image_tb.Text = fileName;
             }
-            
+
         }
 
         private bool checkFileSize(string path)
