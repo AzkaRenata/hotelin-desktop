@@ -24,12 +24,12 @@ namespace Hotelin_Desktop.Detail
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint(MyURL.MyURL.roomListURL)
+                .setEndpoint("room/list")
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);
             var response = await client.sendRequest(request.getApiRequestBundle());
-            
+
         }
 
         public async void deleteRoom(string token, int id)
@@ -39,7 +39,7 @@ namespace Hotelin_Desktop.Detail
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint(MyURL.MyURL.deleteRoomURL + id)
+                .setEndpoint("room/delete/" + id)
                 .setRequestMethod(HttpMethod.Delete);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(redirectToRoomList);
@@ -62,7 +62,7 @@ namespace Hotelin_Desktop.Detail
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-              
+
                 getView().callMethod("setRoomList", _response.getParsedObject<List<Room>>());
             }
         }

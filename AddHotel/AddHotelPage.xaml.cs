@@ -1,12 +1,8 @@
-﻿using Hotelin_Desktop.Detail;
-using Hotelin_Desktop.Model;
-using Hotelin_Desktop.FasilitasKamar;
-using Hotelin_Desktop.TambahKamar;
+﻿using Hotelin_Desktop.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,33 +20,29 @@ using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
-using Panel = System.Windows.Controls.Panel;
 
-namespace Hotelin_Desktop.TambahKamar
+namespace Hotelin_Desktop.AddHotel
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for AddHotelPage.xaml
     /// </summary>
-    public partial class TambahKamarPage : MyPage
+    public partial class AddHotelPage : MyPage
     {
         private BuilderButton buttonBuilder;
         private BuilderTextBox txtBoxBuilder;
         private BuilderTextBlock txtBlockBuilder;
-        private IMyButton saveRoomButton;
+        private IMyButton saveHotelButton;
         private IMyButton chooseImageButton;
-        private IMyTextBox roomCodeTxtBox;
-        private IMyTextBox roomTypeTxtBox;
-        private IMyTextBox bedTypeTxtBox;
-        private IMyTextBox bedCountTxtBox;
-        private IMyTextBox guestCapacityTxtBox;
-        private IMyTextBox roomPriceTxtBox;
+        private IMyTextBox hotelNameTxtBox;
+        private IMyTextBox hotelLocationTxtBox;
+        private IMyTextBox hotelDescTxtBox;
         private IMyTextBlock imageTxtBlock;
         private byte[] fileByte = null;
         private string fullFileName = "";
-        public TambahKamarPage()
+        public AddHotelPage()
         {
             InitializeComponent();
-            setController(new TambahKamarController(this));
+            setController(new AddHotelController(this));
             initUIBuilders();
             initUIElements();
         }
@@ -64,40 +56,26 @@ namespace Hotelin_Desktop.TambahKamar
 
         private void initUIElements()
         {
-            saveRoomButton = buttonBuilder.activate(this, "save_kamar_btn")
-                .addOnClick(this, "onAddRoomButtonClick");
-            chooseImageButton = buttonBuilder.activate(this, "choose_image_btn")
+            saveHotelButton = buttonBuilder.activate(this, "simpan_btn")
+                .addOnClick(this, "onAddHotelButtonClick");
+            chooseImageButton = buttonBuilder.activate(this, "pilih_gambar_btn")
                 .addOnClick(this, "onChooseImageButtonClick");
-            roomCodeTxtBox = txtBoxBuilder.activate(this, "kode_kamar_txt");
-            roomTypeTxtBox = txtBoxBuilder.activate(this, "tipe_kamar_txt");
-            bedTypeTxtBox = txtBoxBuilder.activate(this, "tipe_kasur_txt");
-            bedCountTxtBox = txtBoxBuilder.activate(this, "jumlah_kasur_txt");
-            guestCapacityTxtBox = txtBoxBuilder.activate(this, "kapasitas_tamu_txt");
-            roomPriceTxtBox = txtBoxBuilder.activate(this, "harga_kamar_txt");
+            hotelNameTxtBox = txtBoxBuilder.activate(this, "nama_hotel_txt");
+            hotelLocationTxtBox = txtBoxBuilder.activate(this, "lokasi_hotel_txt");
+            hotelDescTxtBox = txtBoxBuilder.activate(this, "deskripsi_hotel_txt");
             imageTxtBlock = txtBlockBuilder.activate(this, "selected_image_tb");
         }
 
-        public void onAddRoomButtonClick()
+        public void onAddHotelButtonClick()
         {
-            RoomModel room = new RoomModel();
-            room.room_code = roomCodeTxtBox.getText();
-            room.room_type = roomTypeTxtBox.getText();
-            room.bed_type = bedTypeTxtBox.getText();
-            room.bed_count = int.Parse(bedCountTxtBox.getText());
-            room.room_price = long.Parse(roomPriceTxtBox.getText());
-            room.guest_capacity = int.Parse(guestCapacityTxtBox.getText());
-            getController().callMethod("addKamar", room, fileByte, fullFileName);
-        }
+            HotelModel hotel = new HotelModel();
+            hotel.hotel_name = hotelNameTxtBox.getText();
+            hotel.hotel_location = hotelLocationTxtBox.getText();
+            hotel.hotel_desc = hotelDescTxtBox.getText();
+            getController().callMethod("addHotel", hotel, fileByte, fullFileName);
 
-        public void redirectToRoomFacility(RoomModel room)
-        {
-            this.Dispatcher.Invoke(() =>
-            {
-                Console.WriteLine(room.id);
-                RoomFacilityPage facility = new RoomFacilityPage(room.id);
-                NavigationService.Navigate(facility);
-            });
-
+            /*DetailPage detail = new DetailPage();
+            NavigationService.Navigate(detail);*/
         }
 
         private bool checkFileSize(string path)
