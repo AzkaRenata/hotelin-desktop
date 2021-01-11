@@ -1,4 +1,5 @@
-﻿using Hotelin_Desktop.Detail;
+﻿using Hotelin_Desktop.AboutUs;
+using Hotelin_Desktop.Detail;
 using Hotelin_Desktop.Login;
 using Hotelin_Desktop.Pembatalan;
 using Hotelin_Desktop.Pemesanan;
@@ -68,6 +69,11 @@ namespace Hotelin_Desktop.Dashboard
             loginWindow = new LoginWindow();
             loginWindow.Show();
             this.Close();
+        }
+
+        private void aboutUsButton_Click(object sender, RoutedEventArgs e)
+        {
+            appFrame.Navigate(new AboutUsPage());
         }
     }
 }

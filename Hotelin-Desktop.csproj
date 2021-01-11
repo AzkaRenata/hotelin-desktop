@@ -99,6 +99,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AboutUs\AboutUsPage.xaml.cs">
+      <DependentUpon>AboutUsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddHotel\AddHotelController.cs" />
     <Compile Include="AddHotel\AddHotelPage.xaml.cs">
       <DependentUpon>AddHotelPage.xaml</DependentUpon>
@@ -187,6 +190,10 @@
     <Compile Include="UpdateKamar\UpdateKamarPage.xaml.cs">
       <DependentUpon>UpdateKamarPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="AboutUs\AboutUsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddHotel\AddHotelPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -377,6 +384,51 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="AddHotel\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\Adam.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\Aziz.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\Irfan.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\Marisna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\Mujir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\Sarah.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\logo-virtuahive-300dpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\logo-rasyidtechnologies-300dpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\PTI - Logo NEW %28HQ%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\logo-maulidangames-landscape-300dpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\logo - sinergi dimensi informatika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\logo-rasyidinstitute-300dpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\trustmedis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\logo profilku - for light bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutUs\Alterra-Logo---Full-Colour-2000x2000.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />

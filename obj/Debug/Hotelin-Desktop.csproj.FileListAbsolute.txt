@@ -255,3 +255,10 @@ C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\UpdateKamar\UpdateKam
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\TambahHotel\TambahHotelWindow.baml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\UpdateHotel\UpdateHotelPage.baml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\UpdateKamar\UpdateKamarPage.baml
+C:\hotelin-desktop\obj\Debug\AddHotel\AddHotelPage.g.cs
+C:\hotelin-desktop\obj\Debug\EditFasilitasKamar\EditRoomFacilityPage.g.cs
+C:\hotelin-desktop\obj\Debug\FasilitasKamar\RoomFacilityPage.g.cs
+C:\hotelin-desktop\obj\Debug\TambahHotel\TambahHotelWindow.g.cs
+C:\hotelin-desktop\obj\Debug\UpdateHotel\UpdateHotelPage.g.cs
+C:\hotelin-desktop\obj\Debug\UpdateKamar\UpdateKamarPage.g.cs
+C:\hotelin-desktop\obj\Debug\AboutUs\AboutUsPage.g.cs
