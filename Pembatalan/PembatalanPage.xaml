@@ -30,7 +30,7 @@
             VerticalAlignment="Top" 
             Width="578"
             RowHeight="30"
-            GridLinesVisibility="Horizontal"
+            GridLinesVisibility="None"
             CanUserAddRows="False"
             CanUserResizeColumns="False"
             HorizontalGridLinesBrush="#5399AF">

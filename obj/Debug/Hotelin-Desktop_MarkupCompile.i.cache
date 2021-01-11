@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\
+C:\hotelin-desktop\obj\Debug\
 Hotelin_Desktop
 none
 false
 DEBUG;TRACE
-C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\App.xaml
-19-1026894701
+C:\hotelin-desktop\App.xaml
+22123126703
 
-50-298085169
-25-1302406482
-AddKamar\AddKamarPage.xaml;Dashboard\DashboardWindow.xaml;DetailBooking\DetailBookingPage.xaml;DetailKamar\DetailKamarPage.xaml;Detail\DetailPage.xaml;EditKamar\EditKamarPage.xaml;EditHotel\EditHotelPage.xaml;Login\LoginWindow.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\FormRegisterWindow.xaml;Register\RegisterWindow.xaml;TambahHotel\TambahHotelWindow.xaml;TambahKamar\TambahKamarPage.xaml;UpdateHotel\UpdateHotelPage.xaml;UpdateKamar\UpdateKamarPage.xaml;
+57430669481
+25230734122
+AboutUs\AboutUsPage.xaml;AddHotel\AddHotelPage.xaml;Dashboard\DashboardWindow.xaml;DetailBooking\DetailBookingPage.xaml;DetailKamar\DetailKamarPage.xaml;Detail\DetailPage.xaml;EditFasilitasKamar\EditRoomFacilityPage.xaml;EditKamar\EditKamarPage.xaml;EditHotel\EditHotelPage.xaml;FasilitasKamar\RoomFacilityPage.xaml;Login\LoginWindow.xaml;MainWindow.xaml;Pembatalan\PembatalanPage.xaml;Pemesanan\PemesananPage.xaml;Pengunjung\PengunjungPage.xaml;Profile\ProfilePage.xaml;Register\FormRegisterWindow.xaml;Register\RegisterWindow.xaml;TambahHotel\TambahHotelWindow.xaml;TambahKamar\TambahKamarPage.xaml;UpdateHotel\UpdateHotelPage.xaml;UpdateKamar\UpdateKamarPage.xaml;
 
-False
+True
 

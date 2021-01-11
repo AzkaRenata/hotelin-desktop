@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("tambahhotel/down-arrow.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("aboutus/alterra-logo---full-colour-2000x2000.png")]
 
 
