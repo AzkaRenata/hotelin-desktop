@@ -71,9 +71,16 @@ namespace Hotelin_Desktop.DetailBooking
                 if (bookingDetail.booking.user_picture != null)
                 {
                     bitmap.BeginInit();
+                    /*bitmap.BeginInit();
                     bitmap.UriSource = new Uri(@image_url + bookingDetail.booking.user_picture);
                     bitmap.EndInit();
                     user_picture.Source = bitmap;
+                    bitmap.EndInit();*/
+
+                    ImageBrush ImgBrush = new ImageBrush();
+                    ImgBrush.ImageSource = new BitmapImage(
+                        new Uri(@image_url + bookingDetail.booking.user_picture));
+                    user_picture.Fill = ImgBrush;
                 }
             });
         }
