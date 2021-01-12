@@ -17,6 +17,9 @@ using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
 using Velacro.UIElements.PasswordBox;
+using System.IO;
+using Hotelin_Desktop.Dashboard;
+using Hotelin_Desktop.AddHotel;
 
 namespace Hotelin_Desktop.Register
 {
@@ -37,6 +40,8 @@ namespace Hotelin_Desktop.Register
         private IMyPasswordBox passwordcPassBox;
         private IMyTextBlock registerStatusTxtBlock;
         private MyWindow loginWindow;
+        private MyWindow dashboardWindow;
+        private MyPage addHotelPage;
 
         public RegisterWindow()
         {
@@ -59,21 +64,22 @@ namespace Hotelin_Desktop.Register
             registerButton = buttonBuilder.activate(this, "register_btn")
                 .addOnClick(this, "onRegisterButtonClick");
             usernameTxtBox = txtBoxBuilder.activate(this, "username_txt");
-            nameTxtBox = txtBoxBuilder.activate(this, "name_txt");
+            nameTxtBox = txtBoxBuilder.activate(this, "nama_txt");
             emailTxtBox = txtBoxBuilder.activate(this, "email_txt");
             passwordPassBox = passBoxBuilder.activate(this, "password_txt");
-            passwordcPassBox = passBoxBuilder.activate(this, "passwordConfirmation_txt");
+            passwordcPassBox = passBoxBuilder.activate(this, "confirm_password_txt");
             registerStatusTxtBlock = txtBlockBuilder.activate(this, "registerStatus");
         }
 
         public void onRegisterButtonClick()
         {
             getController().callMethod("register",
-                usernameTxtBox.getText(),
+                nameTxtBox.getText(),
                 emailTxtBox.getText(),
                 nameTxtBox.getText(),
                 passwordPassBox.getPassword(),
                 passwordcPassBox.getPassword());
+            redirectTologin();
         }
 
         public void setRegisterStatus(string _status)
@@ -84,16 +90,33 @@ namespace Hotelin_Desktop.Register
 
         }
 
+        public void saveToken(String token)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                string fullPath = @"userToken.txt";
+                File.WriteAllText(fullPath, token);
+                // Read a file  
+                string readText = File.ReadAllText(fullPath);
+                dashboardWindow = new DashboardWindow();
+                dashboardWindow.Show();
+                Window.GetWindow(this).Close();
+            });
+        }
+
+
         private void login_window_btn_Click(object sender, RoutedEventArgs e)
         {
-            loginWindow = new LoginWindow();
-            loginWindow.Show();
-            this.Close();
+            redirectTologin();
 
         }
 
         private void login_link_Click(object sender, RoutedEventArgs e)
         {
+            redirectTologin();
+        }
+
+        private void redirectTologin() {
             loginWindow = new LoginWindow();
             loginWindow.Show();
             this.Close();

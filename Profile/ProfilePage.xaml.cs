@@ -1,4 +1,5 @@
-﻿using Hotelin_Desktop.Dashboard;
+﻿using Hotelin_Desktop.AddHotel;
+using Hotelin_Desktop.Dashboard;
 using Hotelin_Desktop.EditHotel;
 using Hotelin_Desktop.Model;
 using System;
@@ -35,6 +36,13 @@ namespace Hotelin_Desktop.Profile
             InitializeComponent();
             setController(new ProfileController(this));
             getProfile();
+        }
+
+        private void addProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddHotelPage addHotelPage = new AddHotelPage();
+            NavigationService.Navigate(addHotelPage);
+
         }
 
         private void editProfileButton_Click(object sender, RoutedEventArgs e)
@@ -109,5 +117,6 @@ namespace Hotelin_Desktop.Profile
                
         }
 
+        
     }
 }

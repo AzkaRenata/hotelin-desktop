@@ -61,6 +61,10 @@
             Height="240" 
             VerticalAlignment="Top" 
             Margin="438,137,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="16*"/>
+                <ColumnDefinition Width="79*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="0*"/>
                 <RowDefinition/>
@@ -77,7 +81,7 @@
                 FontSize="14" 
                 FontFamily="Montserrat" 
                 VerticalContentAlignment="Center" 
-                Margin="0,-18,0,0" Grid.RowSpan="2"/>
+                Margin="0,-18,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
             <Path 
                 Data="M483.75,114.375 L706.875,114.375" 
                 Fill="#FFF4F4F5" 
@@ -87,7 +91,7 @@
                 Stretch="Fill" 
                 Stroke="Black"
                 VerticalAlignment="Top" 
-                Width="285" Grid.RowSpan="2"/>
+                Width="285" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
             <TextBox x:Name="email_txt" 
                 materialDesign:HintAssist.Hint="Email"
                 HorizontalAlignment="Left" 
@@ -100,7 +104,7 @@
                 FontSize="14" 
                 FontFamily="Montserrat" 
                 VerticalContentAlignment="Center" 
-                Margin="0,31,0,0" Grid.RowSpan="2"/>
+                Margin="0,31,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
             <Path 
                 Data="M483.75,114.375 L706.875,114.375" 
                 Fill="#FFF4F4F5" 
@@ -110,7 +114,7 @@
                 Stretch="Fill" 
                 Stroke="Black"
                 VerticalAlignment="Top" 
-                Width="285" Grid.RowSpan="2"/>
+                Width="285" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
             <PasswordBox x:Name="password_txt" 
                 materialDesign:HintAssist.Hint="Password"
                 HorizontalAlignment="Left" 
@@ -120,7 +124,7 @@
                 BorderBrush="{x:Null}" 
                 FontFamily="Montserrat" 
                 FontSize="14" 
-                VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+                VerticalContentAlignment="Center" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
             <Path 
                 Data="M483.75,114.375 L706.875,114.375" 
                 Fill="#FFF4F4F5" 
@@ -130,7 +134,7 @@
                 Stretch="Fill" 
                 Stroke="Black" 
                 VerticalAlignment="Top" 
-                Width="285" Grid.RowSpan="2"/>
+                Width="285" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
             <PasswordBox x:Name="confirm_password_txt" 
                 materialDesign:HintAssist.Hint="Confirm Password"
                 HorizontalAlignment="Left" 
@@ -140,7 +144,7 @@
                 BorderBrush="{x:Null}" 
                 FontFamily="Montserrat" 
                 FontSize="14" 
-                VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+                VerticalContentAlignment="Center" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
             <Path 
                 Data="M483.75,114.375 L706.875,114.375" 
                 Fill="#FFF4F4F5" 
@@ -150,7 +154,7 @@
                 Stretch="Fill" 
                 Stroke="Black" 
                 VerticalAlignment="Top" 
-                Width="285" Grid.RowSpan="2"/>
+                Width="285" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
             <Button x:Name="register_btn" 
                 Content="LANJUT" 
                 HorizontalAlignment="Left" 
@@ -161,7 +165,7 @@
                 Background="#FF5399AF" 
                 FontSize="14" 
                 Foreground="White" 
-                BorderBrush="{x:Null}" Grid.RowSpan="2">
+                BorderBrush="{x:Null}" Grid.RowSpan="2" Grid.ColumnSpan="2">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="6"/>

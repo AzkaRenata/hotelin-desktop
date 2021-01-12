@@ -42,8 +42,8 @@ namespace Hotelin_Desktop.Register
         {
             if (_response.getHttpResponseMessage().Content != null)
             {
-                string status = _response.getHttpResponseMessage().ReasonPhrase;
-                getView().callMethod("setRegisterStatus", status);
+                string token = _response.getJObject()["token"].ToString();
+                getView().callMethod("saveToken", token);
             }
         }
 

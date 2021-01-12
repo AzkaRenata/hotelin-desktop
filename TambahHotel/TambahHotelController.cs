@@ -37,7 +37,6 @@ namespace Hotelin_Desktop.TambahHotel
                 .addParameters("user_id", Convert.ToString(_userID))
                 .setEndpoint(MyURL.MyURL.addHotelURL)
                 .setRequestMethod(HttpMethod.Post);
-            Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken); // BEARER TOKEN GOES HERE
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());

@@ -106,7 +106,6 @@ namespace Hotelin_Desktop.Login
                 File.WriteAllText(fullPath, token);
                 // Read a file  
                 string readText = File.ReadAllText(fullPath);
-                Console.WriteLine("READ : " + readText);
                 dashboardWindow = new DashboardWindow();
                 dashboardWindow.Show();
                 Window.GetWindow(this).Close();
