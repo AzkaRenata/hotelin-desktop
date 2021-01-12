@@ -206,7 +206,6 @@ C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\bin\Debug\MaterialDesignThemes.
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\bin\Debug\Newtonsoft.Json.xml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Hotelin-Desktop.csprojAssemblyReference.cache
-C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\AddKamar\AddKamarPage.g.cs
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Dashboard\DashboardWindow.g.cs
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailBooking\DetailBookingPage.g.cs
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailKamar\DetailKamarPage.g.cs
@@ -226,7 +225,6 @@ C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\App.g.cs
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Hotelin-Desktop_MarkupCompile.cache
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Hotelin-Desktop_MarkupCompile.lref
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\App.baml
-C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\AddKamar\AddKamarPage.baml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\Dashboard\DashboardWindow.baml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailBooking\DetailBookingPage.baml
 C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\DetailKamar\DetailKamarPage.baml
@@ -262,3 +260,11 @@ C:\hotelin-desktop\obj\Debug\TambahHotel\TambahHotelWindow.g.cs
 C:\hotelin-desktop\obj\Debug\UpdateHotel\UpdateHotelPage.g.cs
 C:\hotelin-desktop\obj\Debug\UpdateKamar\UpdateKamarPage.g.cs
 C:\hotelin-desktop\obj\Debug\AboutUs\AboutUsPage.g.cs
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\AboutUs\AboutUsPage.g.cs
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\AddHotel\AddHotelPage.g.cs
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\EditFasilitasKamar\EditRoomFacilityPage.g.cs
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\FasilitasKamar\RoomFacilityPage.g.cs
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\AboutUs\AboutUsPage.baml
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\AddHotel\AddHotelPage.baml
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\EditFasilitasKamar\EditRoomFacilityPage.baml
+C:\Users\IrfanS\Documents\GitHub\hotelin-desktop\obj\Debug\FasilitasKamar\RoomFacilityPage.baml

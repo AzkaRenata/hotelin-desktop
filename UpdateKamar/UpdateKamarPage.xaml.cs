@@ -57,8 +57,6 @@ namespace Hotelin_Desktop.UpdateKamar
 
         public void onUpdateRoomButtonClick()
         {
-            Console.WriteLine("Kepencet");
-
             getController().callMethod("updateKamar",
                 roomTypeTxtBox.getText(),
                 bedTypeTxtBox.getText(),

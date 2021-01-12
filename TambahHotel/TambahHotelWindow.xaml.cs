@@ -61,9 +61,6 @@ namespace Hotelin_Desktop.TambahHotel
                 hotelLocationTxtBox.getText(),
                 hotelDescriptionTxtBox.getText(),
                 3); // User ID
-            Console.WriteLine(hotelNameTxtBox.getText());
-            Console.WriteLine(hotelLocationTxtBox.getText());
-            Console.WriteLine(hotelDescriptionTxtBox.getText());
         }
     }
 }

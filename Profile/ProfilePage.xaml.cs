@@ -1,8 +1,10 @@
-﻿using Hotelin_Desktop.Dashboard;
+﻿using Hotelin_Desktop.AddHotel;
+using Hotelin_Desktop.Dashboard;
 using Hotelin_Desktop.EditHotel;
 using Hotelin_Desktop.Model;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -33,8 +35,14 @@ namespace Hotelin_Desktop.Profile
         {
             InitializeComponent();
             setController(new ProfileController(this));
-            
             getProfile();
+        }
+
+        private void addProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddHotelPage addHotelPage = new AddHotelPage();
+            NavigationService.Navigate(addHotelPage);
+
         }
 
         private void editProfileButton_Click(object sender, RoutedEventArgs e)
@@ -46,14 +54,12 @@ namespace Hotelin_Desktop.Profile
         private void getProfile()
         {
             string token = File.ReadAllText(@"userToken.txt");
-            Console.WriteLine("MASUK : " + token);
             getController().callMethod("requestProfile", token);
         }
 
         public void setProfile(HotelProfile profile)
         {
             string image_url = MyURL.MyURL.imageURL;
-            Console.WriteLine("DATA HOTEL");
             foreach (Hotel hotel in profile.hotel)
             {
                 this.Dispatcher.Invoke(() =>
@@ -61,7 +67,7 @@ namespace Hotelin_Desktop.Profile
                     hotel_name_label.Content = hotel.hotel_name;
                     hotel_location_label.Content = hotel.hotel_location;
                     hotel_desc_label.Text = hotel.hotel_desc;
-                    hotel_price_label.Content = "Rp. "+hotel.hotel_price;
+                    hotel_price_label.Content = hotel.hotel_price.ToString("C", CultureInfo.CurrentCulture) + ",00";
                     hotel_rating_label.Content = hotel.hotel_rating + "/5";
                     BitmapImage bitmap = new BitmapImage();
                     if(hotel.hotel_picture != null) { 
@@ -84,7 +90,6 @@ namespace Hotelin_Desktop.Profile
                     star_list[j].Source = new BitmapImage(new Uri("star.png", UriKind.Relative));
                 });
             }
-            Console.WriteLine("DATA ROOM");
             Image[] room_image_list = { room_img1, room_img2, room_img3, room_img4};
             int i = 0;
             foreach (Room room in profile.room)
@@ -112,13 +117,6 @@ namespace Hotelin_Desktop.Profile
                
         }
 
-        private void view_btn_Click(object sender, RoutedEventArgs e)
-        {
-            //appFrame.Navigate(detailPengunjungPage);
-        }
-
-        private void delete_btn_Click(object sender, RoutedEventArgs e)
-        {
-        }
+        
     }
 }

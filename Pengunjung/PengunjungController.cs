@@ -31,8 +31,6 @@ namespace Hotelin_Desktop.Pengunjung
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);
             var response = await client.sendRequest(request.getApiRequestBundle());
-            //Console.WriteLine(response.getJObject()["token"]);
-            //client.setAuthorizationToken(response.getJObject()["access_token"].ToString());
         }
 
         private void setItem(HttpResponseBundle _response)
@@ -40,13 +38,6 @@ namespace Hotelin_Desktop.Pengunjung
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                Console.WriteLine("COBA");
-                //JArray json = JArray.Parse(_response.getJObject().ToString());
-                //string json = _response.getJArray
-                //Console.WriteLine(json);
-                //var model = JsonConvert.DeserializeObject<BookingList>(JArray.Parse(_response.getJObject().Value));
-                //Console.WriteLine(model);
-                //Console.WriteLine("HAYO : " + _response.getParsedObject<BookingList>().booking.Count());
                 getView().callMethod("setPengunjung", _response.getParsedObject<BookingList>().booking);
             }
         }

@@ -1,6 +1,7 @@
 ﻿using Hotelin_Desktop.Model;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -46,7 +47,7 @@ namespace Hotelin_Desktop.DetailKamar
             this.Dispatcher.Invoke(() =>
             {
                 room_type_label.Content = roomDetail.room.room_type;
-                room_price_label.Content = roomDetail.room.room_price;
+                room_price_label.Content = roomDetail.room.room_price.ToString("C", CultureInfo.CurrentCulture) + ",00";
                 guest_capacity_label.Content = roomDetail.room.guest_capacity;
                 bed_type_label.Content = roomDetail.room.bed_type;
                 room_code_label.Content = roomDetail.room.room_code;

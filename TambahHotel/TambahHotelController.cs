@@ -35,22 +35,11 @@ namespace Hotelin_Desktop.TambahHotel
                 .addParameters("hotel_location", _hotelLocation)
                 .addParameters("hotel_desc", _hotelDescription)
                 .addParameters("user_id", Convert.ToString(_userID))
-                //.addParameters("hotel_name", "Hotel Cemara")
-                //.addParameters("hotel_location", "Surabaya, Jawa Timur")
-                //.addParameters("hotel_desc", "mantap")
-                //.addParameters("user_id", "3")
                 .setEndpoint(MyURL.MyURL.addHotelURL)
                 .setRequestMethod(HttpMethod.Post);
-            Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken); // BEARER TOKEN GOES HERE
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
-            Console.WriteLine("tes1");
-            //Console.WriteLine(response.getJObject()["user"]);
-            Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-            Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-            Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
-
         }
 
         private void setViewAddHotelStatus(HttpResponseBundle _response)
@@ -58,7 +47,6 @@ namespace Hotelin_Desktop.TambahHotel
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                //getView().callMethod("setRegisterStatus", status);
             }
         }
     }

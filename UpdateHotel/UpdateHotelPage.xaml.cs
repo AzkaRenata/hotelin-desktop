@@ -60,9 +60,6 @@ namespace Hotelin_Desktop.UpdateHotel
                 hotelNameTxtBox.getText(),
                 hotelLocationTxtBox.getText(),
                 hotelDescriptionTxtBox.getText());
-            Console.WriteLine(hotelNameTxtBox.getText());
-            Console.WriteLine(hotelLocationTxtBox.getText());
-            Console.WriteLine(hotelDescriptionTxtBox.getText());
         }
 
         public void setCurrentHotelValue(string _hotelName, string _hotelLocation, string _hotelDesc) 

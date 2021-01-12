@@ -49,12 +49,7 @@ namespace Hotelin_Desktop.EditHotel
             initUIElements();
         }
 
-        //private void simpan_btn_Click(object sender, RoutedEventArgs e)
-        //{
-        //ProfilePage profilePage = new ProfilePage();
-        //NavigationService.Navigate(profilePage);
-        //}
-
+        
         private void initUIBuilders()
         {
             buttonBuilder = new BuilderButton();
@@ -75,7 +70,7 @@ namespace Hotelin_Desktop.EditHotel
         }
         public void onUpdateHotelButtonClick()
         {
-            HotelModel hotel = new HotelModel();
+            Hotel hotel = new Hotel();
             hotel.hotel_name = hotelNameTxtBox.getText();
             hotel.hotel_location = hotelLocationTxtBox.getText();
             hotel.hotel_desc = hotelDescTxtBox.getText();

@@ -25,6 +25,10 @@ namespace Hotelin_Desktop.MyURL
         public static String onGoingBookingURL = "booking/list/1";
         public static String registerOwneURL = "user/register/owner";
         public static String addRoomURL = "room/create";
+        public static String facilityListURL = "room-facility/list/";
+        public static String updateFacilityURL = "room-facility/update-many/";
+        public static String addFacilitiesURL = "room-facility/create-many/";
+
 
 
     }

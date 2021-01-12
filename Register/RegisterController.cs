@@ -34,7 +34,6 @@ namespace Hotelin_Desktop.Register
                 .addParameters("password_confirmation", _passwordConfirmation)
                 .setEndpoint(MyURL.MyURL.registerOwneURL)
                 .setRequestMethod(HttpMethod.Post);
-            Console.WriteLine("tes2");
             client.setOnSuccessRequest(setViewRegisterStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
         }
@@ -43,8 +42,8 @@ namespace Hotelin_Desktop.Register
         {
             if (_response.getHttpResponseMessage().Content != null)
             {
-                string status = _response.getHttpResponseMessage().ReasonPhrase;
-                getView().callMethod("setRegisterStatus", status);
+                string token = _response.getJObject()["token"].ToString();
+                getView().callMethod("saveToken", token);
             }
         }
 

@@ -19,8 +19,6 @@ namespace Hotelin_Desktop.DetailBooking
 
         public async void requestBookingDetail(string token, int id)
         {
-            Console.WriteLine("ID IKI : " + id);
-            Console.WriteLine("TOKEN IKI : " + token);
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
@@ -33,7 +31,6 @@ namespace Hotelin_Desktop.DetailBooking
             var response = await client.sendRequest(request.getApiRequestBundle());
 
             Booking booking = response.getParsedObject<Booking>();
-            Console.WriteLine("BOOKNAME : " + booking.booking.name);
 
             getView().callMethod("setBookingDetail", booking);
         }

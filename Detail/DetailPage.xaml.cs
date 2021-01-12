@@ -50,12 +50,7 @@ namespace Hotelin_Desktop.Detail
 
         private void initUIElements()
         {
-            /*viewButton = buttonBuilder
-                .activate(this, "view_btn")
-                .addOnClick(this, "onViewBtnClick");*/
-            /*emailTxtBox = txtBoxBuilder.activate(this, "email_txt");
-            passwordTxtBox = txtBoxBuilder.activate(this, "password_txt");
-            loginStatusTxtBlock = txtBlockBuilder.activate(this, "loginStatus");*/
+            
         }
 
         public void getRoomList()
@@ -64,7 +59,6 @@ namespace Hotelin_Desktop.Detail
             {
                 kamar_datagrid.Items.Clear();
             });
-            Console.WriteLine("MASUK COYYYY: " + token);
             getController().callMethod("requestRoomList", token);
 
         }
@@ -72,10 +66,8 @@ namespace Hotelin_Desktop.Detail
         public void setRoomList(List<Room> roomList)
         {
             string image_url = MyURL.MyURL.imageURL;
-            Console.WriteLine("DATA KAMAR");
             foreach (Room room in roomList)
             {
-                Console.WriteLine(room.bed_type);
                 this.Dispatcher.Invoke(() =>
                 {
                     kamar_datagrid.Items.Add(room);
@@ -93,7 +85,6 @@ namespace Hotelin_Desktop.Detail
 
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("MASUK VIEWWWWWW ");
             int id = (kamar_datagrid.SelectedItem as Room).id;
             DetailKamarPage detailKamarPage = new DetailKamarPage(id);
             NavigationService.Navigate(detailKamarPage);
