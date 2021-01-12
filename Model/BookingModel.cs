@@ -23,6 +23,9 @@ namespace Hotelin_Desktop.Model
         public string bed_type { get; set; }
         public int room_price { get; set; }
         public string name { get; set; }
+        public int days_count { get; set; }
+        public double total_price { get; set; }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -27,19 +27,15 @@ namespace Hotelin_Desktop.EditHotel
         {
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
-            string endPoint = "hotel/profile";
 
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint(endPoint)
+                .setEndpoint(MyURL.MyURL.profileHotelURL)
                 .setRequestMethod(HttpMethod.Get);
-            Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
-            Console.WriteLine("tes1");
-            //Console.WriteLine(bearerToken);
 
             string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
 
@@ -47,9 +43,6 @@ namespace Hotelin_Desktop.EditHotel
             getView().callMethod("setCurrentHotelValue", hotel);
 
 
-            // Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-            // Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-            // Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
         }
 
         private void setItem(HttpResponseBundle _response)
@@ -57,14 +50,6 @@ namespace Hotelin_Desktop.EditHotel
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                Console.WriteLine("COBA");
-                //JArray json = JArray.Parse(_response.getJObject().ToString());
-                //string json = _response.getJArray
-                //Console.WriteLine(json);
-                //var model = JsonConvert.DeserializeObject<BookingList>(JArray.Parse(_response.getJObject().Value));
-                //Console.WriteLine(model);
-                //Console.WriteLine("HAYO : " + _response.getParsedObject<BookingList>().booking.Count());
-                //getView().callMethod("setPembatalan", _response.getParsedObject<BookingList>().booking);
 
             }
         }
@@ -84,14 +69,11 @@ namespace Hotelin_Desktop.EditHotel
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))
                 .addHeaders("Accept", "application/json")
-                .setEndpoint("hotel/update")
+                .setEndpoint(MyURL.MyURL.updateHotelURL)
                 .setRequestMethod(HttpMethod.Post);
-            Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
-
-            Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
         }
 
         private Boolean hasUserEdited(
@@ -111,7 +93,6 @@ namespace Hotelin_Desktop.EditHotel
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                //getView().callMethod("setRegisterStatus", status);
             }
         }
     }

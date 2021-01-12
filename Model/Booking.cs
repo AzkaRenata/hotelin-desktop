@@ -8,6 +8,8 @@ namespace Hotelin_Desktop.Model
 {
     public class Booking
     {
-        public BookingDetail booking { get; set; }
+        public BookingModel booking { get; set; }
+        public UserModel user { get; set; }
+        public Room room { get; set; }
     }
 }

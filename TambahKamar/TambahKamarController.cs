@@ -32,15 +32,11 @@ namespace Hotelin_Desktop.TambahKamar
                 multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "room_picture", fullFileName);
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))
-                .setEndpoint("room/create")
+                .setEndpoint(MyURL.MyURL.addRoomURL)
                 .setRequestMethod(HttpMethod.Post);
-            Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewAddRoomStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
-
-            Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-
         }
 
         private void setViewAddRoomStatus(HttpResponseBundle _response)

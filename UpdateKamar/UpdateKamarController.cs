@@ -8,13 +8,14 @@ using Velacro.Api;
 using System.Net.Http;
 using Hotelin_Desktop.Model;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace Hotelin_Desktop.UpdateKamar
 {
     public class UpdateKamarController : MyController
     {
         private RoomModel currentRoom;
-        private string bearerToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYwNzYxMDIzOCwiZXhwIjoxNjA3NjEzODM4LCJuYmYiOjE2MDc2MTAyMzgsImp0aSI6ImZYdnhOd0xFeldLVExyRmciLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UW7uCqJrz_bAh08CQr-edUdLy3ZY7-V19_2Rpi6W1no"; // BEARER TOKEN GOES HERE
+        private string bearerToken = File.ReadAllText(@"userToken.txt");
 
         public UpdateKamarController(IMyView _myView, int _roomID) : base(_myView) 
         {
@@ -32,27 +33,13 @@ namespace Hotelin_Desktop.UpdateKamar
                 .addHeaders("Accept", "application/json")
                 .setEndpoint(MyURL.MyURL.detailRoomURL + _roomID)
                 .setRequestMethod(HttpMethod.Get);
-                Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);
                 client.setOnSuccessRequest(setViewAddHotelStatus);
                 var response = await client.sendRequest(request.getApiRequestBundle());
-                Console.WriteLine("tes1");
-            //var hotelData = response.getParsedObject<HotelList>().hotels;
 
             string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
-                
-
-            Console.WriteLine(anotherResponse);
-
             currentRoom = JsonConvert.DeserializeObject<RoomResponse>(anotherResponse).room;
-
-            // Console.WriteLine(currentRoom.room_type);
-
             getView().callMethod("setCurrentRoomValue", currentRoom.room_type, currentRoom.bed_type, currentRoom.room_price, currentRoom.guest_capacity);            
-
-            // Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-            // Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-            // Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
         }
 
         public async void updateKamar(
@@ -78,19 +65,11 @@ namespace Hotelin_Desktop.UpdateKamar
                 .addParameters("guest_capacity", Convert.ToString(_guestCapacity))
                 .setEndpoint(MyURL.MyURL.updateRoomURL+ currentRoom.id)
                 .setRequestMethod(HttpMethod.Post);
-                Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);
                 var response = await client.sendRequest(request.getApiRequestBundle());
-
-                Console.WriteLine("tes1");
-                //Console.WriteLine(response.getJObject()["user"]);
-                Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-                Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-                Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
             }
             else // HANDLING IF USER DIDN'T CHANGE ANYTHING
             {
-                Console.WriteLine("Gaada yg diganti om.");
             }
         }
 
@@ -114,7 +93,6 @@ namespace Hotelin_Desktop.UpdateKamar
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                //getView().callMethod("setRegisterStatus", status);
             }
         }
     }

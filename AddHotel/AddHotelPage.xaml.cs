@@ -74,8 +74,6 @@ namespace Hotelin_Desktop.AddHotel
             hotel.hotel_desc = hotelDescTxtBox.getText();
             getController().callMethod("addHotel", hotel, fileByte, fullFileName);
 
-            /*DetailPage detail = new DetailPage();
-            NavigationService.Navigate(detail);*/
         }
 
         private bool checkFileSize(string path)

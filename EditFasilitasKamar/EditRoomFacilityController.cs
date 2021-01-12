@@ -29,20 +29,17 @@ namespace Hotelin_Desktop.EditFasilitasKamar
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint("room-facility/list/" + room_id)
+                .setEndpoint(MyURL.MyURL.facilityListURL + room_id)
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewSetFacilityStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
 
-            // Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-            // Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-            // Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
         }
 
         public async void saveRoomFacility(List<string> selectedId, List<string> desc)
         {
-            string endPoint = "room-facility/update-many/" + room_id;
+            
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
@@ -57,7 +54,7 @@ namespace Hotelin_Desktop.EditFasilitasKamar
                 i++;
             }
 
-            req.setEndpoint(endPoint)
+            req.setEndpoint(MyURL.MyURL.updateFacilityURL + room_id)
             .setRequestMethod(HttpMethod.Post);
 
             client.setAuthorizationToken(bearerToken);

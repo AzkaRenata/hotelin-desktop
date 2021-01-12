@@ -54,8 +54,8 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nama Pemesan" Binding="{Binding name}" Width="125"/>
                 <DataGridTextColumn Header="Kode Kamar" Binding="{Binding room_code}" Width="85"/>
-                <DataGridTextColumn Header="Waktu Check-in" Binding="{Binding check_in}" Width="120"/>
-                <DataGridTextColumn Header="Waktu Check-out" Binding="{Binding check_out}" Width="120"/>
+                <DataGridTextColumn Header="Waktu Check-in" Binding="{Binding check_in}" Width="125"/>
+                <DataGridTextColumn Header="Waktu Check-out" Binding="{Binding check_out}" Width="125"/>
                 <DataGridTemplateColumn Header="Action">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

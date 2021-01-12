@@ -16,7 +16,6 @@ namespace Hotelin_Desktop.FasilitasKamar
         private string bearerToken = File.ReadAllText(@"userToken.txt");
         public RoomFacilityController(IMyView _myView) : base(_myView)
         {
-            //getFacility();
         }
 
         public async void getFacility()
@@ -32,15 +31,10 @@ namespace Hotelin_Desktop.FasilitasKamar
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewSetFacilityStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
-
-            // Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-            // Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-            // Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
         }
 
         public async void saveRoomFacility(int room_id, List<string> selectedId, List<string> desc)
         {
-            string endPoint = "room-facility/create-many/" + room_id;
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
@@ -55,7 +49,7 @@ namespace Hotelin_Desktop.FasilitasKamar
                 i++;
             }
 
-            req.setEndpoint(endPoint)
+            req.setEndpoint(MyURL.MyURL.addFacilitiesURL + room_id)
             .setRequestMethod(HttpMethod.Post);
 
             client.setAuthorizationToken(bearerToken);

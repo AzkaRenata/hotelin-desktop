@@ -68,7 +68,7 @@
                 HorizontalAlignment="Left"
                 FontWeight="SemiBold"
                  Foreground="#707070"/>
-            
+
             <Label 
                 x:Name="status_label"
                 Content="status" 
@@ -85,7 +85,7 @@
 
         </Grid>
 
-        <Grid Background="White" Margin="320,94,24,45" >
+        <Grid Background="White" Margin="320,94,20,45" >
             <Grid.Effect>
                 <DropShadowEffect 
                     BlurRadius="20" 
@@ -110,7 +110,7 @@
                 Height="35" 
                 Margin="150,80,0,0" 
                 VerticalAlignment="Top" 
-                Width="111"
+                Width="120"
                 Foreground="#707070"/>
             <Label 
                 Content="Waktu Check In" 
@@ -129,7 +129,7 @@
                 Height="35" 
                 Margin="150,40,0,0" 
                 VerticalAlignment="Top" 
-                Width="111"
+                Width="120"
                 Foreground="#707070"/>
             <Label 
                 Content="Lama Menginap" 
@@ -167,7 +167,7 @@
                 Height="35" 
                 Margin="150,160,0,0" 
                 VerticalAlignment="Top" 
-                Width="111"
+                Width="98"
                  Foreground="#707070"/>
             <Label 
                 Content="Tanggal Pemesanan" 
@@ -183,10 +183,10 @@
                 Content="1 Oktober 2020" 
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Left" 
-                Height="35" 
-                Margin="150,200,0,0" 
+                Height="37" 
+                Margin="150,199,0,0" 
                 VerticalAlignment="Top" 
-                Width="111"
+                Width="120"
                 Foreground="#707070"/>
             <Label 
                 Content="Total Biaya" 

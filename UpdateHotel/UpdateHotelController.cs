@@ -8,13 +8,15 @@ using Velacro.Api;
 using System.Net.Http;
 using Hotelin_Desktop.Model;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace Hotelin_Desktop.UpdateHotel
 {
     public class EditHotelController : MyController
     {
         private Hotel currentHotel;
-        private string bearerToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTYwNzM0NDk5OSwiZXhwIjoxNjA3MzQ4NTk5LCJuYmYiOjE2MDczNDQ5OTksImp0aSI6InhXM3FCbEloeUFlcERTcWgiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.aivmXeX4tqVK7ZfeYbIQ2e4Y8vF_nVgSY9vvdHXw7qU"; // BEARER TOKEN GOES HERE
+        string bearerToken = File.ReadAllText(@"userToken.txt");
+
 
         public EditHotelController(IMyView _myView, int _hotelID) : base(_myView) 
         {
@@ -23,7 +25,8 @@ namespace Hotelin_Desktop.UpdateHotel
 
         public async void getCurrentHotelDetail(int _hotelID)
         {
-            
+
+
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
 
@@ -32,25 +35,14 @@ namespace Hotelin_Desktop.UpdateHotel
                 .addHeaders("Accept", "application/json")
                 .setEndpoint(MyURL.MyURL.detailHotelURL+ _hotelID)
                 .setRequestMethod(HttpMethod.Get);
-                Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);
                 client.setOnSuccessRequest(setViewAddHotelStatus);
                 var response = await client.sendRequest(request.getApiRequestBundle());
-                Console.WriteLine("tes1");
-            //var hotelData = response.getParsedObject<HotelList>().hotels;
 
             string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
-                
-
-            Console.WriteLine(anotherResponse);
-
             currentHotel = JsonConvert.DeserializeObject<List<Hotel>>(anotherResponse)[0];
 
             getView().callMethod("setCurrentHotelValue", currentHotel.hotel_name, currentHotel.hotel_location, currentHotel.hotel_desc);            
-
-            // Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-            // Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-            // Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
         }
 
 
@@ -75,15 +67,8 @@ namespace Hotelin_Desktop.UpdateHotel
                 .addParameters("user_id", currentHotel.user_id.ToString())
                 .setEndpoint(MyURL.MyURL.updateHotelURL)
                 .setRequestMethod(HttpMethod.Post);
-                Console.WriteLine("tes2");
                 client.setAuthorizationToken(bearerToken);
                 var response = await client.sendRequest(request.getApiRequestBundle());
-
-                Console.WriteLine("tes1");
-                //Console.WriteLine(response.getJObject()["user"]);
-                Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-                Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-                Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
             }
             else // HANDLING IF USER DIDN'T CHANGE ANYTHING
             {
@@ -108,7 +93,6 @@ namespace Hotelin_Desktop.UpdateHotel
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                //getView().callMethod("setRegisterStatus", status);
             }
         }
     }

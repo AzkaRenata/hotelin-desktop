@@ -143,13 +143,13 @@
     <Compile Include="Model\Booking.cs" />
     <Compile Include="Model\BookingDetail.cs" />
     <Compile Include="Model\BookingModel.cs" />
-    <Compile Include="Model\HotelModel.cs" />
     <Compile Include="Model\HotelProfile.cs" />
     <Compile Include="Model\RoomDetail.cs" />
     <Compile Include="Model\RoomFacilityModel.cs" />
     <Compile Include="Model\RoomList.cs" />
     <Compile Include="Model\RoomModel.cs" />
     <Compile Include="Model\SuccessMessage.cs" />
+    <Compile Include="Model\UserModel.cs" />
     <Compile Include="MyURL\MyURL.cs" />
     <Compile Include="Pembatalan\PembatalanController.cs" />
     <Compile Include="Pembatalan\PembatalanPage.xaml.cs">

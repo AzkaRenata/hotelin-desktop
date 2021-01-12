@@ -41,7 +41,6 @@ namespace Hotelin_Desktop.Register
         public RegisterWindow()
         {
             InitializeComponent();
-            //this.KeepAlive = true;
             setController(new RegisterController(this));
             initUIBuilders();
             initUIElements();

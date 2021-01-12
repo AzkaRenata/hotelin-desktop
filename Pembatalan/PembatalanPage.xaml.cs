@@ -43,8 +43,6 @@ namespace Hotelin_Desktop.Pembatalan
         private void initUIBuilders()
         {
             buttonBuilder = new BuilderButton();
-            /*txtBoxBuilder = new BuilderTextBox();
-            txtBlockBuilder = new BuilderTextBlock();*/
         }
 
         private void getBookingHistory()
@@ -54,33 +52,13 @@ namespace Hotelin_Desktop.Pembatalan
                 pembatalan_datagrid.Items.Clear();
             });
             token = File.ReadAllText(@"userToken.txt");
-            Console.WriteLine("MASUK : " + token);
             getController().callMethod("requestBookingHistory", token);
         }
 
-        public void setBookingHistory(List<BookingModel> bookings)
-        {
-            /*int id = 1;
-            this.bookingList = bookings;
-
-            actualId.Clear();
-            foreach (BookingModel booking in bookings)
-            {
-                Console.WriteLine(booking.id);
-                Console.WriteLine(booking.name);
-                Console.WriteLine(booking.room_id);
-                Console.WriteLine(booking.room_price);
-                Console.WriteLine(booking.room_type);
-                Console.WriteLine(booking.booking_status);
-            }
-            Console.WriteLine("");
-            Console.WriteLine("");*/
-        }
 
         public void setPembatalan(List<BookingModel> bookingList)
         {
             string image_url = MyURL.MyURL.imageURL;
-            Console.WriteLine("DATA BOOKING");
             foreach (BookingModel booking in bookingList)
             {
                 this.Dispatcher.Invoke(() =>
@@ -94,7 +72,6 @@ namespace Hotelin_Desktop.Pembatalan
         private void view_btn_Click(object sender, RoutedEventArgs e)
         {
             int id = (pembatalan_datagrid.SelectedItem as BookingModel).id;
-            Console.WriteLine("ID : " + id);
             DetailBookingPage detailBooking = new DetailBookingPage(id);
             NavigationService.Navigate(detailBooking);
            

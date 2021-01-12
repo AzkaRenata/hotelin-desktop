@@ -32,29 +32,15 @@ namespace Hotelin_Desktop.EditKamar
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint("room/detail/" + _roomID)
+                .setEndpoint(MyURL.MyURL.deleteRoomURL + _roomID)
                 .setRequestMethod(HttpMethod.Get);
-            Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
-            Console.WriteLine("tes1");
-            //var hotelData = response.getParsedObject<HotelList>().hotels;
 
             string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
-
-            Console.WriteLine(anotherResponse);
-
-            //currentRoom = JsonConvert.DeserializeObject<RoomResponse>(anotherResponse).room;
             currentRoom = response.getParsedObject<RoomResponse>();
-
-            // Console.WriteLine(currentRoom.room_type);
-
             getView().callMethod("setCurrentRoomValue", currentRoom);
-
-            // Console.WriteLine("tes : " + response.getHttpResponseMessage().StatusCode);
-            // Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
-            // Console.WriteLine("tes3 : " + response.getHttpResponseMessage().Headers);
         }
 
         public async void updateKamar(RoomModel room, byte[] fileByte, string fullFileName)
@@ -74,36 +60,18 @@ namespace Hotelin_Desktop.EditKamar
                 multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "room_picture", fullFileName);
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))
-                .setEndpoint("room/update/" + id)
+                .setEndpoint(MyURL.MyURL.updateRoomURL + id)
                 .setRequestMethod(HttpMethod.Post);
-            Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
         }
 
-        /*
-        private Boolean hasUserEdited(
-            string _roomType,
-            string _bedType,
-            long _roomPrice,
-            int _guestCapacity
-            )
-        {
-            if (String.Compare(_roomType, currentRoom.room_type) != 0) return true;
-            if (String.Compare(_bedType, currentRoom.bed_type) != 0) return true;
-            if (_roomPrice - currentRoom.room_price != 0) return true;
-            if (_guestCapacity - currentRoom.guest_capacity != 0) return true;
-
-            return false;
-        }
-        */
         private void setViewAddHotelStatus(HttpResponseBundle _response)
         {
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                //getView().callMethod("setRegisterStatus", status);
             }
         }
     }

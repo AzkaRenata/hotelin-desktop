@@ -43,11 +43,9 @@ namespace Hotelin_Desktop.Login
         public LoginWindow()
         {
             InitializeComponent();
-            //this.KeepAlive = true;
             setController(new LoginController(this));
             initUIBuilders();
             initUIElements();
-            //isLoggedIn();
         }
 
         private void isLoggedIn()
@@ -58,7 +56,6 @@ namespace Hotelin_Desktop.Login
 
         public void setTokenStatus(SuccessMessage successMessage)
         {
-            Console.WriteLine("Success : " + successMessage.success);
             if (successMessage.success)
             {
                 this.Dispatcher.Invoke(() =>
@@ -130,9 +127,6 @@ namespace Hotelin_Desktop.Login
             this.Close();
         }
 
-        public void tesPrint()
-        {
-            Console.WriteLine("TESSS");
-        }
+        
     }
 }

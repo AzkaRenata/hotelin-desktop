@@ -32,12 +32,10 @@ namespace Hotelin_Desktop.AddHotel
                 .addHeaders("Accept", "application/json")
                 .setEndpoint("hotel/create")
                 .setRequestMethod(HttpMethod.Post);
-            Console.WriteLine("tes2");
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
 
-            Console.WriteLine("Tes : " + response.getHttpResponseMessage().ToString());
 
         }
 
@@ -46,7 +44,6 @@ namespace Hotelin_Desktop.AddHotel
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                //getView().callMethod("setRegisterStatus", status);
             }
         }
     }

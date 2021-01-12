@@ -59,7 +59,6 @@ namespace Hotelin_Desktop.Login
                     .setRequestMethod(HttpMethod.Post);
                 client.setOnSuccessRequest(setViewLoginStatus);
                 var response = await client.sendRequest(request.getApiRequestBundle());
-                Console.WriteLine("token : " + response.getJObject()["token"]);
             }
         }
            private void setViewLoginStatus(HttpResponseBundle _response)
@@ -69,11 +68,8 @@ namespace Hotelin_Desktop.Login
                     string status = _response.getHttpResponseMessage().ReasonPhrase;
                     int statusCode = (int)_response.getHttpResponseMessage().StatusCode;
 
-                    Console.WriteLine(_response.getHttpResponseMessage());
                     string token = _response.getJObject()["token"].ToString();
                     getView().callMethod("saveToken", token);
-                    //getView().callMethod("tesPrint");
-                    //getView().callMethod("moveToDashboard");
                 }
             }
         }

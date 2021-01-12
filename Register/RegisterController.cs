@@ -34,7 +34,6 @@ namespace Hotelin_Desktop.Register
                 .addParameters("password_confirmation", _passwordConfirmation)
                 .setEndpoint(MyURL.MyURL.registerOwneURL)
                 .setRequestMethod(HttpMethod.Post);
-            Console.WriteLine("tes2");
             client.setOnSuccessRequest(setViewRegisterStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
         }

@@ -93,7 +93,6 @@ namespace Hotelin_Desktop.TambahKamar
         {
             this.Dispatcher.Invoke(() =>
             {
-                Console.WriteLine(room.id);
                 RoomFacilityPage facility = new RoomFacilityPage(room.id);
                 NavigationService.Navigate(facility);
             });
