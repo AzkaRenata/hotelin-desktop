@@ -67,7 +67,7 @@ namespace Hotelin_Desktop.FasilitasKamar
         {
             if (_response.getHttpResponseMessage().Content != null)
             {
-                getView().callMethod("setFacility", _response.getParsedObject<List<FacilityCategory>>());
+                getView().callMethod("setFacility", _response.getParsedObject<List<RoomFacilityModel>>());
             }
         }
 

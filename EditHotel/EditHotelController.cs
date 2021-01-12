@@ -14,7 +14,7 @@ namespace Hotelin_Desktop.EditHotel
 {
     public class EditHotelController : MyController
     {
-        private HotelModel currentHotel;
+        private Hotel currentHotel;
         private HotelProfile hotel;
         private string bearerToken = File.ReadAllText(@"userToken.txt"); // BEARER TOKEN GOES HERE
 
@@ -69,7 +69,7 @@ namespace Hotelin_Desktop.EditHotel
             }
         }
 
-        public async void updateHotel(HotelModel hotel, byte[] fileByte, string fullFileName)
+        public async void updateHotel(Hotel hotel, byte[] fileByte, string fullFileName)
         {
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();

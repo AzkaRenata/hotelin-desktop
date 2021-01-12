@@ -75,7 +75,7 @@ namespace Hotelin_Desktop.EditHotel
         }
         public void onUpdateHotelButtonClick()
         {
-            HotelModel hotel = new HotelModel();
+            Hotel hotel = new Hotel();
             hotel.hotel_name = hotelNameTxtBox.getText();
             hotel.hotel_location = hotelLocationTxtBox.getText();
             hotel.hotel_desc = hotelDescTxtBox.getText();

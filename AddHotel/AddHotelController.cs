@@ -15,7 +15,7 @@ namespace Hotelin_Desktop.AddHotel
     {
         public AddHotelController(IMyView _myView) : base(_myView) { }
 
-        public async void addHotel(HotelModel hotel, byte[] fileByte, string fullFileName)
+        public async void addHotel(Hotel hotel, byte[] fileByte, string fullFileName)
         {
             var client = new ApiClient(MyURL.MyURL.baseURL);
             var request = new ApiRequestBuilder();
