@@ -130,7 +130,9 @@
         </TextBox>
 
         <Rectangle
-            AllowDrop="True"
+            AllowDrop="true"
+            DragOver="panel_DragOver"
+            Drop="panel_Drop"
             Fill="White"
             RadiusX="6"
             RadiusY="6"
@@ -144,10 +146,7 @@
             Margin="346,233,153,170" 
             HorizontalAlignment="Center"
             VerticalAlignment="Center" 
-            Width="121"
-            AllowDrop="true"
-            DragOver="panel_DragOver"
-            Drop="panel_Drop" >
+            Width="121" >
             <Image 
                 Source="down-arrow.png"
                 Stretch="Uniform"

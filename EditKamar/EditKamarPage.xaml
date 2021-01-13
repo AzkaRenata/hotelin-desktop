@@ -132,7 +132,9 @@
         </TextBox>
 
         <Rectangle
-            AllowDrop="True"
+            AllowDrop="true"
+            DragOver="panel_DragOver"
+            Drop="panel_Drop"
             Fill="White"
             RadiusX="6"
             RadiusY="6"

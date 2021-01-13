@@ -36,10 +36,10 @@ namespace Hotelin_Desktop.Profile
             HotelProfile hotel = _response.getParsedObject<HotelProfile>();
             if (hotel.error != true)
             {
-                if (hotel.room != null)
-                getView().callMethod("setProfile", hotel);
-                else
-                getView().callMethod("redirectToaddKamar");
+                string status = _response.getHttpResponseMessage().ReasonPhrase;
+                if(!_response.getJObject().ContainsKey("error")){
+                    getView().callMethod("setProfile", _response.getParsedObject<HotelProfile>());
+                }
             }
             else {
                 getView().callMethod("redirectToAddHotel");
