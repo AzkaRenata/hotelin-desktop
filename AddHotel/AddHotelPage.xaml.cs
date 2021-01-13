@@ -1,4 +1,6 @@
 ﻿using Hotelin_Desktop.Model;
+using Hotelin_Desktop.Profile;
+using Hotelin_Desktop.TambahKamar;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -73,6 +75,7 @@ namespace Hotelin_Desktop.AddHotel
             hotel.hotel_location = hotelLocationTxtBox.getText();
             hotel.hotel_desc = hotelDescTxtBox.getText();
             getController().callMethod("addHotel", hotel, fileByte, fullFileName);
+            redirectToaddKamar();
 
         }
 
@@ -155,6 +158,22 @@ namespace Hotelin_Desktop.AddHotel
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
                 checkFileSize(files[0]);
             }
+        }
+
+        public void redirectToProfile()
+        {
+            ProfilePage profilePage = new ProfilePage();
+            NavigationService.Navigate(profilePage);
+        }
+
+        private void redirectToaddKamar()
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                TambahKamarPage tambahKamarPage = new TambahKamarPage();
+                NavigationService.Navigate(tambahKamarPage);
+
+            });
         }
     }
 }

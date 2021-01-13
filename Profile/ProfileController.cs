@@ -33,12 +33,16 @@ namespace Hotelin_Desktop.Profile
 
         private void setItem(HttpResponseBundle _response)
         {
-            if (_response.getHttpResponseMessage().Content != null)
+            HotelProfile hotel = _response.getParsedObject<HotelProfile>();
+            if (hotel.error != true)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
                 if(!_response.getJObject().ContainsKey("error")){
                     getView().callMethod("setProfile", _response.getParsedObject<HotelProfile>());
                 }
+            }
+            else {
+                getView().callMethod("redirectToAddHotel");
             }
         }
     }
