@@ -32,13 +32,13 @@ namespace Hotelin_Desktop.EditKamar
             var req = request
                 .buildHttpRequest()
                 .addHeaders("Accept", "application/json")
-                .setEndpoint(MyURL.MyURL.deleteRoomURL + _roomID)
+                .setEndpoint(MyURL.MyURL.detailRoomURL + _roomID)
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
 
-            string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
+            //string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
             currentRoom = response.getParsedObject<RoomResponse>();
             getView().callMethod("setCurrentRoomValue", currentRoom);
         }
@@ -57,7 +57,10 @@ namespace Hotelin_Desktop.EditKamar
             multiPartContent.Add(new StringContent(Convert.ToString(room.room_price)), "room_price");
             multiPartContent.Add(new StringContent(Convert.ToString(room.guest_capacity)), "guest_capacity");
             if (fileByte != null)
+            {
                 multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "room_picture", fullFileName);
+                Console.WriteLine("ada file");
+            }
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))
                 .setEndpoint(MyURL.MyURL.updateRoomURL + id)

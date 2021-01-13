@@ -77,6 +77,9 @@
             </TextBox.Resources>
         </TextBox>
         <Rectangle
+            AllowDrop="true"
+            DragOver="panel_DragOver"
+            Drop="panel_Drop"
             Fill="White"
             RadiusX="6"
             RadiusY="6"
@@ -87,9 +90,6 @@
             Margin="344,87,97,241" Width="173" />
 
         <StackPanel
-            AllowDrop="true"
-            DragOver="panel_DragOver"
-            Drop="panel_Drop"
             Margin="381,128,133,275" 
             HorizontalAlignment="Center"
             VerticalAlignment="Center">

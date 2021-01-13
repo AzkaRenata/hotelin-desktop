@@ -36,7 +36,9 @@ namespace Hotelin_Desktop.Profile
             if (_response.getHttpResponseMessage().Content != null)
             {
                 string status = _response.getHttpResponseMessage().ReasonPhrase;
-                getView().callMethod("setProfile", _response.getParsedObject<HotelProfile>());
+                if(!_response.getJObject().ContainsKey("error")){
+                    getView().callMethod("setProfile", _response.getParsedObject<HotelProfile>());
+                }
             }
         }
     }
