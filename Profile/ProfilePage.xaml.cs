@@ -2,6 +2,7 @@
 using Hotelin_Desktop.Dashboard;
 using Hotelin_Desktop.EditHotel;
 using Hotelin_Desktop.Model;
+using Hotelin_Desktop.TambahKamar;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -40,9 +41,24 @@ namespace Hotelin_Desktop.Profile
 
         private void addProfileButton_Click(object sender, RoutedEventArgs e)
         {
-            AddHotelPage addHotelPage = new AddHotelPage();
-            NavigationService.Navigate(addHotelPage);
+            
+            redirectToAddHotel();
+        }
 
+
+
+        public void redirectToAddHotel()
+        {
+            Application.Current.Dispatcher.Invoke((Action)delegate {
+                AddHotelPage addHotelPage = new AddHotelPage();
+            NavigationService.Navigate(addHotelPage);
+            });
+        }
+
+        public void redirectToAddKamar()
+        {
+            TambahKamarPage tambahKamarPage = new TambahKamarPage();
+            NavigationService.Navigate(tambahKamarPage);
         }
 
         private void editProfileButton_Click(object sender, RoutedEventArgs e)
@@ -92,27 +108,32 @@ namespace Hotelin_Desktop.Profile
             }
             Image[] room_image_list = { room_img1, room_img2, room_img3, room_img4};
             int i = 0;
-            foreach (Room room in profile.room)
-            {
-
-                this.Dispatcher.Invoke(() =>
+            if (profile.room != null){ 
+                foreach (Room room in profile.room)
                 {
-                    BitmapImage bitmap = new BitmapImage();
-                    bitmap.BeginInit();
-                    bitmap.UriSource = new Uri(@image_url + room.room_picture);
-                    bitmap.EndInit();
-                    room_image_list[i].Source = bitmap;
-                });
+
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        BitmapImage bitmap = new BitmapImage();
+                        bitmap.BeginInit();
+                        bitmap.UriSource = new Uri(@image_url + room.room_picture);
+                        bitmap.EndInit();
+                        room_image_list[i].Source = bitmap;
+                    });
+                }
             }
-           
-            Label[] facility_list = { facility1_label, facility2_label, facility3_label, facility4_label };
-            foreach (RoomFacility facility in profile.facility)
+            if (profile.room != null)
             {
 
-                this.Dispatcher.Invoke(() =>
+                Label[] facility_list = { facility1_label, facility2_label, facility3_label, facility4_label };
+                foreach (RoomFacility facility in profile.facility)
                 {
-                    facility_list[facility.id-1].Content = facility.facility_name;
-                });
+
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        facility_list[facility.id - 1].Content = facility.facility_name;
+                    });
+                }
             }
                
         }

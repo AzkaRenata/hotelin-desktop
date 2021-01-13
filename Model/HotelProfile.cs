@@ -69,5 +69,6 @@ namespace Hotelin_Desktop.Model
         public List<Hotel> hotel { get; set; }
         public List<Room> room { get; set; }
         public List<RoomFacility> facility { get; set; }
+        public bool error { get; set; }
     }
 }

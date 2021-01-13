@@ -304,27 +304,6 @@
             Width="18" 
             Source="ac.png" 
             Stretch="Fill"/>
-        <Button 
-            x:Name="addProfileButton"
-            Content="Add Hotel" 
-            VerticalContentAlignment="Center"
-            HorizontalContentAlignment="Center"
-            HorizontalAlignment="Left" 
-            Margin="377,33,0,0" 
-            VerticalAlignment="Top" 
-            Width="109" 
-            Height="30" 
-            Background="#5399af" 
-            BorderBrush="{x:Null}" 
-            FontWeight="Bold" 
-            Foreground="White"
-            Click="addProfileButton_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="6"/>
-                </Style>
-            </Button.Resources>
-        </Button>
 
     </Grid>
 

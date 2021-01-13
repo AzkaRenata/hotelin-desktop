@@ -40,7 +40,7 @@ namespace Hotelin_Desktop.Register
         private IMyPasswordBox passwordcPassBox;
         private IMyTextBlock registerStatusTxtBlock;
         private MyWindow loginWindow;
-        private MyWindow dashboardWindow;
+        private MyWindow formRegisterWindow;
         private MyPage addHotelPage;
 
         public RegisterWindow()
@@ -79,7 +79,6 @@ namespace Hotelin_Desktop.Register
                 nameTxtBox.getText(),
                 passwordPassBox.getPassword(),
                 passwordcPassBox.getPassword());
-            redirectTologin();
         }
 
         public void setRegisterStatus(string _status)
@@ -98,8 +97,13 @@ namespace Hotelin_Desktop.Register
                 File.WriteAllText(fullPath, token);
                 // Read a file  
                 string readText = File.ReadAllText(fullPath);
-                dashboardWindow = new DashboardWindow();
-                dashboardWindow.Show();
+                /*formRegisterWindow = new FormRegisterWindow();
+                formRegisterWindow.Show();
+                Window.GetWindow(this).Close();*/
+
+                DashboardWindow dashboard = new DashboardWindow();
+                dashboard.Show();
+                dashboard.appFrame.Navigate(new AddHotelPage());
                 Window.GetWindow(this).Close();
             });
         }

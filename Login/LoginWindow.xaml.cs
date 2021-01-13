@@ -86,7 +86,9 @@ namespace Hotelin_Desktop.Login
 
         public void onLoginButtonClick()
         {
+            login_btn.IsEnabled = false;
             getController().callMethod("login", email_txt.Text, password_txt.Password);
+            login_btn.IsEnabled = true;
         }
 
 

@@ -167,6 +167,7 @@
     <Compile Include="Profile\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Register\FormRegisterController.cs" />
     <Compile Include="Register\FormRegisterWindow.xaml.cs">
       <DependentUpon>FormRegisterWindow.xaml</DependentUpon>
     </Compile>
