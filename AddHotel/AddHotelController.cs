@@ -8,6 +8,10 @@ using Velacro.Api;
 using System.Net.Http;
 using System.IO;
 using Hotelin_Desktop.Model;
+using System.Windows.Navigation;
+using Hotelin_Desktop.TambahKamar;
+using Hotelin_Desktop.Dashboard;
+using System.Windows;
 
 namespace Hotelin_Desktop.AddHotel
 {
@@ -41,10 +45,8 @@ namespace Hotelin_Desktop.AddHotel
 
         private void setViewAddHotelStatus(HttpResponseBundle _response)
         {
-            if (_response.getHttpResponseMessage().Content != null)
-            {
-                string status = _response.getHttpResponseMessage().ReasonPhrase;
-            }
+               string status = _response.getHttpResponseMessage().ReasonPhrase;
         }
+
     }
 }

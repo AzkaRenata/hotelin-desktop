@@ -58,20 +58,32 @@ namespace Hotelin_Desktop.Login
                     .setEndpoint(MyURL.MyURL.loginURL)
                     .setRequestMethod(HttpMethod.Post);
                 client.setOnSuccessRequest(setViewLoginStatus);
+                client.setOnFailedRequest(showWarning);
                 var response = await client.sendRequest(request.getApiRequestBundle());
+            }
+            else { 
+                MessageBox.Show("One of the required field is empty. Please try again.", "Try Again");
             }
         }
            private void setViewLoginStatus(HttpResponseBundle _response)
             {
                 if (_response.getHttpResponseMessage().Content != null)
                 {
-                    string status = _response.getHttpResponseMessage().ReasonPhrase;
+               
+                string status = _response.getHttpResponseMessage().ReasonPhrase;
                     int statusCode = (int)_response.getHttpResponseMessage().StatusCode;
 
                     string token = _response.getJObject()["token"].ToString();
                     getView().callMethod("saveToken", token);
                 }
             }
+
+        private void showWarning(HttpResponseBundle _response)
+        {
+            string error = _response.getJObject()["error"].ToString();
+
+            MessageBox.Show("Wrong email or password. Please try again.", "Try Again");
         }
+    }
     
 }

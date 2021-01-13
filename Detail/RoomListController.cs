@@ -24,7 +24,7 @@ namespace Hotelin_Desktop.Detail
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint("room/list")
+                .setEndpoint(MyURL.MyURL.roomListURL)
                 .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(setItem);
@@ -39,7 +39,7 @@ namespace Hotelin_Desktop.Detail
 
             var req = request
                 .buildHttpRequest()
-                .setEndpoint("room/delete/" + id)
+                .setEndpoint(MyURL.MyURL.deleteRoomURL + id)
                 .setRequestMethod(HttpMethod.Delete);
             client.setAuthorizationToken(token);
             client.setOnSuccessRequest(redirectToRoomList);
