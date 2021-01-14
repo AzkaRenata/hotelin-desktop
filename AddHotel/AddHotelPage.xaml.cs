@@ -41,6 +41,7 @@ namespace Hotelin_Desktop.AddHotel
         private IMyTextBlock imageTxtBlock;
         private byte[] fileByte = null;
         private string fullFileName = "";
+
         public AddHotelPage()
         {
             InitializeComponent();

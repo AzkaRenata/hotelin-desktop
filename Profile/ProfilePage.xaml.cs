@@ -31,7 +31,7 @@ namespace Hotelin_Desktop.Profile
     /// </summary>
     public partial class ProfilePage : MyPage
     {
-        private HotelProfile profile;
+        public HotelProfile profile;
         public ProfilePage()
         {
             InitializeComponent();
@@ -49,9 +49,10 @@ namespace Hotelin_Desktop.Profile
 
         public void redirectToAddHotel()
         {
-            Application.Current.Dispatcher.Invoke((Action)delegate {
+            this.Dispatcher.Invoke(() =>
+            {
                 AddHotelPage addHotelPage = new AddHotelPage();
-            NavigationService.Navigate(addHotelPage);
+                _ = NavigationService.Navigate(addHotelPage);
             });
         }
 
