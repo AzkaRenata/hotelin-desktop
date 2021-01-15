@@ -41,7 +41,6 @@ namespace Hotelin_Desktop.AddHotel
         private IMyTextBlock imageTxtBlock;
         private byte[] fileByte = null;
         private string fullFileName = "";
-
         public AddHotelPage()
         {
             InitializeComponent();
@@ -85,9 +84,9 @@ namespace Hotelin_Desktop.AddHotel
             FileInfo fi = new FileInfo(path);
             const double v = 1.049e+6;//convert byte to MB
             double fileSize = fi.Length / v;
-            if (fileSize > 2)
+            if (fileSize > 5)
             {
-                MessageBox.Show("Image Too Large (Use Image Size <= 2MB)", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Image Too Large (Use Image Size <= 5MB)", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 selected_image_tb.Text = "No Image Selected";
                 return false;
             }

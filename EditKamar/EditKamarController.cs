@@ -38,7 +38,6 @@ namespace Hotelin_Desktop.EditKamar
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
 
-            //string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
             currentRoom = response.getParsedObject<RoomResponse>();
             getView().callMethod("setCurrentRoomValue", currentRoom);
         }

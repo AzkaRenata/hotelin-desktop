@@ -72,7 +72,6 @@ namespace Hotelin_Desktop.UpdateHotel
             }
             else // HANDLING IF USER DIDN'T CHANGE ANYTHING
             {
-                Console.WriteLine("Gaada yg diganti om.");
             }
         }
 

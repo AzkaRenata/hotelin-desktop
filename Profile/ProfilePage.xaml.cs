@@ -31,7 +31,7 @@ namespace Hotelin_Desktop.Profile
     /// </summary>
     public partial class ProfilePage : MyPage
     {
-        public HotelProfile profile;
+        private HotelProfile profile;
         public ProfilePage()
         {
             InitializeComponent();
@@ -39,17 +39,28 @@ namespace Hotelin_Desktop.Profile
             getProfile();
         }
 
+        private void addProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+            redirectToAddHotel();
+        }
+
+
 
         public void redirectToAddHotel()
         {
-            this.Dispatcher.Invoke(() =>
-            {
+            Application.Current.Dispatcher.Invoke((Action)delegate {
                 AddHotelPage addHotelPage = new AddHotelPage();
-                _ = NavigationService.Navigate(addHotelPage);
+            NavigationService.Navigate(addHotelPage);
             });
         }
 
-        
+        public void redirectToAddKamar()
+        {
+            TambahKamarPage tambahKamarPage = new TambahKamarPage();
+            NavigationService.Navigate(tambahKamarPage);
+        }
+
         private void editProfileButton_Click(object sender, RoutedEventArgs e)
         {
             EditHotelPage editHotelPage = new EditHotelPage();
@@ -58,7 +69,6 @@ namespace Hotelin_Desktop.Profile
 
         private void getProfile()
         {
-            string token = File.ReadAllText(@"userToken.txt");Console.WriteLine(token);
             getController().callMethod("requestProfile", token);
         }
 

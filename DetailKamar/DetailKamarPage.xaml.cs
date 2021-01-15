@@ -1,5 +1,4 @@
-﻿using Hotelin_Desktop.EditKamar;
-using Hotelin_Desktop.Model;
+﻿using Hotelin_Desktop.Model;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -28,7 +27,6 @@ namespace Hotelin_Desktop.DetailKamar
     /// </summary>
     public partial class DetailKamarPage : MyPage
     {
-        private RoomDetail roomDetail;
         public DetailKamarPage(int room_id)
         {
             InitializeComponent();
@@ -45,7 +43,6 @@ namespace Hotelin_Desktop.DetailKamar
 
         public void setRoomDetail(RoomDetail roomDetail)
         {
-            this.roomDetail = roomDetail;
             string image_url = MyURL.MyURL.imageURL;
             this.Dispatcher.Invoke(() =>
             {
@@ -78,9 +75,7 @@ namespace Hotelin_Desktop.DetailKamar
 
         private void room_edit_btn_Click(object sender, RoutedEventArgs e)
         {
-            int id = roomDetail.room.id;
-            EditKamarPage editKamarPage = new EditKamarPage(id);
-            NavigationService.Navigate(editKamarPage);
+
         }
     }
 }
