@@ -84,18 +84,17 @@
                 Foreground="#707070"
                 FontWeight="Bold"/>
 
-            <Label 
-                Content="Location Not Set"
-                x:Name="hotel_location_label"
-                VerticalContentAlignment="Center"
-                HorizontalAlignment="Left" 
-                VerticalAlignment="Top"
-                Margin="36,44,0,0" 
-                Height="28" 
-                Width="110" 
-                FontSize="12" 
-                Foreground="#707070"/>
-
+            <TextBlock
+            x:Name="hotel_location_tb"
+            HorizontalAlignment="Left"       
+            Margin="40,49,0,0" 
+            TextWrapping="Wrap"
+            Text="Location Not Set" 
+            FontSize="12"
+            Foreground="#707070"    
+            VerticalAlignment="Top"/>
+            
+            
             <Label 
                 Content="0/5"
                 x:Name="hotel_rating_label"

@@ -69,6 +69,7 @@ namespace Hotelin_Desktop.Profile
 
         private void getProfile()
         {
+            string token = File.ReadAllText(@"userToken.txt");
             getController().callMethod("requestProfile", token);
         }
 
@@ -80,7 +81,7 @@ namespace Hotelin_Desktop.Profile
                 this.Dispatcher.Invoke(() =>
                 {
                     hotel_name_label.Content = hotel.hotel_name;
-                    hotel_location_label.Content = hotel.hotel_location;
+                    hotel_location_tb.Text= hotel.hotel_location;
                     hotel_desc_label.Text = hotel.hotel_desc;
                     hotel_price_label.Content = hotel.hotel_price.ToString("C", CultureInfo.CurrentCulture) + ",00";
                     hotel_rating_label.Content = hotel.hotel_rating + "/5";
