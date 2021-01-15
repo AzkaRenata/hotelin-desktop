@@ -38,7 +38,6 @@ namespace Hotelin_Desktop.EditKamar
             client.setOnSuccessRequest(setViewAddHotelStatus);
             var response = await client.sendRequest(request.getApiRequestBundle());
 
-            //string anotherResponse = await response.getHttpResponseMessage().Content.ReadAsStringAsync();
             currentRoom = response.getParsedObject<RoomResponse>();
             getView().callMethod("setCurrentRoomValue", currentRoom);
         }
@@ -59,7 +58,6 @@ namespace Hotelin_Desktop.EditKamar
             if (fileByte != null)
             {
                 multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "room_picture", fullFileName);
-                Console.WriteLine("ada file");
             }
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))

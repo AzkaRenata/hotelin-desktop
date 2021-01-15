@@ -49,7 +49,6 @@ namespace Hotelin_Desktop.Pengunjung
         public void setPengunjung(List<BookingModel> bookingList)
         {
             string base_url = MyURL.MyURL.baseURL;
-            Console.WriteLine("DATA KAMAR");
             foreach (BookingModel booking in bookingList)
             {
                 this.Dispatcher.Invoke(() =>

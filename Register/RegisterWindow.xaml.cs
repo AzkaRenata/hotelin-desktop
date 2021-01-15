@@ -97,13 +97,8 @@ namespace Hotelin_Desktop.Register
                 File.WriteAllText(fullPath, token);
                 // Read a file  
                 string readText = File.ReadAllText(fullPath);
-                /*formRegisterWindow = new FormRegisterWindow();
-                formRegisterWindow.Show();
-                Window.GetWindow(this).Close();*/
-
                 DashboardWindow dashboard = new DashboardWindow();
                 dashboard.Show();
-                dashboard.appFrame.Navigate(new AddHotelPage());
                 Window.GetWindow(this).Close();
             });
         }

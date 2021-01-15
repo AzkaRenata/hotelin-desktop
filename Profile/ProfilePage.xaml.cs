@@ -69,7 +69,6 @@ namespace Hotelin_Desktop.Profile
 
         private void getProfile()
         {
-            string token = File.ReadAllText(@"userToken.txt");Console.WriteLine(token);
             getController().callMethod("requestProfile", token);
         }
 

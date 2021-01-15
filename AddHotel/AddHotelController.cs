@@ -34,7 +34,7 @@ namespace Hotelin_Desktop.AddHotel
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))
                 .addHeaders("Accept", "application/json")
-                .setEndpoint("hotel/create")
+                .setEndpoint(MyURL.MyURL.addHotelURL)
                 .setRequestMethod(HttpMethod.Post);
             client.setAuthorizationToken(bearerToken);
             client.setOnSuccessRequest(setViewAddHotelStatus);
