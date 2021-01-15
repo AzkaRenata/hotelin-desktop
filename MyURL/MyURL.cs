@@ -8,8 +8,8 @@ namespace Hotelin_Desktop.MyURL
 {
     public static class MyURL
     {
-        public static String baseURL = "http://localhost:8000/api/";
-        public static String imageURL = "http://localhost:8000/storage/";
+        public static String baseURL = "http://api.hotelin.live/api/";
+        public static String imageURL = "http://api.hotelin.live/storage/";
         public static String roomListURL = "room/list";
         public static String deleteRoomURL = "room/delete/";
         public static String detailBookingURL = "booking/detail/";

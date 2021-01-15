@@ -1,4 +1,5 @@
-﻿using Hotelin_Desktop.Model;
+﻿using Hotelin_Desktop.EditKamar;
+using Hotelin_Desktop.Model;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -27,10 +28,12 @@ namespace Hotelin_Desktop.DetailKamar
     /// </summary>
     public partial class DetailKamarPage : MyPage
     {
+        private int id;
         public DetailKamarPage(int room_id)
         {
             InitializeComponent();
             setController(new RoomDetailController(this));
+            this.id = room_id;
             getRoomDetail(room_id);
         }
 
@@ -60,22 +63,29 @@ namespace Hotelin_Desktop.DetailKamar
                 }
             });
 
-            Label[] facility_label = { facility1, facility2, facility3};
+            Label[] facility_label = { facility1, facility2, facility3, facility4};
             int i = 0;
             foreach (RoomFacility facility in roomDetail.facility)
             {
-
-                this.Dispatcher.Invoke(() =>
+                if (i > 4)
                 {
-                    facility_label[i].Content = facility.facility_name;
-                });
+                    break;
+                }
+                else
+                {
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        facility_label[i].Content = facility.facility_name;
+                    });
+                }
                 i++;
             }
         }
 
         private void room_edit_btn_Click(object sender, RoutedEventArgs e)
         {
-
+            EditKamarPage editKamarPage = new EditKamarPage(id);
+            NavigationService.Navigate(editKamarPage);
         }
     }
 }

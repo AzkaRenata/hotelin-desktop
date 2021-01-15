@@ -92,7 +92,7 @@
                 VerticalAlignment="Top"
                 Margin="36,44,0,0" 
                 Height="28" 
-                Width="110" 
+                Width="265" 
                 FontSize="12" 
                 Foreground="#707070"/>
 
