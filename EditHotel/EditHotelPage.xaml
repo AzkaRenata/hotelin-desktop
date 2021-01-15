@@ -123,10 +123,21 @@
             </Button.Resources>
         </Button>
 
+        <Label
+            Content="max size image 2 MB"
+            VerticalContentAlignment="Center"
+            HorizontalAlignment="Left"
+            Margin="343,259,0,163" 
+            Height="28" 
+            Width="159" 
+            FontSize="15"
+            Foreground="#707070"
+            />
+        
         <TextBlock 
             x:Name="selected_image_tb"
             HorizontalAlignment="Left" 
-            Margin="347,273,0,0" 
+            Margin="347,285,0,0" 
             TextWrapping="Wrap" 
             Text="No Image Selected" 
             VerticalAlignment="Top"/>

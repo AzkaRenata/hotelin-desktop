@@ -59,7 +59,6 @@ namespace Hotelin_Desktop.EditKamar
             if (fileByte != null)
             {
                 multiPartContent.Add(new StreamContent(new MemoryStream(fileByte)), "room_picture", fullFileName);
-                Console.WriteLine("ada file");
             }
             var req = request
                 .buildMultipartRequest(new MultiPartContent(multiPartContent))

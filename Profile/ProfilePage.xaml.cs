@@ -39,13 +39,6 @@ namespace Hotelin_Desktop.Profile
             getProfile();
         }
 
-        private void addProfileButton_Click(object sender, RoutedEventArgs e)
-        {
-            
-            redirectToAddHotel();
-        }
-
-
 
         public void redirectToAddHotel()
         {
@@ -56,12 +49,7 @@ namespace Hotelin_Desktop.Profile
             });
         }
 
-        public void redirectToAddKamar()
-        {
-            TambahKamarPage tambahKamarPage = new TambahKamarPage();
-            NavigationService.Navigate(tambahKamarPage);
-        }
-
+        
         private void editProfileButton_Click(object sender, RoutedEventArgs e)
         {
             EditHotelPage editHotelPage = new EditHotelPage();

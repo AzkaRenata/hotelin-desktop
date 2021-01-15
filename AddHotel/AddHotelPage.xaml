@@ -15,7 +15,7 @@
       d:DesignHeight="450" d:DesignWidth="620"
       Title="AddHotelPage">
 
-    <Grid Background="White">
+    <Grid Background="White" Margin="0,10,0,-10">
         <Label 
             Content="Add Hotel"
             VerticalContentAlignment="Center"
@@ -139,10 +139,20 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Label
+            Content="max size image 2 MB"
+            VerticalContentAlignment="Center"
+            HorizontalAlignment="Left"
+            Margin="343,259,0,163" 
+            Height="28" 
+            Width="159" 
+            FontSize="15"
+            Foreground="#707070"
+            />
         <TextBlock 
             x:Name="selected_image_tb"
             HorizontalAlignment="Left" 
-            Margin="347,273,0,0" 
+            Margin="347,291,0,0" 
             TextWrapping="Wrap" 
             Text="No Image Selected" 
             VerticalAlignment="Top"/>
